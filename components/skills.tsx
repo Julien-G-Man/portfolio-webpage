@@ -4,9 +4,14 @@ import { Zap } from 'lucide-react'
 
 const skillCategories = [
   {
+    category: 'Languages',
+    skills: ['Python', 'Java', 'C++', 'SQL'],
+    color: 'from-blue-500 to-blue-600'
+  },
+  {
     category: 'Core Skills',
-    skills: ['Python', 'FastAPI', 'PostgreSQL', 'REST APIs', 'LLM Integration'],
-    color: 'from-blue-500 to-blue-600',
+    skills: ['FastAPI', 'PostgreSQL', 'REST APIs', 'LLM Integration', 'Backend Development'],
+    color: 'from-cyan-500 to-cyan-600',
     mastered: true
   },
   {

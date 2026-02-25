@@ -1,7 +1,7 @@
 'use client'
 
 import Link from 'next/link'
-import { Github, Linkedin, Mail, Menu, X, Facebook, Instagram, MessageCircle } from 'lucide-react'
+import { Github, Linkedin, Menu, X } from 'lucide-react'
 import { useState } from 'react'
 
 export function Header() {
@@ -16,7 +16,7 @@ export function Header() {
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-border">
       <nav className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
-        <Link href="#" className="text-2xl font-bold text-accent">
+        <Link href="#" className="text-xl md:text-2xl font-bold text-accent">
           Julien G. Manana
         </Link>
 
@@ -58,40 +58,6 @@ export function Header() {
               aria-label="LinkedIn"
             >
               <Linkedin size={20} />
-            </a>
-            <a
-              href="https://facebook.com/julien.manana"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-foreground hover:text-accent transition-colors"
-              aria-label="Facebook"
-            >
-              <Facebook size={20} />
-            </a>
-            <a
-              href="https://instagram.com/julien.manana"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-foreground hover:text-accent transition-colors"
-              aria-label="Instagram"
-            >
-              <Instagram size={20} />
-            </a>
-            <a
-              href="https://wa.me/233"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-foreground hover:text-accent transition-colors"
-              aria-label="WhatsApp"
-            >
-              <MessageCircle size={20} />
-            </a>
-            <a
-              href="mailto:juliengmanana@gmail.com"
-              className="text-foreground hover:text-accent transition-colors"
-              aria-label="Email"
-            >
-              <Mail size={20} />
             </a>
           </div>
         </div>
@@ -146,40 +112,6 @@ export function Header() {
                 aria-label="LinkedIn"
               >
                 <Linkedin size={20} />
-              </a>
-              <a
-                href="https://facebook.com/julien.manana"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-foreground hover:text-accent transition-colors"
-                aria-label="Facebook"
-              >
-                <Facebook size={20} />
-              </a>
-              <a
-                href="https://instagram.com/julien.manana"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-foreground hover:text-accent transition-colors"
-                aria-label="Instagram"
-              >
-                <Instagram size={20} />
-              </a>
-              <a
-                href="https://wa.me/233"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-foreground hover:text-accent transition-colors"
-                aria-label="WhatsApp"
-              >
-                <MessageCircle size={20} />
-              </a>
-              <a
-                href="mailto:juliengmanana@gmail.com"
-                className="text-foreground hover:text-accent transition-colors"
-                aria-label="Email"
-              >
-                <Mail size={20} />
               </a>
             </div>
           </nav>
