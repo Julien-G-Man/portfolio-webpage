@@ -1,6 +1,6 @@
 'use client'
 
-import { Github, Linkedin, Mail, ExternalLink } from 'lucide-react'
+import { Github, Linkedin, Mail, Facebook, Instagram, MessageCircle } from 'lucide-react'
 
 export function Footer() {
   const currentYear = new Date().getFullYear()
@@ -11,9 +11,9 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
           {/* Brand Section */}
           <div className="space-y-4">
-            <h3 className="text-2xl font-bold text-white">JGM</h3>
+            <h3 className="text-2xl font-bold text-white">Julien G. Manana</h3>
             <p className="text-muted-foreground text-sm leading-relaxed">
-              Building intelligent AI systems and full-stack applications that make a real impact.
+              Building intelligent AI systems and backend applications that make a real impact.
             </p>
           </div>
 
@@ -65,7 +65,16 @@ export function Footer() {
                 className="text-muted-foreground hover:text-accent transition-colors flex items-center gap-2"
               >
                 <Mail size={16} />
-                juliengmanana@gmail.com
+                Email
+              </a>
+              <a
+                href="https://wa.me/233"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-muted-foreground hover:text-accent transition-colors flex items-center gap-2"
+              >
+                <MessageCircle size={16} />
+                WhatsApp
               </a>
               <a
                 href="https://linkedin.com/in/julien-glory-manana"
@@ -74,7 +83,7 @@ export function Footer() {
                 className="text-muted-foreground hover:text-accent transition-colors flex items-center gap-2"
               >
                 <Linkedin size={16} />
-                LinkedIn Profile
+                LinkedIn
               </a>
               <a
                 href="https://github.com/Julien-G-Man"
@@ -83,7 +92,7 @@ export function Footer() {
                 className="text-muted-foreground hover:text-accent transition-colors flex items-center gap-2"
               >
                 <Github size={16} />
-                GitHub Repository
+                GitHub
               </a>
             </div>
           </div>
@@ -92,7 +101,7 @@ export function Footer() {
         {/* Divider */}
         <div className="border-t border-border pt-8 flex flex-col sm:flex-row justify-between items-center gap-4 text-sm">
           <p className="text-muted-foreground">
-            © {currentYear} Julien Glory Manan. All rights reserved.
+            © {currentYear} Julien Glory Manana. All rights reserved.
           </p>
           <div className="flex items-center gap-4">
             <a
@@ -100,6 +109,7 @@ export function Footer() {
               target="_blank"
               rel="noopener noreferrer"
               className="text-muted-foreground hover:text-accent transition-colors"
+              aria-label="GitHub"
             >
               <Github size={20} />
             </a>
@@ -108,12 +118,41 @@ export function Footer() {
               target="_blank"
               rel="noopener noreferrer"
               className="text-muted-foreground hover:text-accent transition-colors"
+              aria-label="LinkedIn"
             >
               <Linkedin size={20} />
             </a>
             <a
+              href="https://facebook.com/julien.manana"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-muted-foreground hover:text-accent transition-colors"
+              aria-label="Facebook"
+            >
+              <Facebook size={20} />
+            </a>
+            <a
+              href="https://instagram.com/julien.manana"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-muted-foreground hover:text-accent transition-colors"
+              aria-label="Instagram"
+            >
+              <Instagram size={20} />
+            </a>
+            <a
+              href="https://wa.me/233"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-muted-foreground hover:text-accent transition-colors"
+              aria-label="WhatsApp"
+            >
+              <MessageCircle size={20} />
+            </a>
+            <a
               href="mailto:juliengmanana@gmail.com"
               className="text-muted-foreground hover:text-accent transition-colors"
+              aria-label="Email"
             >
               <Mail size={20} />
             </a>
