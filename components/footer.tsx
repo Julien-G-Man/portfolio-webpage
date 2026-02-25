@@ -68,7 +68,7 @@ export function Footer() {
                 Email
               </a>
               <a
-                href="https://wa.me/233"
+                href="https://wa.me/2348165113449"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-muted-foreground hover:text-accent transition-colors flex items-center gap-2"
@@ -123,7 +123,7 @@ export function Footer() {
               <Linkedin size={20} />
             </a>
             <a
-              href="https://facebook.com/julien.manana"
+              href="https://facebook.com/julien.g.manana"
               target="_blank"
               rel="noopener noreferrer"
               className="text-muted-foreground hover:text-accent transition-colors"
@@ -132,7 +132,7 @@ export function Footer() {
               <Facebook size={20} />
             </a>
             <a
-              href="https://instagram.com/julien.manana"
+              href="https://instagram.com/julien_g_manana"
               target="_blank"
               rel="noopener noreferrer"
               className="text-muted-foreground hover:text-accent transition-colors"

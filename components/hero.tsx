@@ -9,7 +9,8 @@ export function Hero() {
   }
 
   return (
-    <section 
+    <section
+      id="hero"
       className="relative min-h-screen pt-24 overflow-hidden bg-background"
     >
       {/* Background image as an absolutely-positioned <img> to avoid tiling */}

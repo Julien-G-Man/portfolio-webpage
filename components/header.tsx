@@ -1,6 +1,5 @@
 'use client'
 
-import Link from 'next/link'
 import { Github, Linkedin, Menu, X } from 'lucide-react'
 import { useState } from 'react'
 
@@ -16,9 +15,13 @@ export function Header() {
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-border">
       <nav className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
-        <Link href="" className="text-xl md:text-2xl font-bold text-accent">
+        <button
+          type="button"
+          onClick={() => scrollToSection('hero')}
+          className="text-xl md:text-2xl font-bold text-accent"
+        >
           Julien G. Manana
-        </Link>
+        </button>
 
         {/* Desktop Navigation */}
         <div className="hidden md:flex items-center gap-6">
