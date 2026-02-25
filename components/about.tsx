@@ -39,19 +39,19 @@ export function About() {
             <div className="grid grid-cols-2 gap-4">
               <div className="bg-background border border-border rounded-lg p-6 hover:border-accent/50 transition-colors">
                 <p className="text-3xl font-bold text-accent mb-2">5+</p>
-                <p className="text-sm text-muted-foreground font-medium">Projects Shipped</p>
+                <p className="text-sm text-muted-foreground font-medium">Projects Built</p>
               </div>
               <div className="bg-background border border-border rounded-lg p-6 hover:border-accent/50 transition-colors">
-                <p className="text-3xl font-bold text-accent mb-2">3+</p>
-                <p className="text-sm text-muted-foreground font-medium">Years in Tech</p>
+                <p className="text-3xl font-bold text-accent mb-2">1</p>
+                <p className="text-sm text-muted-foreground font-medium">Year in Tech</p>
               </div>
               <div className="bg-background border border-border rounded-lg p-6 hover:border-accent/50 transition-colors">
-                <p className="text-3xl font-bold text-accent mb-2">15+</p>
+                <p className="text-3xl font-bold text-accent mb-2">5</p>
                 <p className="text-sm text-muted-foreground font-medium">Skills Mastered</p>
               </div>
               <div className="bg-background border border-border rounded-lg p-6 hover:border-accent/50 transition-colors">
                 <p className="text-3xl font-bold text-accent mb-2">100%</p>
-                <p className="text-sm text-muted-foreground font-medium">Dedicated</p>
+                <p className="text-sm text-muted-foreground font-medium">Passionate</p>
               </div>
             </div>
 
