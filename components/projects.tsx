@@ -55,10 +55,10 @@ const projects = [
     }
   },
   {
-    title: 'Pythonn Developer Projects',
+    title: 'Python Developer Projects',
     subtitle: 'Practice Projects',
     description: 'A collection of python codes and projects I have be writing since the start of my Python coding journey. \nThis code base will never stop growing as long as I keep learning',
-    technologies: ['Python', 'Numpy', 'Pandas', 'OpenCV', 'FastAPI', 'Flask', 'SK-Learn, '],
+    technologies: ['Python', 'Numpy', 'Pandas', 'OpenCV', 'FastAPI', 'Flask', 'SK-Learn', 'OpenAI', 'Pydantic'],
     highlights: [
       'Data Structure and Algorithms', 
       'Object Oriented Programming',
