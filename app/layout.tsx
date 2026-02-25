@@ -7,9 +7,32 @@ const _geist = Geist({ subsets: ["latin"] });
 const _geistMono = Geist_Mono({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: 'Julien Glory Manan | AI & Full-Stack Developer',
+  title: 'Julien Glory Manan | Backend / AI Developer',
   description: 'Computer Science student at KNUST, passionate about AI systems, LLM integration, and building innovative products.',
   generator: 'v0.app',
+  metadataBase: new URL('https://juliengmanana.netlify.app'),
+  openGraph: {
+    title: 'Julien Glory Manana | Backend / AI Developer',
+    description: 'Computer Science student at KNUST, passionate about AI systems, LLM integration, and building innovative products.',
+    url: 'https://juliengmanana.netlify.app',
+    siteName: 'Julien Glory Manan',
+    images: [
+      {
+        url: '/og-image.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'Julien Glory Manana — Backend / AI Developer',
+      },
+    ],
+    locale: 'en_US',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Julien Glory Manan | Backend / AI Developer',
+    description: 'Computer Science student at KNUST, passionate about AI systems, LLM integration, and building innovative products.',
+    images: ['/og-image.jpg'],
+  },
   icons: {
     icon: [
       {
