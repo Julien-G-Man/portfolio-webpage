@@ -46,7 +46,7 @@ export function About() {
                 <p className="text-sm text-muted-foreground font-medium">Year in Tech</p>
               </div>
               <div className="bg-background border border-border rounded-lg p-6 hover:border-accent/50 transition-colors">
-                <p className="text-3xl font-bold text-accent mb-2">5</p>
+                <p className="text-3xl font-bold text-accent mb-2">10+</p>
                 <p className="text-sm text-muted-foreground font-medium">Skills Mastered</p>
               </div>
               <div className="bg-background border border-border rounded-lg p-6 hover:border-accent/50 transition-colors">
@@ -67,7 +67,7 @@ export function About() {
                   <h4 className="text-lg font-bold text-white mb-1">BSc: Computer Science</h4>
                   <p className="text-accent font-medium mb-2">Kwame Nkrumah University of Science and Technology</p>
                   <p className="text-sm text-muted-foreground">2025 – 2028 | Kumasi, Ghana</p>
-                  <p className="text-sm text-muted-foreground mt-2"><span className="text-accent">Status:</span> Mastercard Scholar</p>
+                  <p className="text-sm text-muted-foreground mt-2"><span className="text-accent">Status:</span> Mastercard Foundation Scholar</p>
                 </div>
 
                 <div>
