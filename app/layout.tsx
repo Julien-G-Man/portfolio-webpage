@@ -35,7 +35,7 @@ export const metadata: Metadata = {
     follow: true,
   },
   openGraph: {
-    title: 'Julien Glory Manana | Backend / AI Developer',
+    title: 'Julien Glory Manana | python Backend Developer',
     description: 'Computer Science student at KNUST, passionate about AI systems, LLM integration, and building innovative products.',
     url: 'https://juliengmanana.netlify.app',
     siteName: 'Julien Glory Manana',
@@ -52,7 +52,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Julien Glory Manan | Backend / AI Developer',
+    title: 'Julien Glory Manan | Python Backend Developer',
     description: 'Computer Science student at KNUST, passionate about AI systems, LLM integration, and building innovative products.',
     images: ['/og-image.jpg'],
   },
@@ -89,8 +89,10 @@ export default function RootLayout({
     sameAs: [
       "https://github.com/Julien-G-Man",
       "https://www.linkedin.com/in/julien-glory-manana",
+      "https://instagram.com/julien_g_manana",
+      "https://facebook.com/julien.g.manana"
     ],
-    jobTitle: "Backend / AI Developer",
+    jobTitle: "Python Backend Developer",
     description:
       "Computer Science student at KNUST, passionate about AI systems, LLM integration, and building innovative products.",
   };
