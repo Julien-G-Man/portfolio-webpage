@@ -1,11 +1,13 @@
 'use client'
 
 import Link from 'next/link'
-import { Github, Linkedin, Menu, X } from 'lucide-react'
+import { Github, Linkedin, Menu, X, Moon, Sun } from 'lucide-react'
 import { useState } from 'react'
+import { useTheme } from './theme-context'
 
 export function Header() {
   const [isOpen, setIsOpen] = useState(false)
+  const { theme, toggleTheme } = useTheme()
 
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId)
@@ -41,6 +43,13 @@ export function Header() {
             Projects
           </button>
           <div className="flex items-center gap-4 ml-4 pl-4 border-l border-border">
+            <button
+              onClick={toggleTheme}
+              className="text-foreground hover:text-accent transition-colors p-2"
+              aria-label="Toggle theme"
+            >
+              {theme === 'dark' ? <Sun size={20} /> : <Moon size={20} />}
+            </button>
             <a
               href="https://github.com/Julien-G-Man"
               target="_blank"
@@ -62,14 +71,23 @@ export function Header() {
           </div>
         </div>
 
-        {/* Mobile Menu Button */}
-        <button
-          onClick={() => setIsOpen(!isOpen)}
-          className="md:hidden text-foreground hover:text-accent transition-colors"
-          aria-label="Toggle menu"
-        >
-          {isOpen ? <X size={24} /> : <Menu size={24} />}
-        </button>
+        {/* Mobile Menu Button & Theme Toggle */}
+        <div className="md:hidden flex items-center gap-2">
+          <button
+            onClick={toggleTheme}
+            className="text-foreground hover:text-accent transition-colors p-2"
+            aria-label="Toggle theme"
+          >
+            {theme === 'dark' ? <Sun size={20} /> : <Moon size={20} />}
+          </button>
+          <button
+            onClick={() => setIsOpen(!isOpen)}
+            className="text-foreground hover:text-accent transition-colors"
+            aria-label="Toggle menu"
+          >
+            {isOpen ? <X size={24} /> : <Menu size={24} />}
+          </button>
+        </div>
       </nav>
 
       {/* Mobile Navigation */}
