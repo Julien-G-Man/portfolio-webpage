@@ -13,7 +13,7 @@ export function Hero() {
       className="relative min-h-screen pt-24 overflow-hidden bg-background"
       style={{
         backgroundImage: 'url(/hero.jpg)',
-        backgroundPosition: 'right center',
+        backgroundPosition: '85% center',
         backgroundSize: 'cover',
         backgroundAttachment: 'fixed'
       }}
@@ -27,7 +27,7 @@ export function Hero() {
           <div className="max-w-2xl space-y-8">
             <div className="space-y-4">
               <div className="inline-flex items-center gap-2 px-3 py-1 bg-white/10 backdrop-blur rounded-full border border-white/20">
-                <span className="text-xs font-medium text-accent dark:text-yellow-300">Available for opportunities</span>
+                <span className="text-xs font-medium text-white dark:text-yellow-300">Available for opportunities</span>
               </div>
               <h1 className="text-5xl lg:text-6xl font-bold text-white leading-tight">
                 Julien Glory <span className="text-accent dark:text-yellow-300">Manana</span>
