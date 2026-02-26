@@ -16,7 +16,7 @@ export function Hero() {
       {/* Background image as an absolutely-positioned <img> to avoid tiling */}
       <img
         src="/hero.jpg"
-        alt=""
+        alt="Hero background featuring abstract technology imagery behind Julien Glory Manana"
         className="absolute inset-0 w-full h-full object-cover object-[25%_center] md:object-[82%_55%] lg:object-[72%_35%]"
         style={{ pointerEvents: 'none' }}
       />
