@@ -46,7 +46,7 @@ export function Skills() {
             <Zap size={16} className="text-accent" />
             <span className="text-xs font-medium text-accent">Technical Arsenal</span>
           </div>
-          <h2 className="text-4xl lg:text-5xl font-bold text-white mb-4">Skills & Expertise</h2>
+          <h2 className="text-4xl lg:text-5xl font-bold text-foreground mb-4">Skills & Expertise</h2>
           <p className="text-lg text-muted-foreground">A comprehensive toolkit built through practical experience</p>
         </div>
 

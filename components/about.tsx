@@ -12,7 +12,7 @@ export function About() {
             <GraduationCap size={16} className="text-accent" />
             <span className="text-xs font-medium text-accent">About Me</span>
           </div>
-          <h2 className="text-4xl lg:text-5xl font-bold text-white mb-4">Passion for AI & Innovation</h2>
+          <h2 className="text-4xl lg:text-5xl font-bold text-foreground mb-4">Passion for AI & Innovation</h2>
         </div>
 
         {/* Content Grid */}
@@ -57,21 +57,21 @@ export function About() {
 
             {/* Education */}
             <div className="bg-background border border-border rounded-lg p-8 space-y-6">
-              <h3 className="text-xl font-bold text-white flex items-center gap-2">
+              <h3 className="text-xl font-bold text-foreground flex items-center gap-2">
                 <Award size={24} className="text-accent" />
                 Education
               </h3>
 
               <div className="space-y-6">
                 <div className="pb-6 border-b border-border">
-                  <h4 className="text-lg font-bold text-white mb-1">BSc: Computer Science</h4>
+                  <h4 className="text-lg font-bold text-foreground mb-1">BSc: Computer Science</h4>
                   <p className="text-accent font-medium mb-2">Kwame Nkrumah University of Science and Technology</p>
                   <p className="text-sm text-muted-foreground">2025 – 2028 | Kumasi, Ghana</p>
                   <p className="text-sm text-muted-foreground mt-2"><span className="text-accent">Status:</span> Mastercard Foundation Scholar</p>
                 </div>
 
                 <div>
-                  <h4 className="text-lg font-bold text-white mb-1">W.A.S.S.C.E (Sciences)</h4>
+                  <h4 className="text-lg font-bold text-foreground mb-1">W.A.S.S.C.E (Sciences)</h4>
                   <p className="text-accent font-medium mb-2">Rochas Foundation College of Africa</p>
                   <p className="text-sm text-muted-foreground">2020 – 2023 | Nigeria</p>
                 </div>
