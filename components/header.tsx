@@ -33,7 +33,8 @@ export function Header() {
         <button
           type="button"
           onClick={() => scrollToSection('hero')}
-          className="text-xl md:text-2xl font-bold text-accent"
+          className={`text-xl md:text-2xl font-bold transition-colors duration-300
+            ${scrolled ? 'text-accent' : 'text-white'}`}
         >
           Julien G. Manana
         </button>

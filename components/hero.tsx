@@ -22,7 +22,7 @@ export function Hero() {
       />
 
       {/* Dark gradient overlay from left to right */}
-      <div className="absolute inset-0 bg-gradient-to-r from-background/80 via-background/40 to-transparent z-10" />
+      <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/40 to-transparent z-10" />
 
       <div className="relative z-20 max-w-7xl mx-auto px-6 lg:px-12">
         <div className="flex flex-col justify-center min-h-[calc(100vh-120px)]">
@@ -45,7 +45,7 @@ export function Hero() {
               <div className="flex items-start gap-3">
                 <div className="w-1 h-6 bg-accent dark:bg-yellow-300 rounded-full flex-shrink-0 mt-1" />
                 <div>
-                  <p className="text-white/70">Location</p>
+                  <p className="text-muted-foreground">Location</p>
                   <p className="font-medium text-white">Kumasi, Ghana</p>
                 </div>
               </div>
@@ -53,13 +53,13 @@ export function Hero() {
                 <div className="w-1 h-6 bg-accent dark:bg-yellow-300 rounded-full flex-shrink-0 mt-1" />
                 <div>
                   <p className="text-muted-foreground">Focus</p>
-                  <p className="font-medium text-foreground">Backend Dev</p>
+                  <p className="font-medium text-white">Backend Dev</p>
                 </div>
               </div>
               <div className="flex items-start gap-3">
                 <div className="w-1 h-6 bg-accent dark:bg-yellow-300 rounded-full flex-shrink-0 mt-1" />
                 <div>
-                  <p className="text-white/70">Status</p>
+                  <p className="text-muted-foreground">Status</p>
                   <p className="font-medium text-white">1 Year in Tech</p>
                 </div>
               </div>
@@ -69,7 +69,7 @@ export function Hero() {
             <div className="pt-4">
               <button
                 onClick={() => scrollToSection('projects')}
-                className="inline-flex items-center gap-2 px-6 py-3 bg-accent dark:bg-yellow-300 text-white dark:text-black font-medium rounded-lg hover:bg-red-900 dark:hover:bg-yellow-400 transition-colors group"
+                className="inline-flex items-center gap-2 px-6 py-3 bg-accent dark:bg-yellow-300 text-white dark:text-black font-medium rounded-lg transition-colors group hero-btn"
               >
                 View My Work
                 <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
