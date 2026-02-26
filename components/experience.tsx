@@ -4,15 +4,15 @@ import { Briefcase } from 'lucide-react'
 
 const experiences = [
   {
-    title: 'Technology Intern',
+    title: 'Intern',
     company: 'MTN Mobile Money Congo B.',
     period: '11/2025 – 12/2025',
     location: 'Brazzaville, Republic of Congo',
-    description: 'Gained hands-on exposure to large-scale fintech operations, including MoMo internal systems, MoMo App, and MoMo Open APIs. Collaborated with product, engineering, and operations teams.',
+    description: 'Gained hands-on exposure to large-scale fintech operations, including MoMo internal systems, MoMo App, and MoMo Open APIs. Collaborated with product, BI, engineering, and operations teams.',
     highlights: ['Fintech Systems', 'Product Lifecycle', 'Cross-functional Collaboration']
   },
   {
-    title: 'Deputy Tech Lead',
+    title: 'Deputy Head of Technology',
     company: 'Enactus KNUST',
     period: '2025 – 2026',
     location: 'Kumasi, Ghana',

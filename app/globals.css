@@ -123,3 +123,5 @@
     @apply bg-background text-foreground;
   }
 }
+
+/* Hero image positioning fallback (handled by absolute <img> in component) */

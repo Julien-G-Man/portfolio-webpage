@@ -20,16 +20,16 @@ export function About() {
           {/* Main Text */}
           <div className="space-y-6 text-lg text-foreground/80 leading-relaxed">
             <p>
-              I'm a Computer Science student at Kwame Nkrumah University of Science and Technology (KNUST) and a Mastercard Scholar, deeply passionate about building and experimenting with applied AI systems. My journey in tech has been driven by a fascination with how modern AI tools can solve real-world problems.
+              I'm a Computer Science student at Kwame Nkrumah University of Science and Technology (KNUST) and a Mastercard Scholar. I'm deeply passionate about building and experimenting with applied AI systems. My journey in tech has been driven by a fascination with how modern AI tools can solve real-world problems.
             </p>
             <p>
-              I've worked extensively with Large Language Models using OpenAI and Azure OpenAI, integrating them into production systems. My experience ranges from building AI-powered educational platforms like <span className="text-accent font-semibold">Lamla AI</span> to engineering scalable conversational AI backends with <span className="text-accent font-semibold">Tena AI</span>.
+              I've worked practically with Large Language Models using OpenAI and Azure OpenAI, integrating them into production systems. My experience ranges from building AI-powered educational platforms like <span className="text-accent font-semibold">Lamla AI</span> to engineering scalable conversational AI backends with <span className="text-accent font-semibold">Tena AI</span>.
             </p>
             <p>
               Beyond coding, I'm genuinely interested in responsible AI use, AI education, and helping students and developers understand how to leverage modern AI tools effectively in real-world projects. I believe the future belongs to those who can bridge the gap between AI capabilities and practical applications.
             </p>
             <p>
-              When I'm not building, you'll find me exploring new AI research, contributing to open-source projects, or mentoring peers interested in full-stack development and AI integration.
+              When I'm not building, you'll find me exploring new AI research, or learning more about full-stack development and AI integration.
             </p>
           </div>
 
@@ -46,7 +46,7 @@ export function About() {
                 <p className="text-sm text-muted-foreground font-medium">Year in Tech</p>
               </div>
               <div className="bg-background border border-border rounded-lg p-6 hover:border-accent/50 transition-colors">
-                <p className="text-3xl font-bold text-accent mb-2">5</p>
+                <p className="text-3xl font-bold text-accent mb-2">10+</p>
                 <p className="text-sm text-muted-foreground font-medium">Skills Mastered</p>
               </div>
               <div className="bg-background border border-border rounded-lg p-6 hover:border-accent/50 transition-colors">
@@ -67,7 +67,7 @@ export function About() {
                   <h4 className="text-lg font-bold text-foreground mb-1">BSc: Computer Science</h4>
                   <p className="text-accent font-medium mb-2">Kwame Nkrumah University of Science and Technology</p>
                   <p className="text-sm text-muted-foreground">2025 – 2028 | Kumasi, Ghana</p>
-                  <p className="text-sm text-muted-foreground mt-2"><span className="text-accent">Status:</span> Mastercard Scholar</p>
+                  <p className="text-sm text-muted-foreground mt-2"><span className="text-accent">Status:</span> Mastercard Foundation Scholar</p>
                 </div>
 
                 <div>

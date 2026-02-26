@@ -9,19 +9,22 @@ export function Hero() {
   }
 
   return (
-    <section 
+    <section
+      id="hero"
       className="relative min-h-screen pt-24 overflow-hidden bg-background"
-      style={{
-        backgroundImage: 'url(/hero.jpg)',
-        backgroundPosition: '85% center',
-        backgroundSize: 'cover',
-        backgroundAttachment: 'fixed'
-      }}
     >
-      {/* Dark gradient overlay from left to right - always dark */}
-      <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/60 to-transparent z-0" />
+      {/* Background image as an absolutely-positioned <img> to avoid tiling */}
+      <img
+        src="/hero.jpg"
+        alt="Hero background featuring abstract technology imagery behind Julien Glory Manana"
+        className="absolute inset-0 w-full h-full object-cover object-[25%_center] md:object-[82%_55%] lg:object-[72%_35%]"
+        style={{ pointerEvents: 'none' }}
+      />
 
-      <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-12">
+      {/* Dark gradient overlay from left to right */}
+      <div className="absolute inset-0 bg-gradient-to-r from-background/80 via-background/40 to-transparent z-10" />
+
+      <div className="relative z-20 max-w-7xl mx-auto px-6 lg:px-12">
         <div className="flex flex-col justify-center min-h-[calc(100vh-120px)]">
           {/* Content */}
           <div className="max-w-2xl space-y-8">
@@ -49,8 +52,8 @@ export function Hero() {
               <div className="flex items-start gap-3">
                 <div className="w-1 h-6 bg-accent dark:bg-yellow-300 rounded-full flex-shrink-0 mt-1" />
                 <div>
-                  <p className="text-white/70">Focus</p>
-                  <p className="font-medium text-white">AI & Backend Dev</p>
+                  <p className="text-muted-foreground">Focus</p>
+                  <p className="font-medium text-foreground">Backend Dev</p>
                 </div>
               </div>
               <div className="flex items-start gap-3">

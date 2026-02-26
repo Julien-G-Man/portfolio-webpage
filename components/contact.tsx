@@ -79,7 +79,7 @@ export default function Contact() {
                   className="flex items-center gap-3 text-foreground hover:text-accent transition-colors"
                 >
                   <Mail className="w-5 h-5 text-accent" />
-                  <span>julienmanan@gmail.com</span>
+                  <span>juliengmanana@gmail.com</span>
                 </a>
               </div>
             </div>

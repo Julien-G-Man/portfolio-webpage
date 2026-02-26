@@ -6,23 +6,26 @@ const projects = [
   {
     title: 'Lamla AI',
     subtitle: 'AI-Powered Study Platform',
-    description: 'A full-stack application that helps students generate personalized quizzes and flashcards from their notes using OpenAI APIs.',
-    technologies: ['Python', 'Django', 'OpenAI', 'React', 'PostgreSQL'],
+    description: 'A full-stack application that helps students generate personalized quizzes, flashcards, and AI explanations from their notes using OpenAI APIs.',
+    technologies: ['Python', 'Django', 'FastAPI', 'React', 'Azure OpenAI', 'PostgreSQL'],
     highlights: [
       'GPT-4o-mini integration for intelligent content generation',
+      'Django core logic and API gateway',
+      'Async FastAPI service for low-latency AI interactions',
       'User authentication and persistent profiles',
       'File upload and processing system',
-      'Deployed on Render'
+      'Quiz and flashcards generation',
+      'Deployed on Render (backend) and Vercel (frontend)'
     ],
     links: {
       github: 'https://github.com/Julien-G-Man/lamla.ai',
-      live: 'https://lamla-ai.onrender.com'
+      live: 'https://lamla-ai.vercel.app'
     }
   },
   {
     title: 'Tena AI',
     subtitle: 'Multi-Server Conversational AI Backend',
-    description: 'Production-grade backend for a full-stack conversational AI platform with secure authentication and scalable architecture.',
+    description: 'Collaborated on the backend for a conversational AI platform with secure authentication and scalable architecture.',
     technologies: ['Python', 'Flask', 'FastAPI', 'Azure OpenAI', 'PostgreSQL'],
     highlights: [
       'REST API with Flask for user management and auth',
@@ -38,7 +41,7 @@ const projects = [
   {
     title: 'Customer Support Chatbot',
     subtitle: 'Internship Project',
-    description: 'FastAPI backend for context-aware customer support with Azure OpenAI integration and knowledge chunking system.',
+    description: 'Context-aware customer support chatbot with Azure OpenAI integration and knowledge chunking system.',
     technologies: ['FastAPI', 'PostgreSQL', 'Azure OpenAI', 'React', 'REST APIs'],
     highlights: [
       'Topic-based knowledge chunking for structured responses',
@@ -50,7 +53,30 @@ const projects = [
       github: 'https://github.com/Julien-G-Man',
       live: '#'
     }
-  }
+  },
+  {
+    title: 'Python Developer Projects',
+    subtitle: 'Practice Projects',
+    description: 'A collection of python codes and projects I have be writing since the start of my Python coding journey. \nThis code base will never stop growing as long as I keep learning',
+    technologies: ['Python', 'Numpy', 'Pandas', 'OpenCV', 'FastAPI', 'Flask', 'SK-Learn', 'OpenAI', 'Pydantic'],
+    highlights: [
+      'Data Structure and Algorithms', 
+      'Object Oriented Programming',
+      'Python Libraries', 
+      'Python Frameworks', 
+      'LeetCode Problems and solutions',
+      'File management',
+      'REST APIs with Python',
+      'LLM APIs with Python',
+      'Computer Vision',
+      'Machine Learning',
+      'Mathematical Programming'
+    ],
+    links: {
+      github: 'https://github.com/Julien-G-Man/python-developer',
+      live: '#'
+    }
+  },
 ]
 
 export function Projects() {
@@ -63,8 +89,8 @@ export function Projects() {
             <Code2 size={16} className="text-accent" />
             <span className="text-xs font-medium text-accent">Featured Work</span>
           </div>
-          <h2 className="text-4xl lg:text-5xl font-bold text-foreground mb-4">Projects</h2>
-          <p className="text-lg text-muted-foreground">Real-world applications combining AI, full-stack development, and scalable architecture</p>
+          <h2 className="text-4xl lg:text-5xl font-bold text-white mb-4">Projects</h2>
+          <p className="text-lg text-muted-foreground">Real-world applications combining AI, backend or full-stack development, and scalable architecture</p>
         </div>
 
         {/* Projects Grid */}

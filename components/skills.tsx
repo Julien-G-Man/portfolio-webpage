@@ -5,33 +5,33 @@ import { Zap } from 'lucide-react'
 const skillCategories = [
   {
     category: 'Languages',
-    skills: ['Python', 'Java', 'C++', 'SQL'],
+    skills: ['Python', 'Java', 'C++'],
     color: 'from-blue-500 to-blue-600'
   },
   {
     category: 'Core Skills',
-    skills: ['FastAPI', 'PostgreSQL', 'REST APIs', 'LLM Integration', 'Backend Development'],
+    skills: ['FastAPI', 'PostgreSQL', 'REST APIs', 'LLM Integration', 'Backend Development', 'Async Programming', 'API Design', 'Frontend Integration (React)'],
     color: 'from-cyan-500 to-cyan-600',
     mastered: true
   },
   {
     category: 'Backend Frameworks',
-    skills: ['Django', 'Flask', 'SQLAlchemy', 'Async Programming', 'API Design'],
+    skills: ['FastAP', 'Django', 'Flask'],
     color: 'from-purple-500 to-purple-600'
   },
   {
-    category: 'AI & ML',
-    skills: ['Azure OpenAI', 'Prompt Engineering', 'AI Systems Design', 'Langchain', 'Vector Databases'],
+    category: 'AI',
+    skills: ['Basic Machine Learning', 'Azure OpenAI', 'LLM APIs', 'RAG', 'Prompt Engineering', 'AI Systems Design'],
     color: 'from-pink-500 to-pink-600'
   },
   {
-    category: 'Databases & Tools',
-    skills: ['PostgreSQL', 'MongoDB', 'Git', 'GitHub', 'CLI Tools'],
+    category: 'Technologies & Tools',
+    skills: ['PostgreSQL', 'SQLAlchemy', 'Git', 'GitHub', 'VS Code', 'IntelloJ', 'Cursor', 'CLI Tools'],
     color: 'from-green-500 to-green-600'
   },
   {
     category: 'Platforms & Deployment',
-    skills: ['Azure', 'Render', 'Docker', 'Linux', 'Cloud Architecture'],
+    skills: ['Vercel', 'Render', 'Netlify', 'Docker'],
     color: 'from-orange-500 to-orange-600'
   }
 ]
