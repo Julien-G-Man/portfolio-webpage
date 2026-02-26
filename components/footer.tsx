@@ -11,7 +11,7 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
           {/* Brand Section */}
           <div className="space-y-4">
-            <h3 className="text-2xl font-bold text-white">Julien G. Manana</h3>
+            <h3 className="text-2xl font-bold text-foreground">Julien G. Manana</h3>
             <p className="text-muted-foreground text-sm leading-relaxed">
               Building intelligent AI systems and backend applications that make a real impact.
             </p>
@@ -19,7 +19,7 @@ export function Footer() {
 
           {/* Quick Links */}
           <div>
-            <h4 className="font-bold text-white mb-4">Quick Links</h4>
+            <h4 className="font-bold text-foreground mb-4">Quick Links</h4>
             <ul className="space-y-3 text-sm">
               <li>
                 <a
@@ -58,7 +58,7 @@ export function Footer() {
 
           {/* Contact */}
           <div>
-            <h4 className="font-bold text-white mb-4">Get in Touch</h4>
+            <h4 className="font-bold text-foreground mb-4">Get in Touch</h4>
             <div className="space-y-3 text-sm">
               <a
                 href="mailto:juliengmanana@gmail.com"

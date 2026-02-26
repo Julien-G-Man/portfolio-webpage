@@ -39,7 +39,7 @@ export function Experience() {
             <Briefcase size={16} className="text-accent" />
             <span className="text-xs font-medium text-accent">Professional Journey</span>
           </div>
-          <h2 className="text-4xl lg:text-5xl font-bold text-white mb-4">Experience</h2>
+          <h2 className="text-4xl lg:text-5xl font-bold text-foreground mb-4">Experience</h2>
           <p className="text-lg text-muted-foreground">Roles and responsibilities that shaped my expertise</p>
         </div>
 
@@ -57,7 +57,7 @@ export function Experience() {
               <div className="bg-secondary/30 rounded-lg p-6 group-hover:bg-secondary/50 transition-colors border border-border group-hover:border-accent/30">
                 <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-2 mb-3">
                   <div>
-                    <h3 className="text-xl font-bold text-white">{exp.title}</h3>
+                    <h3 className="text-xl font-bold text-foreground">{exp.title}</h3>
                     <p className="text-accent font-medium">{exp.company}</p>
                   </div>
                   <div className="text-right">
