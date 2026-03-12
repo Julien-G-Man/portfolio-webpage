@@ -4,6 +4,14 @@ import { Briefcase } from 'lucide-react'
 
 const experiences = [
   {
+    title: 'Software Engineering Trainee',
+    company: 'Next Generation of Tech Giants (nGOT Giants)',
+    period: '02/2026 – Present',
+    location: 'Kumasi, Ghana',
+    description: 'Part of the engineering team at an organisation dedicated to developing tech talent across Africa. Involved in building internal tools for the team and gaining exposure to research-driven innovation.',
+    highlights: ['Internal Tooling', 'Research-Driven Innovation', 'Engineering Team', 'Tech Talent Development']
+  },
+  {
     title: 'Intern',
     company: 'MTN Mobile Money Congo B.',
     period: '11/2025 – 12/2025',
