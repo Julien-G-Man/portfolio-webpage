@@ -1,6 +1,6 @@
 'use client'
 
-import { Github, Linkedin, Menu, X } from 'lucide-react'
+import { Download, Github, Linkedin, Menu, X } from 'lucide-react'
 import { useState, useEffect } from 'react'
 
 export function Header() {
@@ -62,6 +62,15 @@ export function Header() {
           >
             Projects
           </button>
+          <a
+            href="/JULIEN-GLORY-MANANA-Resume.pdf"
+            download
+            className={`inline-flex items-center gap-1 text-sm font-medium transition-colors duration-300 hover:text-accent
+              ${scrolled ? 'text-black dark:text-white' : 'text-white'}`}
+          >
+            CV
+            <Download size={16} />
+          </a>
           <div className={`flex items-center gap-4 ml-4 pl-4 border-l transition-colors duration-300
             ${scrolled ? 'border-black/20 dark:border-white/20' : 'border-white/20'}`}>
             <a
@@ -124,6 +133,15 @@ export function Header() {
             >
               Projects
             </button>
+            <a
+              href="/JULIEN-GLORY-MANANA-Resume.pdf"
+              download
+              className={`inline-flex items-center gap-2 text-sm font-medium hover:text-accent transition-colors text-left
+                ${scrolled ? 'text-black dark:text-white' : 'text-white'}`}
+            >
+              Download CV
+              <Download size={16} />
+            </a>
             <div className={`flex items-center gap-4 pt-2 border-t transition-colors duration-300
               ${scrolled ? 'border-black/10 dark:border-white/10' : 'border-white/10'}`}>
               <a

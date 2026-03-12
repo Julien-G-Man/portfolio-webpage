@@ -89,7 +89,7 @@ export function Projects() {
             <Code2 size={16} className="text-accent" />
             <span className="text-xs font-medium text-accent">Featured Work</span>
           </div>
-          <h2 className="text-4xl lg:text-5xl font-bold text-white mb-4">Projects</h2>
+          <h2 className="text-4xl lg:text-5xl font-bold text-foreground mb-4">Projects</h2>
           <p className="text-lg text-muted-foreground">Real-world applications combining AI, backend or full-stack development, and scalable architecture</p>
         </div>
 

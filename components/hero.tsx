@@ -1,6 +1,6 @@
 'use client'
 
-import { ArrowRight } from 'lucide-react'
+import { ArrowRight, Download } from 'lucide-react'
 
 export function Hero() {
   const scrollToSection = (sectionId: string) => {
@@ -65,8 +65,8 @@ export function Hero() {
               </div>
             </div>
 
-            {/* CTA Button */}
-            <div className="pt-4">
+            {/* CTA Buttons */}
+            <div className="pt-4 flex flex-wrap items-center gap-3">
               <button
                 onClick={() => scrollToSection('projects')}
                 className="inline-flex items-center gap-2 px-6 py-3 bg-accent dark:bg-yellow-300 text-white dark:text-black font-medium rounded-lg transition-colors group hero-btn"
@@ -74,6 +74,14 @@ export function Hero() {
                 View My Work
                 <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
               </button>
+              <a
+                href="/JULIEN-GLORY-MANANA-Resume.pdf"
+                download
+                className="inline-flex items-center gap-2 px-6 py-3 border border-white/30 text-white font-medium rounded-lg hover:bg-white/10 transition-colors"
+              >
+                Download CV
+                <Download size={18} />
+              </a>
             </div>
           </div>
         </div>
