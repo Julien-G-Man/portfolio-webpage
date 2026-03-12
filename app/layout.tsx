@@ -8,20 +8,34 @@ const _geist = Geist({ subsets: ["latin"] });
 const _geistMono = Geist_Mono({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: 'Julien Glory Manan | Python Backend Developer',
-  description: 'Computer Science student at KNUST, passionate about AI systems, LLM integration, and building innovative products.',
+  title: 'Julien Glory Manana | Python Backend Developer',
+  description: 'Julien Glory Manana — Computer Science student at KNUST, Ghana. Python backend developer specialising in AI systems, LLM integration, and building innovative products. Open to internships and collaborations.',
   keywords: [
     'Julien',
     'Julien Glory',
     'Glory',
     'Manana',
     'Julien Glory Manana',
+    'Python developer',
     'AI developer',
     'backend developer',
+    'software engineer',
+    'software engineering trainee',
     'KNUST',
+    'Kwame Nkrumah University',
     'Computer Science',
     'LLM integration',
-    'Netlify',
+    'AI systems',
+    'machine learning',
+    'Next.js developer',
+    'React developer',
+    'Ghana developer',
+    'Africa tech',
+    'nGOT Giants',
+    'Next Generation of Tech Giants',
+    'portfolio',
+    'developer portfolio',
+    'open to work',
   ],
   generator: 'v0.app',
   metadataBase: new URL('https://juliengmanana.netlify.app'),
@@ -36,8 +50,8 @@ export const metadata: Metadata = {
     follow: true,
   },
   openGraph: {
-    title: 'Julien Glory Manana | python Backend Developer',
-    description: 'Computer Science student at KNUST, passionate about AI systems, LLM integration, and building innovative products.',
+    title: 'Julien Glory Manana | Python Backend Developer',
+    description: 'Julien Glory Manana — Computer Science student at KNUST, Ghana. Python backend developer specialising in AI systems, LLM integration, and building innovative products.',
     url: 'https://juliengmanana.netlify.app',
     siteName: 'Julien Glory Manana',
     images: [
@@ -53,8 +67,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Julien Glory Manan | Python Backend Developer',
-    description: 'Computer Science student at KNUST, passionate about AI systems, LLM integration, and building innovative products.',
+    title: 'Julien Glory Manana | Python Backend Developer',
+    description: 'Julien Glory Manana — Computer Science student at KNUST, Ghana. Python backend developer specialising in AI systems, LLM integration, and building innovative products.',
     images: ['/og-image.jpg'],
   },
   icons: {
@@ -87,6 +101,7 @@ export default function RootLayout({
     "@type": "Person",
     name: "Julien Glory Manana",
     url: "https://juliengmanana.netlify.app",
+    image: "https://juliengmanana.netlify.app/julien.jpg",
     sameAs: [
       "https://github.com/Julien-G-Man",
       "https://www.linkedin.com/in/julien-glory-manana",
@@ -94,8 +109,22 @@ export default function RootLayout({
       "https://facebook.com/julien.g.manana"
     ],
     jobTitle: "Python Backend Developer",
-    description:
-      "Computer Science student at KNUST, passionate about AI systems, LLM integration, and building innovative products.",
+    description: "Computer Science student at KNUST, Ghana. Python backend developer specialising in AI systems, LLM integration, and building innovative products.",
+    alumniOf: {
+      "@type": "CollegeOrUniversity",
+      name: "Kwame Nkrumah University of Science and Technology",
+      sameAs: "https://www.knust.edu.gh"
+    },
+    knowsAbout: [
+      "Python", "Backend Development", "Artificial Intelligence",
+      "Large Language Models", "Next.js", "React", "Software Engineering",
+      "API Development", "Machine Learning"
+    ],
+    nationality: "Congolese",
+    workLocation: {
+      "@type": "Place",
+      name: "Kumasi, Ghana"
+    }
   };
 
   return (
@@ -109,7 +138,7 @@ export default function RootLayout({
         {/* additional meta tags for SEO */}
         <meta
           name="keywords"
-          content="Julien Glory, Glory, Manana, Julien Glory Manana, AI developer, backend developer, KNUST, Computer Science, LLM integration, Netlify"
+          content="Julien Glory Manana, Python developer, AI developer, backend developer, software engineer, KNUST, Computer Science, LLM integration, Ghana developer, Africa tech, nGOT Giants, developer portfolio"
         />
         <meta name="author" content="Julien Glory Manana" />
       </head>
