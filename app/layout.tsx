@@ -49,6 +49,9 @@ export const metadata: Metadata = {
     index: true,
     follow: true,
   },
+  verification: {
+    google: 'SY98vlwn2xMG5dhZ61WUn_PfjzEX4VSXU48Beo-nDpU',
+  },
   openGraph: {
     title: 'Julien Glory Manana | Python Backend Developer',
     description: 'Julien Glory Manana — Computer Science student at KNUST, Ghana. Python backend developer specialising in AI systems, LLM integration, and building innovative products.',
