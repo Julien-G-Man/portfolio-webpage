@@ -10,9 +10,9 @@ const skillCategories = [
   },
   {
     category: 'Core Skills',
-    skills: ['FastAPI', 'PostgreSQL', 'REST APIs', 'LLM Integration', 'Backend Development', 'Async Programming', 'API Design', 'Frontend Integration (React)'],
+    skills: ['FastAPI', 'PostgreSQL', 'REST APIs', 'LLM Integration', 'Backend Development', 'Async Programming', 'API Design', 'Frontend Integration (React, NextJS)'],
     color: 'from-cyan-500 to-cyan-600',
-    mastered: true
+    mastered: false
   },
   {
     category: 'Backend Frameworks',
@@ -21,12 +21,12 @@ const skillCategories = [
   },
   {
     category: 'AI',
-    skills: ['Basic Machine Learning', 'Azure OpenAI', 'LLM APIs', 'RAG', 'Prompt Engineering', 'AI Systems Design'],
+    skills: ['Basic Machine Learning', 'OpenAI API', 'Claude API', 'LLM APIs', 'Basic RAG', 'Prompt Engineering', 'AI Systems Design'],
     color: 'from-pink-500 to-pink-600'
   },
   {
     category: 'Technologies & Tools',
-    skills: ['PostgreSQL', 'SQLAlchemy', 'Git', 'GitHub', 'VS Code', 'IntelloJ', 'Cursor', 'CLI Tools'],
+    skills: ['PostgreSQL', 'SQLAlchemy', 'Git', 'GitHub', 'VS Code', 'IntelloJ', 'Cursor', 'Claude Code', 'CLI Tools'],
     color: 'from-green-500 to-green-600'
   },
   {
