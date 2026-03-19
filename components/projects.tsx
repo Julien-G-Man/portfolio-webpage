@@ -6,8 +6,8 @@ const projects = [
   {
     title: 'Lamla AI',
     subtitle: 'AI-Powered Study Platform',
-    description: 'A full-stack application that helps students generate personalized quizzes, flashcards, and AI explanations from their notes using OpenAI APIs.',
-    technologies: ['Python', 'Django', 'FastAPI', 'React', 'Azure OpenAI', 'PostgreSQL'],
+    description: 'A full-stack application that helps students generate personalized quizzes, flashcards, and AI explanations from their notes using OpenAI and Claude APIs.',
+    technologies: ['Python', 'Django', 'FastAPI', 'React', 'OpenAI', 'Claude', 'PostgreSQL'],
     highlights: [
       'GPT-4o-mini integration for intelligent content generation',
       'Django core logic and API gateway',
@@ -20,6 +20,25 @@ const projects = [
     links: {
       github: 'https://github.com/Julien-G-Man/lamla.ai',
       live: 'https://lamla-ai.vercel.app'
+    }
+  },
+  {
+    title: 'Tool-Augmented Chatbot',
+    subtitle: 'LLM Tool/Function-Calling Database Query Agent',
+    description: 'Full-stack learning project demonstrating LLM tool/function-calling by connecting a chatbot to a real SQL Server database. Instead of hallucinating answers, the AI assistant queries actual database tables through controlled backend functions, then summarizes results in natural language.',
+    technologies: ['FastAPI', 'React', 'Vite', 'SQLAlchemy', 'pyodbc', 'OpenAI-compatible SDK', 'SQL Server', 'SQLite'],
+    highlights: [
+      'LLM tool-calling: AI model decides when and which database function to invoke',
+      'Connects to real SQL Server (CompanyDB) with 6 predefined database functions',
+      'Maintains conversation context across multiple turns (last 5 messages in SQLite)',
+      'Rich response rendering with Markdown tables and lists support',
+      'Six available tools: list departments/projects/employees, filter by project, get project lead, get dependents',
+      'Backend: FastAPI with tool handler and SQL query execution',
+      'Frontend: React + Vite chat interface for real-time interaction'
+    ],
+    links: {
+      github: 'https://github.com/Julien-G-Man/tool-augmented-chatbot',
+      live: '#'
     }
   },
   {
