@@ -8,39 +8,31 @@ const _geist = Geist({ subsets: ["latin"] });
 const _geistMono = Geist_Mono({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: 'Julien Glory Manana | Python Backend Developer',
-  description: 'Julien Glory Manana — Computer Science student at KNUST, Ghana. Python backend developer specialising in AI systems, LLM integration, and building innovative products. Open to internships and collaborations.',
+  title: 'Julien Glory Manana | Backend Developer | Aspiring AI Engineer',
+  description: 'Julien Glory Manana is a Python backend developer and Computer Science student at KNUST, Ghana. He focuses more in AI systems, LLM integration, Django, FastAPI, and full-stack development. Available for internships and collaborations.',
   keywords: [
-    'Julien',
-    'Julien Glory',
-    'Glory',
-    'Manana',
     'Julien Glory Manana',
-    'Python developer',
+    'Julien Manana',
+    'Julien Glory',
+    'Python backend developer',
     'AI developer',
-    'backend developer',
+    'LLM integration specialist',
+    'FastAPI developer',
+    'Full-stack developer',
     'software engineer',
-    'software engineering trainee',
-    'KNUST',
-    'Kwame Nkrumah University',
-    'Computer Science',
-    'LLM integration',
-    'AI systems',
-    'machine learning',
-    'Next.js developer',
-    'React developer',
-    'Ghana developer',
-    'Africa tech',
-    'nGOT Giants',
-    'Next Generation of Tech Giants',
+    'KNUST computer science',
+    'Ghana tech',
+    'Africa developer',
     'portfolio',
-    'developer portfolio',
-    'open to work',
   ],
   generator: 'v0.app',
   metadataBase: new URL('https://juliengmanana.netlify.app'),
   alternates: {
     canonical: 'https://juliengmanana.netlify.app',
+    languages: {
+      'en': 'https://juliengmanana.netlify.app',
+      'en-US': 'https://juliengmanana.netlify.app',
+    },
   },
   authors: [
     { name: 'Julien Glory Manana', url: 'https://juliengmanana.netlify.app' },
@@ -53,10 +45,11 @@ export const metadata: Metadata = {
     google: 'SY98vlwn2xMG5dhZ61WUn_PfjzEX4VSXU48Beo-nDpU',
   },
   openGraph: {
-    title: 'Julien Glory Manana | Python Backend Developer',
-    description: 'Julien Glory Manana — Computer Science student at KNUST, Ghana. Python backend developer specialising in AI systems, LLM integration, and building innovative products.',
+    title: 'Julien Glory Manana | Python Backend Developer & AI Specialist',
+    description: 'Julien Glory Manana is a Python backend developer specializing in AI systems, LLM integration, and full-stack development. KNUST Computer Science student based in Ghana.',
     url: 'https://juliengmanana.netlify.app',
-    siteName: 'Julien Glory Manana',
+    siteName: 'Julien Glory Manana - Portfolio',
+    type: 'website',
     images: [
       {
         url: '/og-image.jpg',
@@ -66,12 +59,12 @@ export const metadata: Metadata = {
       },
     ],
     locale: 'en_US',
-    type: 'website',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Julien Glory Manana | Python Backend Developer',
-    description: 'Julien Glory Manana — Computer Science student at KNUST, Ghana. Python backend developer specialising in AI systems, LLM integration, and building innovative products.',
+    title: 'Julien Glory Manana | Backend & AI Developer',
+    description: 'Python backend developer specializing in AI systems, LLM integration, and full-stack development. KNUST Computer Science student.',
+    creator: '@julien_g_manana',
     images: ['/og-image.jpg'],
   },
   icons: {
@@ -99,45 +92,71 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   // JSON-LD structured data for person/website helps search engines
-  const jsonLd = {
-    "@context": "https://schema.org",
-    "@type": "Person",
-    name: "Julien Glory Manana",
-    url: "https://juliengmanana.netlify.app",
-    image: "https://juliengmanana.netlify.app/julien.jpg",
-    sameAs: [
-      "https://github.com/Julien-G-Man",
-      "https://www.linkedin.com/in/julien-glory-manana",
-      "https://instagram.com/julien_g_manana",
-      "https://facebook.com/julien.g.manana"
-    ],
-    jobTitle: "Python Backend Developer",
-    description: "Computer Science student at KNUST, Ghana. Python backend developer specialising in AI systems, LLM integration, and building innovative products.",
-    alumniOf: {
-      "@type": "CollegeOrUniversity",
-      name: "Kwame Nkrumah University of Science and Technology",
-      sameAs: "https://www.knust.edu.gh"
+  const jsonLd = [
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      name: "Julien Glory Manana",
+      url: "https://juliengmanana.netlify.app",
+      image: "https://juliengmanana.netlify.app/julien.jpg",
+      email: "mailto:juliengmanana@gmail.com",
+      sameAs: [
+        "https://github.com/Julien-G-Man",
+        "https://www.linkedin.com/in/julien-glory-manana",
+        "https://instagram.com/julien_g_manana",
+        "https://facebook.com/julien.g.manana"
+      ],
+      jobTitle: "Python Backend Developer",
+      description: "Python backend developer specializing in AI systems, LLM integration, and full-stack development. Computer Science student at KNUST, Ghana.",
+      worksFor: {
+        "@type": "Organization",
+        name: "Freelance / Self-employed"
+      },
+      alumniOf: {
+        "@type": "CollegeOrUniversity",
+        name: "Kwame Nkrumah University of Science and Technology",
+        sameAs: "https://www.knust.edu.gh"
+      },
+      knowsAbout: [
+        "Python", "Backend Development", "Artificial Intelligence", "LLM Integration",
+        "FastAPI", "Django", "Large Language Models", "Next.js", "React", "Software Engineering",
+        "REST APIs", "SQL Server", "PostgreSQL", "Machine Learning", "OpenAI", "Azure"
+      ],
+      nationality: "Congolese",
+      workLocation: {
+        "@type": "Place",
+        name: "Kumasi, Ghana"
+      }
     },
-    knowsAbout: [
-      "Python", "Backend Development", "Artificial Intelligence",
-      "Large Language Models", "Next.js", "React", "Software Engineering",
-      "API Development", "Machine Learning"
-    ],
-    nationality: "Congolese",
-    workLocation: {
-      "@type": "Place",
-      name: "Kumasi, Ghana"
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      name: "Julien Glory Manana - Developer Portfolio",
+      url: "https://juliengmanana.netlify.app",
+      description: "Portfolio of Julien Glory Manana - Python backend developer specializing in AI systems and LLM integration",
+      creator: {
+        "@type": "Person",
+        name: "Julien Glory Manana"
+      },
+      potentialAction: {
+        "@type": "SearchAction",
+        target: "https://juliengmanana.netlify.app?q={search_term_string}",
+        "query-input": "required name=search_term_string"
+      }
     }
-  };
+  ];
 
   return (
     <html lang="en" className="dark">
       <head>
         {/* inject JSON-LD manually since Next's metadata doesn't cover custom script */}
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
-        />
+        {jsonLd.map((schema, index) => (
+          <script
+            key={index}
+            type="application/ld+json"
+            dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+          />
+        ))}
         {/* additional meta tags for SEO */}
         <meta
           name="keywords"
