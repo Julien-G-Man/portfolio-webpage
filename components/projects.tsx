@@ -2,7 +2,20 @@
 
 import { Code2, ExternalLink, Github } from 'lucide-react'
 
-const projects = [
+type Project = {
+  title: string
+  subtitle: string
+  description: string
+  technologies: string[]
+  highlights: string[]
+  links: {
+    github: string
+    live: string
+  }
+  githubLabel?: string
+}
+
+const projects: Project[] = [
   {
     title: 'Lamla AI',
     subtitle: 'AI-Powered Study Platform',
@@ -20,6 +33,24 @@ const projects = [
     links: {
       github: 'https://github.com/Julien-G-Man/lamla.ai',
       live: 'https://lamla-ai.vercel.app'
+    }
+  },
+  {
+    title: 'VeriMed',
+    subtitle: 'AI-Powered Medicine Authenticity Risk Assessment',
+    description: 'A mobile-friendly web application that helps users assess whether a medicine is likely genuine, suspicious, or unverifiable by analyzing packaging images against FDA reference dataset.',
+    technologies: ['FastAPI', 'Next.js', 'OpenCV', 'EasyOCR', 'pyzbar', 'rapidfuzz', 'PostgreSQL'],
+    highlights: [
+      'Three-image verification flow: front pack, back pack, and barcode or QR close-up',
+      'OCR, barcode decoding, and fuzzy matching combined in a rule-based scoring pipeline',
+      'Weighted risk classification with plain-language explanations and next-step guidance',
+      'Reference-based assessment using curated medicine registry data rather than barcode-only checks',
+      'Follow-up assistant with persistent Postgres conversation history tied to verification results',
+      'Mobile-first full-stack architecture built for consumers, vendors, and hackathon demos'
+    ],
+    links: {
+      github: 'https://github.com/Julien-G-Man/verimed',
+      live: 'https://verimed-web.netlify.app'
     }
   },
   {
@@ -69,9 +100,10 @@ const projects = [
       'Reduced hallucination through context injection'
     ],
     links: {
-      github: 'https://github.com/Julien-G-Man',
+      github: '#',
       live: '#'
-    }
+    },
+    githubLabel: 'GitHub Not Available'
   },
   {
     title: 'Python Developer Projects',
@@ -158,16 +190,23 @@ export function Projects() {
 
                 {/* Links */}
                 <div className="flex flex-wrap gap-4 pt-6 border-t border-border">
-                  <a
-                    href={project.links.github}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 text-accent hover:text-accent/80 transition-colors font-medium group/link"
-                  >
-                    <Github size={18} />
-                    GitHub
-                    <ExternalLink size={16} className="group-hover/link:translate-x-1 transition-transform" />
-                  </a>
+                  {project.links.github !== '#' ? (
+                    <a
+                      href={project.links.github}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-2 text-accent hover:text-accent/80 transition-colors font-medium group/link"
+                    >
+                      <Github size={18} />
+                      GitHub
+                      <ExternalLink size={16} className="group-hover/link:translate-x-1 transition-transform" />
+                    </a>
+                  ) : project.githubLabel ? (
+                    <span className="inline-flex items-center gap-2 text-foreground/60 font-medium">
+                      <Github size={18} />
+                      {project.githubLabel}
+                    </span>
+                  ) : null}
                   {project.links.live !== '#' && (
                     <a
                       href={project.links.live}

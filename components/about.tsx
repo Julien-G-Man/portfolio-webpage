@@ -23,7 +23,7 @@ export function About() {
               I'm a Computer Science student at Kwame Nkrumah University of Science and Technology (KNUST) and a Mastercard Scholar. I'm deeply passionate about building and experimenting with applied AI systems. My journey in tech has been driven by a fascination with how modern AI tools can solve real-world problems.
             </p>
             <p>
-              I've worked practically with Large Language Models using OpenAI and Azure OpenAI, integrating them into production systems. My experience ranges from building AI-powered educational platforms like <span className="text-accent font-semibold">Lamla AI</span> to engineering scalable conversational AI backends with <span className="text-accent font-semibold">Tena AI</span>.
+              I've worked practically with Large Language Models using OpenAI, Claude, and Azure OpenAI, integrating them into production systems. My experience ranges from building AI-powered educational platforms like <span className="text-accent font-semibold">Lamla AI</span> to engineering scalable conversational AI backends with <span className="text-accent font-semibold">Tena AI</span>.
             </p>
             <p>
               Beyond coding, I'm genuinely interested in responsible AI use, AI education, and helping students and developers understand how to leverage modern AI tools effectively in real-world projects. I believe the future belongs to those who can bridge the gap between AI capabilities and practical applications.
