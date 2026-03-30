@@ -17,25 +17,28 @@ export function Hero() {
       <img
         src="/hero.jpg"
         alt="Hero background featuring abstract technology imagery behind Julien Glory Manana"
-        className="absolute inset-0 w-full h-full object-cover object-[25%_center] md:object-[82%_55%] lg:object-[72%_35%]"
+        className="absolute inset-0 h-full w-full object-cover object-[20%_top] lg:inset-y-0 lg:right-0 lg:left-auto lg:w-[72%] lg:object-[52%_35%]"
         style={{ pointerEvents: 'none' }}
       />
 
       {/* Dark gradient overlay from left to right */}
-      <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/40 to-transparent z-10" />
+      <div className="absolute inset-0 bg-gradient-to-r from-black via-transparent via-[65%] to-transparent z-10 lg:from-black/96 lg:via-black/78 lg:via-[15%]" />
+
+      {/* Desktop edge fade so the image can start later without looking abrupt */}
+      <div className="absolute inset-y-0 left-0 hidden lg:block w-[44%] bg-gradient-to-r from-black via-black/95 via-[72%] to-transparent z-10" />
 
       <div className="relative z-20 max-w-7xl mx-auto px-6 lg:px-12">
         <div className="flex flex-col justify-center min-h-[calc(100vh-120px)]">
           {/* Content */}
-          <div className="max-w-2xl space-y-8">
+          <div className="max-w-xl space-y-6 sm:space-y-8 lg:max-w-2xl">
             <div className="space-y-4">
               <div className="inline-flex items-center gap-2 px-3 py-1 bg-white/10 backdrop-blur rounded-full border border-white/20">
                 <span className="text-xs font-medium text-white dark:text-yellow-300">Available for opportunities</span>
               </div>
-              <h1 className="text-5xl lg:text-6xl font-bold text-white leading-tight">
+              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-tight">
                 Julien Glory <span className="text-accent dark:text-yellow-300">Manana</span>
               </h1>
-              <p className="text-xl text-white/80 leading-relaxed">
+              <p className="text-lg sm:text-xl text-white/80 leading-relaxed">
                 Computer Science student at KNUST, focused on building and experimenting with applied AI systems. I create intelligent solutions that bridge AI capabilities with real-world applications.
               </p>
             </div>
@@ -66,10 +69,10 @@ export function Hero() {
             </div>
 
             {/* CTA Buttons */}
-            <div className="pt-4 flex flex-wrap items-center gap-3">
+            <div className="pt-2 sm:pt-4 flex flex-col sm:flex-row sm:flex-wrap items-start sm:items-center gap-3">
               <button
                 onClick={() => scrollToSection('projects')}
-                className="inline-flex items-center gap-2 px-6 py-3 bg-accent dark:bg-yellow-300 text-white dark:text-black font-medium rounded-lg transition-colors group hero-btn"
+                className="inline-flex w-full sm:w-auto justify-center items-center gap-2 px-6 py-3 bg-accent dark:bg-yellow-300 text-white dark:text-black font-medium rounded-lg transition-colors group hero-btn"
               >
                 View My Work
                 <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
@@ -77,7 +80,7 @@ export function Hero() {
               <a
                 href="/JULIEN-GLORY-MANANA-Resume.pdf"
                 download
-                className="inline-flex items-center gap-2 px-6 py-3 border border-white/30 text-white font-medium rounded-lg hover:bg-white/10 transition-colors"
+                className="inline-flex w-full sm:w-auto justify-center items-center gap-2 px-6 py-3 border border-white/30 text-white font-medium rounded-lg hover:bg-white/10 transition-colors"
               >
                 Download CV
                 <Download size={18} />

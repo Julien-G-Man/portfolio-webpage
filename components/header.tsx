@@ -40,7 +40,7 @@ export function Header() {
         </button>
 
         {/* Desktop Navigation */}
-        <div className="hidden md:flex items-center gap-6">
+        <div className="hidden lg:flex items-center gap-6">
           <button
             onClick={() => scrollToSection('about')}
             className={`text-sm font-medium transition-colors duration-300 hover:text-accent
@@ -99,7 +99,7 @@ export function Header() {
         {/* Mobile Menu Button */}
         <button
           onClick={() => setIsOpen(!isOpen)}
-          className={`md:hidden transition-colors duration-300 hover:text-accent
+          className={`lg:hidden transition-colors duration-300 hover:text-accent
             ${scrolled ? 'text-black dark:text-white' : 'text-white'}`}
           aria-label="Toggle menu"
         >
@@ -109,7 +109,7 @@ export function Header() {
 
       {/* Mobile Navigation */}
       {isOpen && (
-        <div className={`md:hidden border-t transition-colors duration-300
+        <div className={`lg:hidden border-t transition-colors duration-300
           ${scrolled ? 'bg-white/70 dark:bg-black/40 border-black/10 dark:border-white/10' : 'bg-black/20 border-white/10'}`}>
           <nav className="max-w-7xl mx-auto px-6 py-4 flex flex-col gap-4">
             <button
