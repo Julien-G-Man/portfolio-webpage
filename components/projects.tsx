@@ -73,6 +73,25 @@ const projects: Project[] = [
     }
   },
   {
+    title: 'ScholarAid',
+    subtitle: 'Scholarship Management & Application Platform',
+    description: 'A full-stack platform that helps students discover scholarships and get AI assistance on their applications, while giving admins intelligent tools to ingest and manage scholarship data at scale.',
+    technologies: ['Python', 'Django', 'Next.js', 'Claude', 'DRF', 'JWT', 'BeautifulSoup4', 'PostgreSQL', 'Bootstrap 5'],
+    highlights: [
+      'Scholarship listings with search and filter across curated opportunities',
+      'AI application review — submit essays for automated feedback powered by Claude',
+      'AI scholarship intake (admin) — paste a URL or raw text; Claude extracts all fields',
+      'Scraper pipeline (admin) — bulk-scrape portals, Claude cleans data, download CSV, review, re-upload, ingest',
+      'User dashboard to track deadlines, applications, and progress',
+      'Secure admin tools for managing scholarships and reviewing applicants',
+      'JWT authentication via SimpleJWT · SQLite in dev, PostgreSQL in prod'
+    ],
+    links: {
+      github: 'https://github.com/Julien-G-Man/ScholarAid',
+      live: 'https://scholar-aid.netlify.app'
+    }
+  },
+  {
     title: 'Tena AI',
     subtitle: 'Multi-Server Conversational AI Backend',
     description: 'Collaborated on the backend for a conversational AI platform with secure authentication and scalable architecture.',
