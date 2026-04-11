@@ -39,7 +39,7 @@ export function Hero() {
                 Julien Glory <span className="text-accent dark:text-yellow-300">Manana</span>
               </h1>
               <p className="text-lg sm:text-xl text-white/80 leading-relaxed">
-                Computer Science student at KNUST, focused on building and experimenting with applied AI systems. I create intelligent solutions that bridge AI capabilities with real-world applications.
+                Computer Science student at KNUST, building backend systems and integrating AI into real projects. Early in the journey — but shipping, learning, and getting better with every build.
               </p>
             </div>
 

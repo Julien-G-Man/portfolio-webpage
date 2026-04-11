@@ -16,12 +16,12 @@ const skillCategories = [
   },
   {
     category: 'Backend Frameworks',
-    skills: ['FastAP', 'Django', 'Flask'],
+    skills: ['FastAPI', 'Django', 'Flask'],
     color: 'from-purple-500 to-purple-600'
   },
   {
     category: 'AI',
-    skills: ['Basic Machine Learning', 'OpenAI API', 'Claude API', 'LLM APIs', 'Basic RAG', 'Prompt Engineering', 'AI Systems Design'],
+    skills: ['OpenAI API', 'Claude API', 'LLM APIs', 'Prompt Engineering', 'Basic RAG', 'MCP (learning)', 'Basic Machine Learning'],
     color: 'from-pink-500 to-pink-600'
   },
   {
@@ -46,8 +46,8 @@ export function Skills() {
             <Zap size={16} className="text-accent" />
             <span className="text-xs font-medium text-accent">Technical Arsenal</span>
           </div>
-          <h2 className="text-4xl lg:text-5xl font-bold text-foreground mb-4">Skills & Expertise</h2>
-          <p className="text-lg text-muted-foreground">A comprehensive toolkit built through practical experience</p>
+          <h2 className="text-4xl lg:text-5xl font-bold text-foreground mb-4">Skills & Tools</h2>
+          <p className="text-lg text-muted-foreground">What I've picked up so far — and keep adding to</p>
         </div>
 
         {/* Skills Grid */}

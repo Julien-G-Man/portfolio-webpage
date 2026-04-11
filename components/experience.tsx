@@ -8,24 +8,24 @@ const experiences = [
     company: 'Next Generation of Tech Giants (nGOT Giants)',
     period: '02/2026 – Present',
     location: 'Kumasi, Ghana',
-    description: 'Part of the engineering team at an organisation dedicated to developing tech talent across Africa. Involved in building internal tools for the team and gaining exposure to research-driven innovation.',
-    highlights: ['Internal Tooling', 'Research-Driven Innovation', 'Engineering Team', 'Tech Talent Development']
+    description: 'Building the backend for Port, an internal collaboration and communication tool used by the nGOT team. Part of an engineering team focused on developing tech talent across Africa.',
+    highlights: ['Backend Development', 'Port (Internal Tool)', 'Team Collaboration', 'FastAPI', 'Tech Talent Development']
   },
   {
     title: 'Intern',
     company: 'MTN Mobile Money Congo B.',
     period: '11/2025 – 12/2025',
     location: 'Brazzaville, Republic of Congo',
-    description: 'Gained hands-on exposure to large-scale fintech operations, including MoMo internal systems, MoMo App, and MoMo Open APIs. Collaborated with product, BI, engineering, and operations teams.',
-    highlights: ['Fintech Systems', 'Product Lifecycle', 'Cross-functional Collaboration']
+    description: 'Worked inside a large-scale fintech operation across MoMo internal systems, MoMo App, and MoMo Open APIs. Built a customer support chatbot covering 15 MoMo service topics — XtraCash, MoMo Advance, account management & security precautions, and more — with a three-layer retrieval system: semantic search first, keyword fallback second, and full context injection as a last resort to eliminate hallucinations. Collaborated across product, BI, engineering, and operations teams.',
+    highlights: ['FastAPI', 'Azure OpenAI', 'Semantic Search', 'Keyword Fallback', 'Hallucination Reduction', 'Fintech Systems', 'Cross-functional Collaboration']
   },
   {
     title: 'Deputy Head of Technology',
     company: 'Enactus KNUST',
     period: '2025 – 2026',
     location: 'Kumasi, Ghana',
-    description: 'Developing and designing Enactus technology tools and platforms to help the team scale their impact.',
-    highlights: ['Leadership', 'Tech Architecture', 'Team Coordination']
+    description: 'Part of the tech leadership team at Enactus KNUST, supporting the Head of Technology in managing the chapter\'s tech operations. Own the automation and internal tooling side — building systems for mass emails, project data, and member management. Contributed to the chapter website and support other divisions and projects with tech solutions.',
+    highlights: ['Team Leadership', 'Internal Tooling', 'Automation Tools', 'Website Development', 'Cross-division Support']
   },
   {
     title: 'International Relations Officer',

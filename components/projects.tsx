@@ -93,12 +93,12 @@ const projects: Project[] = [
   },
   {
     title: 'Tena AI',
-    subtitle: 'Multi-Server Conversational AI Backend',
+    subtitle: 'Conversational AI Backend',
     description: 'Collaborated on the backend for a conversational AI platform with secure authentication and scalable architecture.',
-    technologies: ['Python', 'Flask', 'FastAPI', 'Azure OpenAI', 'PostgreSQL'],
+    technologies: ['Python', 'Flask', 'Azure OpenAI', 'PostgreSQL'],
     highlights: [
       'REST API with Flask for user management and auth',
-      'Async FastAPI service for low-latency AI interactions',
+      'Async service for low-latency AI interactions',
       'PostgreSQL with SQLAlchemy ORM',
       'Role-based access control and session authentication'
     ],
@@ -109,14 +109,15 @@ const projects: Project[] = [
   },
   {
     title: 'Customer Support Chatbot',
-    subtitle: 'Internship Project',
-    description: 'Context-aware customer support chatbot with Azure OpenAI integration and knowledge chunking system.',
+    subtitle: 'MTN Mobile Money Congo — Internship Project',
+    description: 'Built during my internship at MTN Mobile Money Congo. A customer support chatbot covering 15 MoMo service topics — XtraCash, MoMo Advance, account management, and more. Uses a three-layer retrieval system to keep responses accurate and grounded: semantic search first, keyword fallback second, and full context injection as a final safety net against hallucinations.',
     technologies: ['FastAPI', 'PostgreSQL', 'Azure OpenAI', 'React', 'REST APIs'],
     highlights: [
-      'Topic-based knowledge chunking for structured responses',
-      'Keyword-based context retrieval with fallback mechanisms',
+      '15 MoMo service topics chunked — XtraCash, MoMo Advance, account management, and more',
+      'Three-layer retrieval: semantic search → keyword fallback → full context injection',
+      'Full context injection as last resort to eliminate hallucinations',
       'Async endpoints with semaphore-based concurrency',
-      'Reduced hallucination through context injection'
+      'Collaborated with product, BI, and engineering teams on query coverage'
     ],
     links: {
       github: '#',
