@@ -23,7 +23,7 @@ export function About() {
               Born in the Republic of Congo, raised in Nigeria, now studying Computer Science at KNUST in Ghana as a Mastercard Foundation Scholar. Three countries, one direction — building things that matter.
             </p>
             <p>
-              I've been working hands-on with LLMs — OpenAI, Claude, Azure OpenAI — integrating them into real projects. Things like <span className="text-accent font-semibold">Lamla AI</span>, an AI study platform I built from scratch, and <span className="text-accent font-semibold">ScholarAid</span>, a scholarship platform with AI-powered essay review. Each one has taught me something I didn't know going in.
+              I've been working hands-on with LLMs — OpenAI, Claude, Azure OpenAI — integrating them into real projects. Things like <span className="text-accent font-semibold">Lamla AI</span>, an AI study platform my friend and I built, and <span className="text-accent font-semibold">ScholarAid</span>, a scholarship platform with AI-powered essay review. Each one has taught me something I didn't know going in.
             </p>
             <p>
               I genuinely believe technology is one of the most powerful tools Africa has right now — for education, health, access, opportunity. That's not just a talking point for me, it shapes what I choose to build and why.

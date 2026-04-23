@@ -17,7 +17,7 @@ const experiences = [
     period: '11/2025 – 12/2025',
     location: 'Brazzaville, Republic of Congo',
     description: 'Worked inside a large-scale fintech operation across MoMo internal systems, MoMo App, and MoMo Open APIs. Built a customer support chatbot covering 15 MoMo service topics — XtraCash, MoMo Advance, account management & security precautions, and more — with a three-layer retrieval system: semantic search first, keyword fallback second, and full context injection as a last resort to eliminate hallucinations. Collaborated across product, BI, engineering, and operations teams.',
-    highlights: ['FastAPI', 'Azure OpenAI', 'Semantic Search', 'Keyword Fallback', 'Hallucination Reduction', 'Fintech Systems', 'Cross-functional Collaboration']
+    highlights: ['FastAPI', 'Azure OpenAI', 'Semantic Search', 'Hallucination Reduction', 'Fintech Systems', 'Cross-functional Collaboration']
   },
   {
     title: 'Deputy Head of Technology',

@@ -28,7 +28,8 @@ const projects: Project[] = [
       'User authentication and persistent profiles',
       'File upload and processing system',
       'Quiz and flashcards generation',
-      'Deployed on Render (backend) and Vercel (frontend)'
+      'Deployed on Render (backend) and Vercel (frontend)',
+      'I worked on the backend and AI integration, my friend handled the frontend'
     ],
     links: {
       github: 'https://github.com/Julien-G-Man/lamla.ai',
