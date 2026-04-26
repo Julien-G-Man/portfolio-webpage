@@ -129,7 +129,7 @@ const projects: Project[] = [
   {
     title: 'Python Developer Projects',
     subtitle: 'Practice Projects',
-    description: 'A collection of python codes and projects I have be writing since the start of my Python coding journey. \nThis code base will never stop growing as long as I keep learning',
+    description: 'A collection of python codes and projects I have be writing since the start of my Python coding journey. \nA lot there looks messy by the way, it includes my helloworld("print") as well :) \nThis code base will never stop growing as long as I keep learning',
     technologies: ['Python', 'Numpy', 'Pandas', 'OpenCV', 'FastAPI', 'Flask', 'SK-Learn', 'OpenAI', 'Pydantic'],
     highlights: [
       'Data Structure and Algorithms', 
@@ -151,9 +151,9 @@ const projects: Project[] = [
   },
   {
     title: 'AI Engineering Journey',
-    subtitle: 'Hands-on Personal AI Engineering Curriculum',
+    subtitle: 'Hands-on Personal AI Engineering Curriculum (In Progress, started April 2026)',
     description: 'A structured learning repo documenting my path through AI engineering, from LLM fundamentals and prompt patterns to RAG pipelines, agents, MCP, deployment, and LangChain.',
-    technologies: ['Python', 'OpenAI', 'Anthropic', 'ChromaDB', 'Weaviate', 'FastAPI', 'BentoML', 'Docker', 'LangChain'],
+    technologies: ['Python', 'OpenAI', 'Anthropic', 'ChromaDB', 'Weaviate', 'Pinecone', 'FastAPI', 'BentoML', 'Docker', 'LangChain', 'LangGraph', 'MCP'],
     highlights: [
       'LLM fundamentals: raw API calls, context windows, structured outputs, and prompt patterns',
       'RAG pipeline work: embeddings, chunking, vector stores, and retrieval logic',
