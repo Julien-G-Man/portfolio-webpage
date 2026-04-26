@@ -36,7 +36,7 @@ export function Hero() {
                 <span className="text-xs font-medium text-white dark:text-yellow-300">Available for opportunities</span>
               </div>
               <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-tight">
-                Julien Glory <span className="text-accent dark:text-yellow-300">Manana</span>
+                Julien Glory <span className="block sm:inline text-accent dark:text-yellow-300">Manana</span>
               </h1>
               <p className="text-lg sm:text-xl text-white/80 leading-relaxed">
                 Computer Science student at KNUST, building backend systems and integrating AI into real projects. Early in the journey — but shipping, learning, and getting better with every build.

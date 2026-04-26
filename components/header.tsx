@@ -33,10 +33,11 @@ export function Header() {
         <button
           type="button"
           onClick={() => scrollToSection('hero')}
-          className={`text-xl md:text-2xl font-bold transition-colors duration-300
+          className={`text-xl md:text-2xl font-bold transition-colors duration-300 leading-tight text-left whitespace-normal
             ${scrolled ? 'text-accent' : 'text-white'}`}
         >
-          Julien G. Manana
+          <span className="block md:inline">Julien G.</span>
+          <span className="block md:inline md:ml-1">Manana</span>
         </button>
 
         {/* Desktop Navigation */}
@@ -61,6 +62,20 @@ export function Header() {
               ${scrolled ? 'text-black dark:text-white' : 'text-white'}`}
           >
             Projects
+          </button>
+          <button
+            onClick={() => scrollToSection('skills')}
+            className={`text-sm font-medium transition-colors duration-300 hover:text-accent
+              ${scrolled ? 'text-black dark:text-white' : 'text-white'}`}
+          >
+            Skills
+          </button>
+          <button
+            onClick={() => scrollToSection('contact')}
+            className={`text-sm font-medium transition-colors duration-300 hover:text-accent
+              ${scrolled ? 'text-black dark:text-white' : 'text-white'}`}
+          >
+            Contact
           </button>
           <a
             href="/JULIEN-GLORY-MANANA-Resume.pdf"
@@ -109,47 +124,52 @@ export function Header() {
 
       {/* Mobile Navigation */}
       {isOpen && (
-        <div className={`lg:hidden border-t transition-colors duration-300
-          ${scrolled ? 'bg-white/70 dark:bg-black/40 border-black/10 dark:border-white/10' : 'bg-black/20 border-white/10'}`}>
+        <div className="lg:hidden border-t border-white/10 bg-zinc-950">
           <nav className="max-w-7xl mx-auto px-6 py-4 flex flex-col gap-4">
             <button
               onClick={() => scrollToSection('about')}
-              className={`text-sm font-medium hover:text-accent transition-colors text-left
-                ${scrolled ? 'text-black dark:text-white' : 'text-white'}`}
+              className="text-sm font-medium hover:text-accent transition-colors text-left text-white"
             >
               About
             </button>
             <button
               onClick={() => scrollToSection('experience')}
-              className={`text-sm font-medium hover:text-accent transition-colors text-left
-                ${scrolled ? 'text-black dark:text-white' : 'text-white'}`}
+              className="text-sm font-medium hover:text-accent transition-colors text-left text-white"
             >
               Experience
             </button>
             <button
               onClick={() => scrollToSection('projects')}
-              className={`text-sm font-medium hover:text-accent transition-colors text-left
-                ${scrolled ? 'text-black dark:text-white' : 'text-white'}`}
+              className="text-sm font-medium hover:text-accent transition-colors text-left text-white"
             >
               Projects
+            </button>
+            <button
+              onClick={() => scrollToSection('skills')}
+              className="text-sm font-medium hover:text-accent transition-colors text-left text-white"
+            >
+              Skills
+            </button>
+            <button
+              onClick={() => scrollToSection('contact')}
+              className="text-sm font-medium hover:text-accent transition-colors text-left text-white"
+            >
+              Contact
             </button>
             <a
               href="/JULIEN-GLORY-MANANA-Resume.pdf"
               download
-              className={`inline-flex items-center gap-2 text-sm font-medium hover:text-accent transition-colors text-left
-                ${scrolled ? 'text-black dark:text-white' : 'text-white'}`}
+              className="inline-flex items-center gap-2 text-sm font-medium hover:text-accent transition-colors text-left text-white"
             >
               Download CV
               <Download size={16} />
             </a>
-            <div className={`flex items-center gap-4 pt-2 border-t transition-colors duration-300
-              ${scrolled ? 'border-black/10 dark:border-white/10' : 'border-white/10'}`}>
+            <div className="flex items-center gap-4 pt-2 border-t border-white/10">
               <a
                 href="https://github.com/Julien-G-Man"
                 target="_blank"
                 rel="noopener noreferrer"
-                className={`hover:text-accent transition-colors
-                  ${scrolled ? 'text-black dark:text-white' : 'text-white'}`}
+                className="hover:text-accent transition-colors text-white"
                 aria-label="GitHub"
               >
                 <Github size={20} />
@@ -158,8 +178,7 @@ export function Header() {
                 href="https://linkedin.com/in/julien-glory-manana"
                 target="_blank"
                 rel="noopener noreferrer"
-                className={`hover:text-accent transition-colors
-                  ${scrolled ? 'text-black dark:text-white' : 'text-white'}`}
+                className="hover:text-accent transition-colors text-white"
                 aria-label="LinkedIn"
               >
                 <Linkedin size={20} />
