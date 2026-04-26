@@ -149,6 +149,24 @@ const projects: Project[] = [
       live: '#'
     }
   },
+  {
+    title: 'AI Engineering Journey',
+    subtitle: 'Hands-on Personal AI Engineering Curriculum',
+    description: 'A structured learning repo documenting my path through AI engineering, from LLM fundamentals and prompt patterns to RAG pipelines, agents, MCP, deployment, and LangChain.',
+    technologies: ['Python', 'OpenAI', 'Anthropic', 'ChromaDB', 'Weaviate', 'FastAPI', 'BentoML', 'Docker', 'LangChain'],
+    highlights: [
+      'LLM fundamentals: raw API calls, context windows, structured outputs, and prompt patterns',
+      'RAG pipeline work: embeddings, chunking, vector stores, and retrieval logic',
+      'Agent systems: tool calling, multi-step reasoning, and memory vs stateless design',
+      'MCP exploration: context and memory management across systems with tool servers',
+      'Deployment focus: serving models and shipping AI apps with FastAPI and BentoML',
+      'LangChain study: chains, memory, LangGraph, and agent orchestration'
+    ],
+    links: {
+      github: 'https://github.com/Julien-G-Man/ai-engineering',
+      live: '#'
+    }
+  },
 ]
 
 export function Projects() {
