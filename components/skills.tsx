@@ -26,7 +26,7 @@ const skillCategories = [
   },
   {
     category: 'Technologies & Tools',
-    skills: ['PostgreSQL', 'SQLAlchemy', 'Git', 'GitHub', 'VS Code', 'IntelloJ', 'Cursor', 'Claude Code', 'CLI Tools'],
+    skills: ['PostgreSQL', 'SQLAlchemy', 'Git', 'GitHub', 'VS Code', 'IntelloJ', 'Cursor', 'Codex', 'GitHub Copilot', 'Claude Code', 'CLI Tools'],
     color: 'from-green-500 to-green-600'
   },
   {

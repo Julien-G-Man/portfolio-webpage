@@ -35,7 +35,15 @@ export function About() {
             <div className="pt-2">
               <p className="text-sm font-medium text-accent mb-3">Currently exploring</p>
               <div className="flex flex-wrap gap-2">
-                {['MCP Servers', 'RAG Pipelines', 'LLMs (deeper)', 'AI Engineering', 'Machine Learning'].map((topic) => (
+                {[
+                  'AI Engineering',
+                  'RAG Pipelines',
+                  'MCP Servers',
+                  'LangChain',
+                  'LLMs',
+                  'Agentic Workflows',
+                  'Machine Learning',
+                ].map((topic) => (
                   <span
                     key={topic}
                     className="px-3 py-1 text-sm border border-accent/30 text-foreground/70 rounded-full bg-accent/5"
