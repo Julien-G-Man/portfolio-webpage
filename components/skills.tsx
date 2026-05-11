@@ -5,34 +5,27 @@ import { Zap } from 'lucide-react'
 const skillCategories = [
   {
     category: 'Languages',
-    skills: ['Python', 'Java', 'C++'],
-    color: 'from-blue-500 to-blue-600'
+    skills: ['Python', 'Java', 'C++', 'SQL'],
+    color: 'from-blue-500 to-blue-600',
+    mastered: false
   },
   {
-    category: 'Core Skills',
-    skills: ['FastAPI', 'PostgreSQL', 'REST APIs', 'LLM Integration', 'Backend Development', 'Async Programming', 'API Design', 'Frontend Integration (React, NextJS)'],
+    category: 'Backend',
+    skills: ['FastAPI', 'Django', 'Flask', 'PostgreSQL', 'SQL Server', 'SQLite', 'SQLAlchemy', 'pyodbc', 'REST APIs', 'Async Programming'],
     color: 'from-cyan-500 to-cyan-600',
     mastered: false
   },
   {
-    category: 'Backend Frameworks',
-    skills: ['FastAPI', 'Django', 'Flask'],
-    color: 'from-purple-500 to-purple-600'
+    category: 'AI / ML',
+    skills: ['OpenAI API', 'Claude API', 'LangChain', 'LlamaIndex', 'Prompt Engineering', 'RAG (embeddings + retrieval)', 'Vector Databases (Pinecone)', 'Agents basics'],
+    color: 'from-pink-500 to-pink-600',
+    mastered: false
   },
   {
-    category: 'AI',
-    skills: ['OpenAI API', 'Claude API', 'LLM APIs', 'Prompt Engineering', 'Basic RAG', 'MCP (learning)', 'Basic Machine Learning'],
-    color: 'from-pink-500 to-pink-600'
-  },
-  {
-    category: 'Technologies & Tools',
-    skills: ['PostgreSQL', 'SQLAlchemy', 'Git', 'GitHub', 'VS Code', 'IntelloJ', 'Cursor', 'Codex', 'GitHub Copilot', 'Claude Code', 'CLI Tools'],
-    color: 'from-green-500 to-green-600'
-  },
-  {
-    category: 'Platforms & Deployment',
-    skills: ['Vercel', 'Render', 'Netlify', 'Docker'],
-    color: 'from-orange-500 to-orange-600'
+    category: 'DevOps & Tools',
+    skills: ['VS Code', 'Vercel', 'Render', 'Netlify', 'Git', 'GitHub', 'Poetry', 'Pydantic V2', 'CLI Tools'],
+    color: 'from-green-500 to-green-600',
+    mastered: false
   }
 ]
 

@@ -63,18 +63,18 @@ export function Hero() {
                 <div className="w-1 h-6 bg-accent dark:bg-yellow-300 rounded-full flex-shrink-0 mt-1" />
                 <div>
                   <p className="text-muted-foreground">Status</p>
-                  <p className="font-medium text-white">1 Year in Tech</p>
+                  <p className="font-medium text-white">1.5 Years in Tech</p>
                 </div>
               </div>
             </div>
 
             {/* CTA Buttons */}
-            <div className="pt-2 sm:pt-4 flex flex-col sm:flex-row sm:flex-wrap items-start sm:items-center gap-3">
+              <div className="pt-2 sm:pt-4 flex flex-col sm:flex-row sm:flex-wrap items-start sm:items-center gap-3">
               <button
                 onClick={() => scrollToSection('projects')}
                 className="inline-flex w-full sm:w-auto justify-center items-center gap-2 px-6 py-3 bg-accent dark:bg-yellow-300 text-white dark:text-black font-medium rounded-lg transition-colors group hero-btn"
               >
-                View My Work
+                See Case Studies
                 <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
               </button>
               <a

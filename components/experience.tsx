@@ -4,12 +4,12 @@ import { Briefcase } from 'lucide-react'
 
 const experiences = [
   {
-    title: 'Software Engineering Trainee',
+    title: 'AI & Software Engineering Trainee',
     company: 'Next Generation of Tech Giants (nGOT Giants)',
     period: '02/2026 – Present',
     location: 'Kumasi, Ghana',
-    description: 'Building the backend for Port, an internal collaboration and communication tool used by the nGOT team. Part of an engineering team focused on developing tech talent across Africa.',
-    highlights: ['Backend Development', 'Port (Internal Tool)', 'Team Collaboration', 'FastAPI', 'Tech Talent Development']
+    description: 'Building the backend for Port, an internal collaboration and communication tool used by the nGOT team, while completing hands-on AI/ML training through project-based sprints. Training covers applied LLM workflows, RAG systems, agentic architectures, and deployment-oriented engineering practices.',
+    highlights: ['Backend Development', 'Port (Internal Tool)', 'AI/ML Sprint Training', 'RAG & Agentic Systems', 'AI Engineering', 'Team Collaboration', 'Tech Talent Development']
   },
   {
     title: 'Intern',

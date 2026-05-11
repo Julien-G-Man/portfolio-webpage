@@ -45,7 +45,7 @@ export const metadata: Metadata = {
     google: 'SY98vlwn2xMG5dhZ61WUn_PfjzEX4VSXU48Beo-nDpU',
   },
   openGraph: {
-    title: 'Julien Glory Manana | Python Backend Developer & AI Specialist',
+    title: 'Julien Glory Manana | Python Backend Developer & AIE',
     description: 'Julien Glory Manana is a Python backend developer specializing in AI systems, LLM integration, and full-stack development. KNUST Computer Science student based in Ghana.',
     url: 'https://juliengmanana.netlify.app',
     siteName: 'Julien Glory Manana - Portfolio',
@@ -147,7 +147,7 @@ export default function RootLayout({
   ];
 
   return (
-    <html lang="en" className="dark">
+    <html lang="en">
       <head>
         {/* inject JSON-LD manually since Next's metadata doesn't cover custom script */}
         {jsonLd.map((schema, index) => (

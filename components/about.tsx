@@ -74,20 +74,20 @@ export function About() {
             {/* Quick Stats */}
             <div className="grid grid-cols-2 gap-4">
               <div className="bg-background border border-border rounded-lg p-6 hover:border-accent/50 transition-colors">
-                <p className="text-3xl font-bold text-accent mb-2">5+</p>
+                <p className="text-3xl font-bold text-accent mb-2">10+</p>
                 <p className="text-sm text-muted-foreground font-medium">Projects Built</p>
               </div>
               <div className="bg-background border border-border rounded-lg p-6 hover:border-accent/50 transition-colors">
-                <p className="text-3xl font-bold text-accent mb-2">1</p>
-                <p className="text-sm text-muted-foreground font-medium">Year in Tech</p>
+                <p className="text-3xl font-bold text-accent mb-2">5+</p>
+                <p className="text-sm text-muted-foreground font-medium">Deployed</p>
               </div>
               <div className="bg-background border border-border rounded-lg p-6 hover:border-accent/50 transition-colors">
-                <p className="text-3xl font-bold text-accent mb-2">10+</p>
+                <p className="text-3xl font-bold text-accent mb-2">15+</p>
                 <p className="text-sm text-muted-foreground font-medium">Tools & Skills</p>
               </div>
               <div className="bg-background border border-border rounded-lg p-6 hover:border-accent/50 transition-colors">
-                <p className="text-3xl font-bold text-accent mb-2">40K+</p>
-                <p className="text-sm text-muted-foreground font-medium">TikTok Followers</p>
+                <p className="text-3xl font-bold text-accent mb-2">1.5</p>
+                <p className="text-sm text-muted-foreground font-medium">Years in Tech</p>
               </div>
             </div>
 
@@ -126,7 +126,7 @@ export function About() {
                 <TrendingUp size={20} className="text-accent flex-shrink-0 mt-0.5" />
                 <div className="flex-1 min-w-0">
                   <p className="font-semibold text-foreground group-hover:text-accent transition-colors">Founderslens</p>
-                  <p className="text-sm text-muted-foreground">TikTok · 40K+ followers — wisdom from top founders and builders</p>
+                  <p className="text-sm text-muted-foreground">TikTok · wisdom from top founders and builders</p>
                 </div>
                 <ExternalLink size={16} className="text-muted-foreground group-hover:text-accent transition-colors flex-shrink-0 mt-0.5" />
               </a>

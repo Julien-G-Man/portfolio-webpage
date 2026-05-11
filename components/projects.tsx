@@ -1,11 +1,12 @@
 'use client'
 
 import { Code2, ExternalLink, Github } from 'lucide-react'
+import type { ReactNode } from 'react'
 
 type Project = {
   title: string
   subtitle: string
-  description: string
+  description: ReactNode
   technologies: string[]
   highlights: string[]
   links: {
@@ -16,6 +17,39 @@ type Project = {
 }
 
 const projects: Project[] = [
+  {
+    title: '10-Day AI/ML Engineering & Agentic Systems Sprint',
+    subtitle: 'AI/ML and Agents',
+    description: (
+      <>
+        A hands-on sprint repository from a 10-day AI/ML and agentic systems program at{' '}
+        <a
+          href="https://www.linkedin.com/company/next-generation-of-tech-ngot-giants"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-accent hover:text-accent/80 transition-colors font-medium"
+        >
+          NGOT Giants
+        </a>
+        , covering practical FastAPI apps, LLM workflows, RAG pipelines, model training, and
+        deployment-ready project structure.
+      </>
+    ),
+    technologies: ['Python', 'FastAPI', 'OpenAI API', 'RAG', 'LoRA', 'MLflow', 'Pinecone', 'LlamaIndex', 'Tavily', 'LangChain', 'Agentic Systems', 'Docker'],
+    highlights: [
+      'telecomm-api: telecom complaint analysis API with functional calling and structured LLM output',
+      'biohealth-finetune: QLoRA fine-tuning and inference demos for biomedical NER',
+      'eta-predictor: logistics ETA service with validated inputs and model-backed predictions',
+      'medical-literature-rag: medical QA API grounded in retrieved guideline sources',
+      'rag-system: experimental RAG work for chunking, embeddings, retrieval, and OpenAI-based generation',
+      'product-recommender: semantic product discovery in an eCommerce context, using vector similarity instead of keyword search, Pinecone-managed retrieval, and Pydantic V2 plus Poetry for modern Python tooling',
+      'agent-systems: LangChain-based agents including a SpaceTech Satellite Data Summariser and an eCommerce smart shopper'
+    ],
+    links: {
+      github: 'https://github.com/Julien-G-Man/10-Day-AI-ML-and-Agentic-Systems-Sprint',
+      live: '#'
+    }
+  },
   {
     title: 'Lamla AI',
     subtitle: 'AI-Powered Study Platform',
@@ -129,7 +163,7 @@ const projects: Project[] = [
   {
     title: 'Python Developer Projects',
     subtitle: 'Practice Projects',
-    description: 'A collection of python codes and projects I have be writing since the start of my Python coding journey. \nA lot there looks messy by the way, it includes my helloworld("print") as well :) \nThis code base will never stop growing as long as I keep learning',
+    description: 'A collection of Python code and projects I have been writing since the start of my Python coding journey. \nA lot there looks messy by the way, it includes my helloWorld("print") as well :) \nThis code base will never stop growing as long as I keep learning',
     technologies: ['Python', 'Numpy', 'Pandas', 'OpenCV', 'FastAPI', 'Flask', 'SK-Learn', 'OpenAI', 'Pydantic'],
     highlights: [
       'Data Structure and Algorithms', 
