@@ -2,6 +2,7 @@
 
 import { Download, Github, Linkedin, Menu, X } from 'lucide-react'
 import { useState, useEffect } from 'react'
+import { HomeSectionLink } from '@/components/home-section-link'
 
 export function Header() {
   const [isOpen, setIsOpen] = useState(false)
@@ -17,12 +18,6 @@ export function Header() {
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
 
-  const scrollToSection = (sectionId: string) => {
-    const element = document.getElementById(sectionId)
-    element?.scrollIntoView({ behavior: 'smooth' })
-    setIsOpen(false)
-  }
-
   return (
     <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 border-b border-transparent
       ${scrolled 
@@ -30,53 +25,52 @@ export function Header() {
         : 'dark:bg-black/0 bg-white/0 backdrop-blur-none'
       }`}>
       <nav className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
-        <button
-          type="button"
-          onClick={() => scrollToSection('hero')}
+        <HomeSectionLink
+          sectionId="hero"
           className={`text-xl md:text-2xl font-bold transition-colors duration-300 leading-tight text-left whitespace-normal
             ${scrolled ? 'text-accent' : 'text-white'}`}
         >
           <span className="block md:inline">Julien G.</span>
           <span className="block md:inline md:ml-1">Manana</span>
-        </button>
+        </HomeSectionLink>
 
         {/* Desktop Navigation */}
         <div className="hidden lg:flex items-center gap-6">
-          <button
-            onClick={() => scrollToSection('about')}
+          <HomeSectionLink
+            sectionId="about"
             className={`text-sm font-medium transition-colors duration-300 hover:text-accent
               ${scrolled ? 'text-black dark:text-white' : 'text-white'}`}
           >
             About
-          </button>
-          <button
-            onClick={() => scrollToSection('experience')}
+          </HomeSectionLink>
+          <HomeSectionLink
+            sectionId="experience"
             className={`text-sm font-medium transition-colors duration-300 hover:text-accent
               ${scrolled ? 'text-black dark:text-white' : 'text-white'}`}
           >
             Experience
-          </button>
-          <button
-            onClick={() => scrollToSection('projects')}
+          </HomeSectionLink>
+          <a
+            href="/projects"
             className={`text-sm font-medium transition-colors duration-300 hover:text-accent
               ${scrolled ? 'text-black dark:text-white' : 'text-white'}`}
           >
             Projects
-          </button>
-          <button
-            onClick={() => scrollToSection('skills')}
+          </a>
+          <HomeSectionLink
+            sectionId="skills"
             className={`text-sm font-medium transition-colors duration-300 hover:text-accent
               ${scrolled ? 'text-black dark:text-white' : 'text-white'}`}
           >
             Skills
-          </button>
-          <button
-            onClick={() => scrollToSection('contact')}
+          </HomeSectionLink>
+          <HomeSectionLink
+            sectionId="contact"
             className={`text-sm font-medium transition-colors duration-300 hover:text-accent
               ${scrolled ? 'text-black dark:text-white' : 'text-white'}`}
           >
             Contact
-          </button>
+          </HomeSectionLink>
           <a
             href="/JULIEN-GLORY-MANANA-Resume.pdf"
             download
@@ -126,36 +120,41 @@ export function Header() {
       {isOpen && (
         <div className="lg:hidden border-t border-white/10 bg-zinc-950">
           <nav className="max-w-7xl mx-auto px-6 py-4 flex flex-col gap-4">
-            <button
-              onClick={() => scrollToSection('about')}
+            <HomeSectionLink
+              sectionId="about"
+              onNavigate={() => setIsOpen(false)}
               className="text-sm font-medium hover:text-accent transition-colors text-left text-white"
             >
               About
-            </button>
-            <button
-              onClick={() => scrollToSection('experience')}
+            </HomeSectionLink>
+            <HomeSectionLink
+              sectionId="experience"
+              onNavigate={() => setIsOpen(false)}
               className="text-sm font-medium hover:text-accent transition-colors text-left text-white"
             >
               Experience
-            </button>
-            <button
-              onClick={() => scrollToSection('projects')}
+            </HomeSectionLink>
+            <a
+              href="/projects"
+              onClick={() => setIsOpen(false)}
               className="text-sm font-medium hover:text-accent transition-colors text-left text-white"
             >
               Projects
-            </button>
-            <button
-              onClick={() => scrollToSection('skills')}
+            </a>
+            <HomeSectionLink
+              sectionId="skills"
+              onNavigate={() => setIsOpen(false)}
               className="text-sm font-medium hover:text-accent transition-colors text-left text-white"
             >
               Skills
-            </button>
-            <button
-              onClick={() => scrollToSection('contact')}
+            </HomeSectionLink>
+            <HomeSectionLink
+              sectionId="contact"
+              onNavigate={() => setIsOpen(false)}
               className="text-sm font-medium hover:text-accent transition-colors text-left text-white"
             >
               Contact
-            </button>
+            </HomeSectionLink>
             <a
               href="/JULIEN-GLORY-MANANA-Resume.pdf"
               download

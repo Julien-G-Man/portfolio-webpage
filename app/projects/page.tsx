@@ -1,6 +1,11 @@
 'use client'
 
-import { Code2, ExternalLink, Github } from 'lucide-react'
+import Link from 'next/link'
+import Image from 'next/image'
+import { Code2, ExternalLink, Github, ArrowRight } from 'lucide-react'
+import { Header } from '@/components/header'
+import { Footer } from '@/components/footer'
+import { ThemeToggle } from '@/components/theme-toggle'
 import type { ReactNode } from 'react'
 
 type Project = {
@@ -203,100 +208,146 @@ const projects: Project[] = [
   },
 ]
 
-export function Projects() {
+export default function ProjectsPage() {
   return (
-    <section id="projects" className="py-20 bg-secondary/30">
-      <div className="max-w-6xl mx-auto px-6 lg:px-12">
-        {/* Section Header */}
-        <div className="mb-16">
-          <div className="inline-flex items-center gap-2 px-3 py-1 bg-secondary rounded-full border border-border mb-4">
-            <Code2 size={16} className="text-accent" />
-            <span className="text-xs font-medium text-accent">Featured Work</span>
+    <main className="bg-background">
+      <Header />
+      {/* Hero Section */}
+      <section className="relative h-screen flex items-end overflow-hidden bg-black pt-20">
+        <Image
+          src="/python_js.jpeg"
+          alt="Projects hero background"
+          fill
+          className="object-cover object-center opacity-60"
+          priority
+
+        />
+        <div className="relative z-10 w-full p-6 md:p-12 mb-20">
+          <div className="max-w-6xl mx-auto">
+            <div className="inline-flex items-center gap-2 px-3 py-1 bg-secondary/50 rounded-full border border-border/50 mb-6 backdrop-blur-sm">
+              <Code2 size={16} className="text-accent" />
+              <span className="text-xs font-medium text-accent">Featured Work</span>
+            </div>
+            <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-4 leading-tight">
+              All Projects
+            </h1>
+            <p className="text-lg md:text-xl text-white max-w-2xl">
+              Real-world applications combining AI, backend or full-stack development, and scalable architecture
+            </p>
           </div>
-          <h2 className="text-4xl lg:text-5xl font-bold text-foreground mb-4">Projects</h2>
-          <p className="text-lg text-muted-foreground">Real-world applications combining AI, backend or full-stack development, and scalable architecture</p>
         </div>
+      </section>
 
-        {/* Projects Grid */}
-        <div className="grid grid-cols-1 gap-8">
-          {projects.map((project, index) => (
-            <div
-              key={index}
-              className="group relative bg-background border border-border rounded-xl overflow-hidden hover:border-accent/50 transition-all duration-300 hover:shadow-lg hover:shadow-accent/5"
-            >
-              {/* Gradient overlay on hover */}
-              <div className="absolute inset-0 bg-gradient-to-r from-accent/0 via-accent/0 to-accent/5 opacity-0 group-hover:opacity-100 transition-opacity" />
-
-              <div className="relative p-8 lg:p-10">
-                {/* Header */}
-                <div className="mb-6">
-                  <h3 className="text-2xl lg:text-3xl font-bold text-foreground mb-2">{project.title}</h3>
-                  <p className="text-lg text-accent font-medium">{project.subtitle}</p>
+      {/* Projects Grid */}
+      <section className="py-20 bg-secondary/30">
+        <div className="max-w-6xl mx-auto px-6 lg:px-12">
+          <div className="grid grid-cols-1 gap-8">
+            {projects.map((project, index) => (
+              <div
+                key={index}
+                className="group relative bg-background border border-border rounded-xl overflow-hidden hover:border-accent/50 transition-all duration-300 hover:shadow-lg hover:shadow-accent/5"
+              >
+                <div className="absolute top-4 right-4 text-foreground/30 font-mono font-extrabold text-4xl md:text-5xl select-none pointer-events-none">
+                  {String(index + 1).padStart(2, '0')}
                 </div>
+                {/* Gradient overlay on hover */}
+                <div className="absolute inset-0 bg-gradient-to-r from-accent/0 via-accent/0 to-accent/5 opacity-0 group-hover:opacity-100 transition-opacity" />
 
-                {/* Description */}
-                <p className="text-foreground/80 text-lg leading-relaxed mb-6 max-w-3xl">
-                  {project.description}
-                </p>
+                <div className="relative p-8 lg:p-10">
+                  {/* Header */}
+                  <div className="mb-6">
+                    <h3 className="text-2xl lg:text-3xl font-bold text-foreground mb-2">{project.title}</h3>
+                    <p className="text-lg text-accent font-medium">{project.subtitle}</p>
+                  </div>
 
-                {/* Highlights */}
-                <div className="mb-8 space-y-3">
-                  {project.highlights.map((highlight, idx) => (
-                    <div key={idx} className="flex items-start gap-3">
-                      <div className="w-1.5 h-1.5 bg-accent rounded-full flex-shrink-0 mt-2" />
-                      <p className="text-foreground/70">{highlight}</p>
-                    </div>
-                  ))}
-                </div>
+                  {/* Description */}
+                  <p className="text-foreground/80 text-lg leading-relaxed mb-6 max-w-3xl">
+                    {project.description}
+                  </p>
 
-                {/* Technologies */}
-                <div className="flex flex-wrap gap-2 mb-8">
-                  {project.technologies.map((tech, idx) => (
-                    <span
-                      key={idx}
-                      className="text-xs px-3 py-1.5 bg-secondary border border-border rounded-lg text-foreground/70 font-medium"
-                    >
-                      {tech}
-                    </span>
-                  ))}
-                </div>
+                  {/* Highlights */}
+                  <div className="mb-8 space-y-3">
+                    {project.highlights.map((highlight, idx) => (
+                      <div key={idx} className="flex items-start gap-3">
+                        <div className="w-1.5 h-1.5 bg-accent rounded-full flex-shrink-0 mt-2" />
+                        <p className="text-foreground/70">{highlight}</p>
+                      </div>
+                    ))}
+                  </div>
 
-                {/* Links */}
-                <div className="flex flex-wrap gap-4 pt-6 border-t border-border">
-                  {project.links.github !== '#' ? (
-                    <a
-                      href={project.links.github}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="inline-flex items-center gap-2 text-accent hover:text-accent/80 transition-colors font-medium group/link"
-                    >
-                      <Github size={18} />
-                      GitHub
-                      <ExternalLink size={16} className="group-hover/link:translate-x-1 transition-transform" />
-                    </a>
-                  ) : project.githubLabel ? (
-                    <span className="inline-flex items-center gap-2 text-foreground/60 font-medium">
-                      <Github size={18} />
-                      {project.githubLabel}
-                    </span>
-                  ) : null}
-                  {project.links.live !== '#' && (
-                    <a
-                      href={project.links.live}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="inline-flex items-center gap-2 text-accent hover:text-accent/80 transition-colors font-medium group/link"
-                    >
-                      Live Demo
-                      <ExternalLink size={16} className="group-hover/link:translate-x-1 transition-transform" />
-                    </a>
-                  )}
+                  {/* Technologies */}
+                  <div className="flex flex-wrap gap-2 mb-8">
+                    {project.technologies.map((tech, idx) => (
+                      <span
+                        key={idx}
+                        className="text-xs px-3 py-1.5 bg-secondary border border-border rounded-lg text-foreground/70 font-medium"
+                      >
+                        {tech}
+                      </span>
+                    ))}
+                  </div>
+
+                  {/* Links */}
+                  <div className="flex flex-wrap gap-4 pt-6 border-t border-border">
+                    {project.links.github !== '#' ? (
+                      <a
+                        href={project.links.github}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-2 text-accent hover:text-accent/80 transition-colors font-medium group/link"
+                      >
+                        <Github size={18} />
+                        GitHub
+                        <ExternalLink size={16} className="group-hover/link:translate-x-1 transition-transform" />
+                      </a>
+                    ) : project.githubLabel ? (
+                      <span className="inline-flex items-center gap-2 text-foreground/60 font-medium">
+                        <Github size={18} />
+                        {project.githubLabel}
+                      </span>
+                    ) : null}
+                    {project.links.live !== '#' && (
+                      <a
+                        href={project.links.live}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-2 text-accent hover:text-accent/80 transition-colors font-medium group/link"
+                      >
+                        Live Demo
+                        <ExternalLink size={16} className="group-hover/link:translate-x-1 transition-transform" />
+                      </a>
+                    )}
+                  </div>
                 </div>
               </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-20 bg-background border-t border-border">
+        <div className="max-w-6xl mx-auto px-6 lg:px-12 flex flex-col sm:flex-row gap-6 justify-center sm:justify-start">
+          <Link
+            href="/"
+            className="inline-flex items-center gap-2 px-8 py-3 bg-secondary hover:bg-secondary/80 border border-border text-foreground font-semibold rounded-lg transition-all duration-300 hover:shadow-lg"
+          >
+            <ArrowRight size={18} className="rotate-180" />
+            Home
+          </Link>
+          <a
+            href="/?section=contact"
+            className="inline-flex items-center gap-2 px-8 py-3 bg-accent hover:bg-accent/90 text-background font-semibold rounded-lg transition-all duration-300 hover:shadow-lg"
+          >
+            Let's Connect
+            <ArrowRight size={18} />
+          </a>
+        </div>
+      </section>
+
+      <Footer />
+      <ThemeToggle />
+    </main>
   )
 }
+

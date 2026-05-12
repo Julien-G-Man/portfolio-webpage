@@ -1,6 +1,7 @@
 'use client'
 
 import { Github, Linkedin, Mail, Facebook, Instagram, MessageCircle } from 'lucide-react'
+import { HomeSectionLink } from '@/components/home-section-link'
 
 export function Footer() {
   const currentYear = new Date().getFullYear()
@@ -22,36 +23,36 @@ export function Footer() {
             <h4 className="font-bold text-foreground mb-4">Quick Links</h4>
             <ul className="space-y-3 text-sm">
               <li>
-                <a
-                  href="#about"
+                <HomeSectionLink
+                  sectionId="about"
                   className="text-muted-foreground hover:text-accent transition-colors inline-flex items-center gap-1"
                 >
                   About
-                </a>
+                </HomeSectionLink>
               </li>
               <li>
-                <a
-                  href="#experience"
+                <HomeSectionLink
+                  sectionId="experience"
                   className="text-muted-foreground hover:text-accent transition-colors inline-flex items-center gap-1"
                 >
                   Experience
-                </a>
+                </HomeSectionLink>
               </li>
               <li>
                 <a
-                  href="#projects"
+                  href="/projects"
                   className="text-muted-foreground hover:text-accent transition-colors inline-flex items-center gap-1"
                 >
                   Projects
                 </a>
               </li>
               <li>
-                <a
-                  href="mailto:juliengmanana@gmail.com"
+                <HomeSectionLink
+                  sectionId="contact"
                   className="text-muted-foreground hover:text-accent transition-colors inline-flex items-center gap-1"
                 >
                   Contact
-                </a>
+                </HomeSectionLink>
               </li>
             </ul>
           </div>

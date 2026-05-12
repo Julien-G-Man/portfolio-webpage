@@ -3,6 +3,7 @@
 import Link from 'next/link'
 import { Header } from '@/components/header'
 import { ArrowLeft, Home } from 'lucide-react'
+import { HomeSectionLink } from '@/components/home-section-link'
 
 export default function NotFound() {
   return (
@@ -48,21 +49,21 @@ export default function NotFound() {
           <div className="pt-8 border-t border-border">
             <p className="text-sm text-muted-foreground mb-4">Quick Links</p>
             <div className="flex flex-wrap justify-center gap-3">
-              <Link href="/#about" className="text-accent hover:text-accent/80 transition-colors">
+              <HomeSectionLink sectionId="about" className="text-accent hover:text-accent/80 transition-colors">
                 About
-              </Link>
+              </HomeSectionLink>
               <span className="text-border">•</span>
-              <Link href="/#projects" className="text-accent hover:text-accent/80 transition-colors">
+              <HomeSectionLink sectionId="projects" className="text-accent hover:text-accent/80 transition-colors">
                 Projects
-              </Link>
+              </HomeSectionLink>
               <span className="text-border">•</span>
-              <Link href="/#skills" className="text-accent hover:text-accent/80 transition-colors">
+              <HomeSectionLink sectionId="skills" className="text-accent hover:text-accent/80 transition-colors">
                 Skills
-              </Link>
+              </HomeSectionLink>
               <span className="text-border">•</span>
-              <Link href="/#contact" className="text-accent hover:text-accent/80 transition-colors">
+              <HomeSectionLink sectionId="contact" className="text-accent hover:text-accent/80 transition-colors">
                 Contact
-              </Link>
+              </HomeSectionLink>
             </div>
           </div>
         </div>

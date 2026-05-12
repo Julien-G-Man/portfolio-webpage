@@ -76,7 +76,7 @@ export default function Contact() {
               <h3 className="mb-4 text-xl font-semibold text-foreground">Contact Information</h3>
               <div className="space-y-4">
                 <a
-                  href="mailto:julienmanan@gmail.com"
+                  href="mailto:juliengmanana@gmail.com"
                   className="group flex items-center gap-3 text-foreground transition-colors hover:text-accent"
                 >
                   <span className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-border bg-background group-hover:border-accent/40">
@@ -103,13 +103,10 @@ export default function Contact() {
               </p>
               <div className="mb-4 flex flex-wrap gap-2">
                 <span className="rounded-full border border-accent/30 bg-accent/10 px-3 py-1 text-xs font-medium text-accent">Software Engineering Internship</span>
-                <span className="rounded-full border border-accent/30 bg-accent/10 px-3 py-1 text-xs font-medium text-accent">AI Internship</span>
+                <span className="rounded-full border border-accent/30 bg-accent/10 px-3 py-1 text-xs font-medium text-accent">AI Engineering Internship</span>
                 <span className="rounded-full border border-accent/30 bg-accent/10 px-3 py-1 text-xs font-medium text-accent">Backend Engineering</span>
                 <span className="rounded-full border border-accent/30 bg-accent/10 px-3 py-1 text-xs font-medium text-accent">Django Development</span>
               </div>
-              <p className="text-sm text-muted-foreground">
-                Focus areas: Python, Django, APIs, backend systems, LLM integration, and Artificial Intelligence.
-              </p>
             </div>
           </div>
 
