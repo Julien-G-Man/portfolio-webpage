@@ -9,6 +9,7 @@ import { Skills } from '@/components/skills'
 import Contact from '@/components/contact'
 import { Footer } from '@/components/footer'
 import { ThemeToggle } from '@/components/theme-toggle'
+import { ScrollReveal } from '@/components/scroll-reveal'
 
 export default function Home() {
   return (
@@ -18,12 +19,24 @@ export default function Home() {
       </Suspense>
       <Header />
       <Hero />
-      <About />
-      <Experience />
-      <FeaturedProjects />
-      <Skills />
-      <Contact />
-      <Footer />
+      <ScrollReveal>
+        <About />
+      </ScrollReveal>
+      <ScrollReveal>
+        <Experience />
+      </ScrollReveal>
+      <ScrollReveal>
+        <FeaturedProjects />
+      </ScrollReveal>
+      <ScrollReveal>
+        <Skills />
+      </ScrollReveal>
+      <ScrollReveal>
+        <Contact />
+      </ScrollReveal>
+      <ScrollReveal>
+        <Footer />
+      </ScrollReveal>
       <ThemeToggle />
     </main>
   )

@@ -7,6 +7,7 @@ import { Code2, ExternalLink, Github, ArrowRight, Filter, X } from 'lucide-react
 import { Header } from '@/components/header'
 import { Footer } from '@/components/footer'
 import { ThemeToggle } from '@/components/theme-toggle'
+import { ScrollReveal } from '@/components/scroll-reveal'
 import type { ReactNode } from 'react'
 
 type Project = {
@@ -269,7 +270,8 @@ export default function ProjectsPage() {
       {/* Projects Grid */}
       <section className="py-20 bg-secondary/30">
         <div className="max-w-6xl mx-auto px-6 lg:px-12">
-          <div className="mb-10 space-y-6 rounded-xl border border-border bg-background/80 p-5 shadow-sm backdrop-blur sm:p-6">
+          <ScrollReveal className="mb-10">
+          <div className="space-y-6 rounded-xl border border-border bg-background/80 p-5 shadow-sm backdrop-blur sm:p-6">
             <div className="flex flex-col gap-4 lg:flex-row lg:items-center lg:justify-between">
               <div>
                 <div className="inline-flex items-center gap-2 text-sm font-semibold text-accent">
@@ -314,11 +316,12 @@ export default function ProjectsPage() {
               })}
             </div>
           </div>
+          </ScrollReveal>
 
           <div className="grid grid-cols-1 gap-8">
             {filteredProjects.map((project, index) => (
+              <ScrollReveal key={`${project.title}-${project.category}`} delay={Math.min(index * 70, 280)}>
               <div
-                key={index}
                 className="group relative bg-background border border-border rounded-xl overflow-hidden hover:border-accent/50 transition-all duration-300 hover:shadow-lg hover:shadow-accent/5"
               >
                 <div className="absolute top-4 right-4 text-foreground/30 font-mono font-extrabold text-4xl md:text-5xl select-none pointer-events-none">
@@ -399,10 +402,12 @@ export default function ProjectsPage() {
                   </div>
                 </div>
               </div>
+              </ScrollReveal>
             ))}
           </div>
 
           {filteredProjects.length === 0 && (
+            <ScrollReveal>
             <div className="rounded-xl border border-border bg-background p-10 text-center">
               <h2 className="text-2xl font-bold text-foreground">No projects found</h2>
               <p className="mx-auto mt-2 max-w-md text-muted-foreground">
@@ -417,13 +422,15 @@ export default function ProjectsPage() {
                 Clear Filters
               </button>
             </div>
+            </ScrollReveal>
           )}
         </div>
       </section>
 
       {/* CTA Section */}
       <section className="py-20 bg-background border-t border-border">
-        <div className="max-w-6xl mx-auto px-6 lg:px-12 flex flex-col sm:flex-row gap-6 justify-center sm:justify-start">
+        <ScrollReveal className="max-w-6xl mx-auto px-6 lg:px-12">
+        <div className="flex flex-col sm:flex-row gap-6 justify-center">
           <Link
             href="/"
             className="inline-flex items-center gap-2 px-8 py-3 bg-secondary hover:bg-secondary/80 border border-border text-foreground font-semibold rounded-lg transition-all duration-300 hover:shadow-lg"
@@ -439,9 +446,12 @@ export default function ProjectsPage() {
             <ArrowRight size={18} />
           </a>
         </div>
+        </ScrollReveal>
       </section>
 
-      <Footer />
+      <ScrollReveal>
+        <Footer />
+      </ScrollReveal>
       <ThemeToggle />
     </main>
   )

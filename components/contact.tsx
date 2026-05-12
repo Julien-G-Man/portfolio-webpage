@@ -1,7 +1,7 @@
 'use client';
 
 import { useState } from 'react';
-import { Mail, Send, AlertCircle, CheckCircle } from 'lucide-react';
+import { Mail, Send, AlertCircle, CheckCircle, MessageCircle } from 'lucide-react';
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -62,11 +62,13 @@ export default function Contact() {
   return (
     <section id="contact" className="bg-background px-4 py-20 sm:px-6 lg:px-8">
       <div className="mx-auto max-w-6xl">
-        <div className="mb-12 text-center">
-          <h2 className="mb-4 text-4xl font-bold text-foreground">Get In Touch</h2>
-          <p className="text-muted-foreground text-lg">
-            Have a question or want to collaborate? I'd love to hear from you.
-          </p>
+        <div className="mb-16">
+          <div className="inline-flex items-center gap-2 px-3 py-1 bg-secondary rounded-full border border-border mb-4">
+            <MessageCircle size={16} className="text-accent" />
+            <span className="text-xs font-medium text-accent">Let's Talk</span>
+          </div>
+          <h2 className="text-4xl lg:text-5xl font-bold text-foreground mb-4">Get In Touch</h2>
+          <p className="text-lg text-muted-foreground">Have a question or want to collaborate? I'd love to hear from you.</p>
         </div>
 
         <div className="grid gap-8 lg:grid-cols-[0.95fr_1.05fr] lg:items-stretch">

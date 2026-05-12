@@ -78,7 +78,7 @@ export function Hero() {
                 <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
               </button>
               <a
-                href="/JULIEN-GLORY-MANANA-Resume.pdf"
+                href="/Julien-Glory-Manana-Resume-May-2026.pdf"
                 download
                 className="inline-flex w-full sm:w-auto justify-center items-center gap-2 px-6 py-3 border border-white/30 text-white font-medium rounded-lg hover:bg-white/10 transition-colors"
               >
