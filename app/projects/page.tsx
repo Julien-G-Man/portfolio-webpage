@@ -2,7 +2,8 @@
 
 import Link from 'next/link'
 import Image from 'next/image'
-import { Code2, ExternalLink, Github, ArrowRight } from 'lucide-react'
+import { useMemo, useState } from 'react'
+import { Code2, ExternalLink, Github, ArrowRight, Filter, X } from 'lucide-react'
 import { Header } from '@/components/header'
 import { Footer } from '@/components/footer'
 import { ThemeToggle } from '@/components/theme-toggle'
@@ -11,6 +12,7 @@ import type { ReactNode } from 'react'
 type Project = {
   title: string
   subtitle: string
+  category: string
   description: ReactNode
   technologies: string[]
   highlights: string[]
@@ -25,6 +27,7 @@ const projects: Project[] = [
   {
     title: '10-Day AI/ML Engineering & Agentic Systems Sprint',
     subtitle: 'AI/ML and Agents',
+    category: 'AI/ML and Agents',
     description: (
       <>
         A hands-on sprint repository from a 10-day AI/ML and agentic systems program at{' '}
@@ -58,6 +61,7 @@ const projects: Project[] = [
   {
     title: 'Lamla AI',
     subtitle: 'AI-Powered Study Platform',
+    category: 'Education',
     description: 'A full-stack application that helps students generate personalized quizzes, flashcards, and AI explanations from their notes using OpenAI and Claude APIs.',
     technologies: ['Python', 'Django', 'FastAPI', 'React', 'OpenAI', 'Claude', 'PostgreSQL'],
     highlights: [
@@ -78,6 +82,7 @@ const projects: Project[] = [
   {
     title: 'VeriMed',
     subtitle: 'AI-Powered Medicine Authenticity Risk Assessment',
+    category: 'Health Tech',
     description: 'A mobile-friendly web application that helps users assess whether a medicine is likely genuine, suspicious, or unverifiable by analyzing packaging images against FDA reference dataset.',
     technologies: ['FastAPI', 'Next.js', 'OpenCV', 'EasyOCR', 'pyzbar', 'rapidfuzz', 'PostgreSQL'],
     highlights: [
@@ -96,6 +101,7 @@ const projects: Project[] = [
   {
     title: 'Tool-Augmented Chatbot',
     subtitle: 'LLM Tool/Function-Calling Database Query Agent',
+    category: 'LLM Tools',
     description: 'Full-stack learning project demonstrating LLM tool/function-calling by connecting a chatbot to a real SQL Server database. Instead of hallucinating answers, the AI assistant queries actual database tables through controlled backend functions, then summarizes results in natural language.',
     technologies: ['FastAPI', 'React', 'Vite', 'SQLAlchemy', 'pyodbc', 'OpenAI-compatible SDK', 'SQL Server', 'SQLite'],
     highlights: [
@@ -115,6 +121,7 @@ const projects: Project[] = [
   {
     title: 'ScholarAid',
     subtitle: 'Scholarship Management & Application Platform',
+    category: 'Education',
     description: 'A full-stack platform that helps students discover scholarships and get AI assistance on their applications, while giving admins intelligent tools to ingest and manage scholarship data at scale.',
     technologies: ['Python', 'Django', 'Next.js', 'Claude', 'DRF', 'JWT', 'BeautifulSoup4', 'PostgreSQL', 'Bootstrap 5'],
     highlights: [
@@ -134,6 +141,7 @@ const projects: Project[] = [
   {
     title: 'Tena AI',
     subtitle: 'Conversational AI Backend',
+    category: 'LLM Tools',
     description: 'Collaborated on the backend for a conversational AI platform with secure authentication and scalable architecture.',
     technologies: ['Python', 'Flask', 'Azure OpenAI', 'PostgreSQL'],
     highlights: [
@@ -150,6 +158,7 @@ const projects: Project[] = [
   {
     title: 'Customer Support Chatbot',
     subtitle: 'MTN Mobile Money Congo  -  Internship Project',
+    category: 'Fintech',
     description: 'Built during my internship at MTN Mobile Money Congo. A customer support chatbot covering 15 MoMo service topics  -  XtraCash, MoMo Advance, account management, and more. Uses a three-layer retrieval system to keep responses accurate and grounded: semantic search first, keyword fallback second, and full context injection as a final safety net against hallucinations.',
     technologies: ['FastAPI', 'PostgreSQL', 'Azure OpenAI', 'React', 'REST APIs'],
     highlights: [
@@ -168,6 +177,7 @@ const projects: Project[] = [
   {
     title: 'Python Developer Projects',
     subtitle: 'Practice Projects',
+    category: 'Practice Projects',
     description: 'A collection of Python code and projects I have been writing since the start of my Python coding journey. \nA lot there looks messy by the way, it includes my helloWorld("print") as well :) \nThis code base will never stop growing as long as I keep learning',
     technologies: ['Python', 'Numpy', 'Pandas', 'OpenCV', 'FastAPI', 'Flask', 'SK-Learn', 'OpenAI', 'Pydantic'],
     highlights: [
@@ -191,6 +201,7 @@ const projects: Project[] = [
   {
     title: 'AI Engineering Journey',
     subtitle: 'Hands-on Personal AI Engineering Curriculum (In Progress, started April 2026)',
+    category: 'AI/ML and Agents',
     description: 'A structured learning repo documenting my path through AI engineering, from LLM fundamentals and prompt patterns to RAG pipelines, agents, MCP, deployment, and LangChain.',
     technologies: ['Python', 'OpenAI', 'Anthropic', 'ChromaDB', 'Weaviate', 'Pinecone', 'FastAPI', 'BentoML', 'Docker', 'LangChain', 'LangGraph', 'MCP'],
     highlights: [
@@ -208,20 +219,37 @@ const projects: Project[] = [
   },
 ]
 
+const categories = ['All', ...Array.from(new Set(projects.map((project) => project.category)))]
+
 export default function ProjectsPage() {
+  const [selectedCategory, setSelectedCategory] = useState('All')
+
+  const filteredProjects = useMemo(() => {
+    return projects.filter((project) => {
+      return selectedCategory === 'All' || project.category === selectedCategory
+    })
+  }, [selectedCategory])
+
+  const hasActiveFilters = selectedCategory !== 'All'
+
+  const clearFilters = () => {
+    setSelectedCategory('All')
+  }
+
   return (
     <main className="bg-background">
       <Header />
       {/* Hero Section */}
       <section className="relative h-screen flex items-end overflow-hidden bg-black pt-20">
         <Image
-          src="/python_js.jpeg"
+          src="/agent-right.jpeg"
           alt="Projects hero background"
           fill
-          className="object-cover object-center opacity-60"
+          className="object-cover object-center opacity-45"
           priority
 
         />
+        <div className="absolute inset-0 bg-black/20" />
         <div className="relative z-10 w-full p-6 md:p-12 mb-20">
           <div className="max-w-6xl mx-auto">
             <div className="inline-flex items-center gap-2 px-3 py-1 bg-secondary/50 rounded-full border border-border/50 mb-6 backdrop-blur-sm">
@@ -241,8 +269,54 @@ export default function ProjectsPage() {
       {/* Projects Grid */}
       <section className="py-20 bg-secondary/30">
         <div className="max-w-6xl mx-auto px-6 lg:px-12">
+          <div className="mb-10 space-y-6 rounded-xl border border-border bg-background/80 p-5 shadow-sm backdrop-blur sm:p-6">
+            <div className="flex flex-col gap-4 lg:flex-row lg:items-center lg:justify-between">
+              <div>
+                <div className="inline-flex items-center gap-2 text-sm font-semibold text-accent">
+                  <Filter size={16} />
+                  Project Filters
+                </div>
+                <p className="mt-1 text-sm text-muted-foreground">
+                  Showing {filteredProjects.length} of {projects.length} projects
+                </p>
+              </div>
+
+              {hasActiveFilters && (
+                <button
+                  type="button"
+                  onClick={clearFilters}
+                  className="inline-flex w-full items-center justify-center gap-2 rounded-lg border border-border bg-secondary px-4 py-2 text-sm font-medium text-foreground transition-colors hover:border-accent/50 sm:w-auto"
+                >
+                  <X size={16} />
+                  Clear
+                </button>
+              )}
+            </div>
+
+            <div className="flex gap-2 overflow-x-auto pb-1" aria-label="Project categories">
+              {categories.map((category) => {
+                const isSelected = selectedCategory === category
+
+                return (
+                  <button
+                    key={category}
+                    type="button"
+                    onClick={() => setSelectedCategory(category)}
+                    className={`h-11 flex-shrink-0 rounded-lg border px-4 text-sm font-medium transition-colors ${
+                      isSelected
+                        ? 'border-accent bg-accent text-background'
+                        : 'border-border bg-secondary text-foreground hover:border-accent/50'
+                    }`}
+                  >
+                    {category}
+                  </button>
+                )
+              })}
+            </div>
+          </div>
+
           <div className="grid grid-cols-1 gap-8">
-            {projects.map((project, index) => (
+            {filteredProjects.map((project, index) => (
               <div
                 key={index}
                 className="group relative bg-background border border-border rounded-xl overflow-hidden hover:border-accent/50 transition-all duration-300 hover:shadow-lg hover:shadow-accent/5"
@@ -257,7 +331,12 @@ export default function ProjectsPage() {
                   {/* Header */}
                   <div className="mb-6">
                     <h3 className="text-2xl lg:text-3xl font-bold text-foreground mb-2">{project.title}</h3>
-                    <p className="text-lg text-accent font-medium">{project.subtitle}</p>
+                    <div className="flex flex-wrap items-center gap-3">
+                      <p className="text-lg text-accent font-medium">{project.subtitle}</p>
+                      <span className="rounded-full border border-accent/30 bg-accent/10 px-3 py-1 text-xs font-semibold text-accent">
+                        {project.category}
+                      </span>
+                    </div>
                   </div>
 
                   {/* Description */}
@@ -322,6 +401,23 @@ export default function ProjectsPage() {
               </div>
             ))}
           </div>
+
+          {filteredProjects.length === 0 && (
+            <div className="rounded-xl border border-border bg-background p-10 text-center">
+              <h2 className="text-2xl font-bold text-foreground">No projects found</h2>
+              <p className="mx-auto mt-2 max-w-md text-muted-foreground">
+                Try a different category or clear the filter.
+              </p>
+              <button
+                type="button"
+                onClick={clearFilters}
+                className="mt-6 inline-flex items-center gap-2 rounded-lg bg-accent px-5 py-2.5 font-semibold text-background transition-colors hover:bg-accent/90"
+              >
+                <X size={16} />
+                Clear Filters
+              </button>
+            </div>
+          )}
         </div>
       </section>
 

@@ -20,7 +20,7 @@ export function FeaturedProjects() {
       technologies: ['Python', 'FastAPI', 'OpenAI', 'RAG', 'LangChain'],
       github: 'https://github.com/Julien-G-Man/10-Day-AI-ML-and-Agentic-Systems-Sprint',
       live: '#',
-      image: '/ngot-sprint.png'
+      image: '/agent-left.jpeg'
     },
     {
       id: 2,
