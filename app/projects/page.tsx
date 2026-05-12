@@ -246,7 +246,7 @@ export default function ProjectsPage() {
           src="/agent-right.jpeg"
           alt="Projects hero background"
           fill
-          className="object-cover object-center opacity-45"
+          className="scale-125 object-cover object-[82%_28%] opacity-45 md:scale-100 md:object-center"
           priority
 
         />
