@@ -110,7 +110,7 @@ export function FeaturedProjects() {
             style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
           >
             {featuredProjects.map((project) => (
-              <div key={project.id} data-card className="flex-shrink-0 w-full md:w-1/2">
+              <div key={project.id} data-card className="flex-shrink-0 w-full md:w-1/2 flex">
                 <ProjectCard project={project} />
               </div>
             ))}
@@ -144,9 +144,9 @@ export function FeaturedProjects() {
             style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
           >
             {featuredProjects.map((project) => (
-              <div key={project.id} data-card className="flex-shrink-0 w-full max-w-sm">
-                <ProjectCard project={project} />
-              </div>
+                <div key={project.id} data-card className="flex-shrink-0 w-full max-w-sm flex">
+                  <ProjectCard project={project} />
+                </div>
             ))}
           </div>
 
@@ -189,7 +189,7 @@ export function FeaturedProjects() {
 
 function ProjectCard({ project }: { project: any }) {
   return (
-    <div className="group relative bg-background border border-border rounded-xl overflow-hidden hover:border-accent/50 transition-all duration-300 hover:shadow-lg hover:shadow-accent/5 flex flex-col">
+    <div className="group relative w-full bg-background border border-border rounded-xl overflow-hidden hover:border-accent/50 transition-all duration-300 hover:shadow-lg hover:shadow-accent/5 flex flex-col">
       {/* Project Image */}
       <div className="relative aspect-video md:aspect-[3/2] overflow-hidden bg-black">
         <Image
@@ -230,7 +230,7 @@ function ProjectCard({ project }: { project: any }) {
       </div>
 
       {/* Project Content */}
-      <div className="relative p-6 flex-grow flex flex-col">
+      <div className="relative p-6 flex-1 flex min-h-[260px] flex-col">
         {/* Header */}
         <div className="mb-4">
           <h3 className="text-xl font-bold text-foreground mb-1">{project.title}</h3>

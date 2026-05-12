@@ -118,7 +118,7 @@ export function Header() {
 
       {/* Mobile Navigation */}
       {isOpen && (
-        <div className="lg:hidden absolute right-4 top-full mt-2 w-[min(18rem,calc(100vw-2rem))] rounded-xl border border-border bg-background/95 p-2 shadow-2xl backdrop-blur-md">
+        <div className="lg:hidden absolute right-4 top-full mt-2 w-[min(18rem,calc(100vw-2rem))] rounded-xl border border-border bg-background p-2 shadow-2xl">
           <nav className="flex flex-col gap-1">
             <HomeSectionLink
               sectionId="about"
