@@ -81,7 +81,7 @@ export function Skills() {
             <span className="text-xs font-medium text-accent">Technical Arsenal</span>
           </div>
           <h2 className="text-4xl lg:text-5xl font-bold text-foreground mb-4">Skills & Tools</h2>
-          <p className="text-lg text-muted-foreground">What I've picked up so far — and keep adding to</p>
+          <p className="text-lg text-muted-foreground">What I've picked up so far - and keep adding to</p>
         </div>
 
         {/* Skills Horizontal Scroll Container */}

@@ -20,16 +20,16 @@ export function About() {
           {/* Main Text */}
           <div className="space-y-6 text-lg text-foreground/80 leading-relaxed">
             <p>
-              Born in the Republic of Congo, raised in Nigeria, now studying Computer Science at KNUST in Ghana as a Mastercard Foundation Scholar. Three countries, one direction — building things that matter.
+              Born in the Republic of Congo, raised in Nigeria, now studying Computer Science at KNUST in Ghana as a Mastercard Foundation Scholar. Three countries, one direction  -  building things that matter.
             </p>
             <p>
-              I've been working hands-on with LLMs — OpenAI, Claude, Azure OpenAI — integrating them into real projects. Things like <span className="text-accent font-semibold">Lamla AI</span>, an AI study platform my friend and I built, and <span className="text-accent font-semibold">ScholarAid</span>, a scholarship platform with AI-powered essay review. Each one has taught me something I didn't know going in.
+              I've been working hands-on with LLMs  -  OpenAI, Claude, Azure OpenAI  -  integrating them into real projects. Things like <span className="text-accent font-semibold">Lamla AI</span>, an AI study platform my friend and I built, and <span className="text-accent font-semibold">ScholarAid</span>, a scholarship platform with AI-powered essay review. Each one has taught me something I didn't know going in.
             </p>
             <p>
-              I genuinely believe technology is one of the most powerful tools Africa has right now — for education, health, access, opportunity. That's not just a talking point for me, it shapes what I choose to build and why.
+              I genuinely believe technology is one of the most powerful tools Africa has right now  -  for education, health, access, opportunity. That's not just a talking point for me, it shapes what I choose to build and why.
             </p>
             <p>
-              When I'm not building, I'm reading about what I haven't figured out yet — which is a long list, and that's fine. I also love helping people grow, which led me to start <span className="text-accent font-semibold">VALUENETWORK</span>, a community where I share opportunities and updates, and <span className="text-accent font-semibold">Founderslens</span>, a TikTok page posting wisdom from top founders and builders.
+              When I'm not building, I'm reading about what I haven't figured out yet  -  which is a long list, and that's fine. I also love helping people grow, which led me to start <span className="text-accent font-semibold">VALUENETWORK</span>, a community where I share opportunities and updates, and <span className="text-accent font-semibold">Founderslens</span>, a TikTok page posting wisdom from top founders and builders.
             </p>
 
             <div className="pt-2">
@@ -102,14 +102,14 @@ export function About() {
                 <div className="pb-6 border-b border-border">
                   <h4 className="text-lg font-bold text-foreground mb-1">BSc: Computer Science</h4>
                   <p className="text-accent font-medium mb-2">Kwame Nkrumah University of Science and Technology</p>
-                  <p className="text-sm text-muted-foreground">2025 – 2028 | Kumasi, Ghana</p>
+                  <p className="text-sm text-muted-foreground">2025  -  2028 | Kumasi, Ghana</p>
                   <p className="text-sm text-muted-foreground mt-2"><span className="text-accent">Status:</span> Mastercard Foundation Scholar</p>
                 </div>
 
                 <div>
                   <h4 className="text-lg font-bold text-foreground mb-1">W.A.S.S.C.E (Sciences)</h4>
                   <p className="text-accent font-medium mb-2">Rochas Foundation College of Africa</p>
-                  <p className="text-sm text-muted-foreground">2020 – 2023 | Nigeria</p>
+                  <p className="text-sm text-muted-foreground">2020  -  2023 | Nigeria</p>
                 </div>
               </div>
             </div>
@@ -126,7 +126,7 @@ export function About() {
                 <TrendingUp size={20} className="text-accent flex-shrink-0 mt-0.5" />
                 <div className="flex-1 min-w-0">
                   <p className="font-semibold text-foreground group-hover:text-accent transition-colors">Founderslens</p>
-                  <p className="text-sm text-muted-foreground">TikTok · wisdom from top founders and builders</p>
+                  <p className="text-sm text-muted-foreground">TikTok  -  wisdom from top founders and builders</p>
                 </div>
                 <ExternalLink size={16} className="text-muted-foreground group-hover:text-accent transition-colors flex-shrink-0 mt-0.5" />
               </a>
@@ -134,7 +134,7 @@ export function About() {
                 <Users size={20} className="text-accent flex-shrink-0 mt-0.5" />
                 <div>
                   <p className="font-semibold text-foreground">VALUENETWORK</p>
-                  <p className="text-sm text-muted-foreground">Community · opportunities, updates, and resources for students and builders</p>
+                  <p className="text-sm text-muted-foreground">Community  -  opportunities, updates, and resources for students and builders</p>
                 </div>
               </div>
             </div>

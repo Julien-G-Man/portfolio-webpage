@@ -39,7 +39,7 @@ export function Hero() {
                 Julien Glory <span className="block sm:inline text-accent dark:text-yellow-300">Manana</span>
               </h1>
               <p className="text-lg sm:text-xl text-white/80 leading-relaxed">
-                Computer Science student at KNUST, building backend systems and integrating AI into real projects. Early in the journey — but shipping, learning, and getting better with every build.
+                Computer Science student at KNUST, building backend systems and integrating AI into real projects. Early in the journey - but shipping, learning, and getting better with every build.
               </p>
             </div>
 

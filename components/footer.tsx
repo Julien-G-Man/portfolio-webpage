@@ -102,7 +102,7 @@ export function Footer() {
         {/* Divider */}
         <div className="border-t border-border pt-8 flex flex-col sm:flex-row justify-between items-center gap-4 text-sm">
           <p className="text-muted-foreground">
-            © {currentYear} Julien Glory Manana. All rights reserved.
+            Copyright {currentYear} Julien Glory Manana. All rights reserved.
           </p>
           <div className="flex items-center gap-4">
             <a

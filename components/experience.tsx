@@ -6,7 +6,7 @@ const experiences = [
   {
     title: 'AI & Software Engineering Trainee',
     company: 'Next Generation of Tech Giants (nGOT Giants)',
-    period: '02/2026 – Present',
+    period: '02/2026  -  Present',
     location: 'Kumasi, Ghana',
     description: 'Building the backend for Port, an internal collaboration and communication tool used by the nGOT team, while completing hands-on AI/ML training through project-based sprints. Training covers applied LLM workflows, RAG systems, agentic architectures, and deployment-oriented engineering practices.',
     highlights: ['Backend Development', 'Port (Internal Tool)', 'AI/ML Sprint Training', 'RAG & Agentic Systems', 'AI Engineering', 'Team Collaboration', 'Tech Talent Development']
@@ -14,23 +14,23 @@ const experiences = [
   {
     title: 'Intern',
     company: 'MTN Mobile Money Congo B.',
-    period: '11/2025 – 12/2025',
+    period: '11/2025  -  12/2025',
     location: 'Brazzaville, Republic of Congo',
-    description: 'Worked inside a large-scale fintech operation across MoMo internal systems, MoMo App, and MoMo Open APIs. Built a customer support chatbot covering 15 MoMo service topics — XtraCash, MoMo Advance, account management & security precautions, and more — with a three-layer retrieval system: semantic search first, keyword fallback second, and full context injection as a last resort to eliminate hallucinations. Collaborated across product, BI, engineering, and operations teams.',
+    description: 'Worked inside a large-scale fintech operation across MoMo internal systems, MoMo App, and MoMo Open APIs. Built a customer support chatbot covering 15 MoMo service topics  -  XtraCash, MoMo Advance, account management & security precautions, and more  -  with a three-layer retrieval system: semantic search first, keyword fallback second, and full context injection as a last resort to eliminate hallucinations. Collaborated across product, BI, engineering, and operations teams.',
     highlights: ['FastAPI', 'Azure OpenAI', 'Semantic Search', 'Hallucination Reduction', 'Fintech Systems', 'Cross-functional Collaboration']
   },
   {
     title: 'Deputy Head of Technology',
     company: 'Enactus KNUST',
-    period: '2025 – 2026',
+    period: '2025  -  2026',
     location: 'Kumasi, Ghana',
-    description: 'Part of the tech leadership team at Enactus KNUST, supporting the Head of Technology in managing the chapter\'s tech operations. Own the automation and internal tooling side — building systems for mass emails, project data, and member management. Contributed to the chapter website and support other divisions and projects with tech solutions.',
+    description: 'Part of the tech leadership team at Enactus KNUST, supporting the Head of Technology in managing the chapter\'s tech operations. Own the automation and internal tooling side  -  building systems for mass emails, project data, and member management. Contributed to the chapter website and support other divisions and projects with tech solutions.',
     highlights: ['Team Leadership', 'Internal Tooling', 'Automation Tools', 'Website Development', 'Cross-division Support']
   },
   {
     title: 'International Relations Officer',
     company: 'Science Students\' Association (SCISA) - KNUST',
-    period: '01/2026 – 09/2026',
+    period: '01/2026  -  09/2026',
     location: 'Kumasi, Ghana',
     description: 'Building international connections and representing the association.',
     highlights: ['Communication', 'Diplomacy', 'Networking']

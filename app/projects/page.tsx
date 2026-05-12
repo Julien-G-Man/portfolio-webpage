@@ -119,12 +119,12 @@ const projects: Project[] = [
     technologies: ['Python', 'Django', 'Next.js', 'Claude', 'DRF', 'JWT', 'BeautifulSoup4', 'PostgreSQL', 'Bootstrap 5'],
     highlights: [
       'Scholarship listings with search and filter across curated opportunities',
-      'AI application review — submit essays for automated feedback powered by Claude',
-      'AI scholarship intake (admin) — paste a URL or raw text; Claude extracts all fields',
-      'Scraper pipeline (admin) — bulk-scrape portals, Claude cleans data, download CSV, review, re-upload, ingest',
+      'AI application review  -  submit essays for automated feedback powered by Claude',
+      'AI scholarship intake (admin)  -  paste a URL or raw text; Claude extracts all fields',
+      'Scraper pipeline (admin)  -  bulk-scrape portals, Claude cleans data, download CSV, review, re-upload, ingest',
       'User dashboard to track deadlines, applications, and progress',
       'Secure admin tools for managing scholarships and reviewing applicants',
-      'JWT authentication via SimpleJWT · SQLite in dev, PostgreSQL in prod'
+      'JWT authentication via SimpleJWT  -  SQLite in dev, PostgreSQL in prod'
     ],
     links: {
       github: 'https://github.com/Julien-G-Man/ScholarAid',
@@ -149,12 +149,12 @@ const projects: Project[] = [
   },
   {
     title: 'Customer Support Chatbot',
-    subtitle: 'MTN Mobile Money Congo — Internship Project',
-    description: 'Built during my internship at MTN Mobile Money Congo. A customer support chatbot covering 15 MoMo service topics — XtraCash, MoMo Advance, account management, and more. Uses a three-layer retrieval system to keep responses accurate and grounded: semantic search first, keyword fallback second, and full context injection as a final safety net against hallucinations.',
+    subtitle: 'MTN Mobile Money Congo  -  Internship Project',
+    description: 'Built during my internship at MTN Mobile Money Congo. A customer support chatbot covering 15 MoMo service topics  -  XtraCash, MoMo Advance, account management, and more. Uses a three-layer retrieval system to keep responses accurate and grounded: semantic search first, keyword fallback second, and full context injection as a final safety net against hallucinations.',
     technologies: ['FastAPI', 'PostgreSQL', 'Azure OpenAI', 'React', 'REST APIs'],
     highlights: [
-      '15 MoMo service topics chunked — XtraCash, MoMo Advance, account management, and more',
-      'Three-layer retrieval: semantic search → keyword fallback → full context injection',
+      '15 MoMo service topics chunked  -  XtraCash, MoMo Advance, account management, and more',
+      'Three-layer retrieval: semantic search -> keyword fallback -> full context injection',
       'Full context injection as last resort to eliminate hallucinations',
       'Async endpoints with semaphore-based concurrency',
       'Collaborated with product, BI, and engineering teams on query coverage'

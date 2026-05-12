@@ -52,15 +52,15 @@ export default function NotFound() {
               <HomeSectionLink sectionId="about" className="text-accent hover:text-accent/80 transition-colors">
                 About
               </HomeSectionLink>
-              <span className="text-border">•</span>
+              <span className="text-border">/</span>
               <HomeSectionLink sectionId="projects" className="text-accent hover:text-accent/80 transition-colors">
                 Projects
               </HomeSectionLink>
-              <span className="text-border">•</span>
+              <span className="text-border">/</span>
               <HomeSectionLink sectionId="skills" className="text-accent hover:text-accent/80 transition-colors">
                 Skills
               </HomeSectionLink>
-              <span className="text-border">•</span>
+              <span className="text-border">/</span>
               <HomeSectionLink sectionId="contact" className="text-accent hover:text-accent/80 transition-colors">
                 Contact
               </HomeSectionLink>
