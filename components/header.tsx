@@ -72,7 +72,7 @@ export function Header() {
             Contact
           </HomeSectionLink>
           <a
-            href="/Julien-Glory-Manana-Resume-May-2026.pdf"
+            href="/Julien-Glory-Manana-Resume-June-2026.pdf"
             download
             className={`inline-flex items-center gap-1 text-sm font-medium transition-colors duration-300 hover:text-accent
               ${scrolled ? 'text-black dark:text-white' : 'text-white'}`}
@@ -156,7 +156,7 @@ export function Header() {
               Contact
             </HomeSectionLink>
             <a
-              href="/Julien-Glory-Manana-Resume-May-2026.pdf"
+              href="/Julien-Glory-Manana-Resume-June-2026.pdf"
               download
               className="inline-flex items-center gap-2 rounded-lg px-4 py-3 text-sm font-medium text-foreground transition-colors hover:bg-secondary hover:text-accent"
             >
