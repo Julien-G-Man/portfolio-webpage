@@ -60,7 +60,7 @@ const projects: Project[] = [
     }
   },
   {
-    title: 'Lamla AI',
+    title: 'Ocasia',
     subtitle: 'AI-Powered Study Platform',
     category: 'Education',
     description: 'A full-stack application that helps students generate personalized quizzes, flashcards, and AI explanations from their notes using OpenAI and Claude APIs.',
@@ -76,8 +76,8 @@ const projects: Project[] = [
       'I worked on the backend and AI integration, my friend handled the frontend'
     ],
     links: {
-      github: 'https://github.com/Julien-G-Man/lamla.ai',
-      live: 'https://lamla-ai.vercel.app'
+      github: 'https://github.com/Julien-G-Man/ocasia',
+      live: 'https://ocasia.vercel.app'
     }
   },
   {

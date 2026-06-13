@@ -24,24 +24,14 @@ export function FeaturedProjects() {
     },
     {
       id: 2,
-      title: 'Lamla AI',
+      title: 'Ocasia',
       subtitle: 'AI-Powered Study Platform',
       description: 'Full-stack platform generating personalized quizzes, flashcards, and AI explanations from student notes.',
-      technologies: ['Python', 'Django', 'React', 'OpenAI', 'Claude'],
-      github: 'https://github.com/Julien-G-Man/lamla.ai',
-      live: 'https://lamla-ai.vercel.app',
-      image: '/lamla_home.jpeg'
+      technologies: ['Python', 'Django', 'React', 'OpenAI', 'Claude', 'Agent'],
+      github: 'https://github.com/Julien-G-Man/ocasia',
+      live: 'https://ocasia.vercel.app',
+      image: '/ocasia-home.png'
     },
-    {
-      id: 3,
-      title: 'VeriMed',
-      subtitle: 'Medicine Authenticity Risk Assessment',
-      description: 'Mobile-friendly app analyzing medicine packaging images against FDA datasets for genuine vs suspicious classification.',
-      technologies: ['FastAPI', 'Next.js', 'OpenCV', 'PostgreSQL'],
-      github: 'https://github.com/Julien-G-Man/verimed',
-      live: 'https://verimed-web.netlify.app',
-      image: '/verimed_hero.png'
-    }
   ]
 
   const scroll = (direction: 'left' | 'right') => {
