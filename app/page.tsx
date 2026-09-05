@@ -8,7 +8,6 @@ import { FeaturedProjects } from '@/components/featured-projects'
 import { Skills } from '@/components/skills'
 import Contact from '@/components/contact'
 import { Footer } from '@/components/footer'
-import { ThemeToggle } from '@/components/theme-toggle'
 import { ScrollReveal } from '@/components/scroll-reveal'
 
 export default function Home() {
@@ -37,7 +36,6 @@ export default function Home() {
       <ScrollReveal>
         <Footer />
       </ScrollReveal>
-      <ThemeToggle />
     </main>
   )
 }

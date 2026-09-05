@@ -32,9 +32,6 @@ export function Hero() {
           {/* Content */}
           <div className="max-w-xl space-y-6 sm:space-y-8 lg:max-w-2xl">
             <div className="space-y-4">
-              <div className="inline-flex items-center gap-2 px-3 py-1 bg-white/10 backdrop-blur rounded-full border border-white/20">
-                <span className="text-xs font-medium text-white dark:text-yellow-300">Available for opportunities</span>
-              </div>
               <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-tight">
                 Julien Glory <span className="block sm:inline text-accent dark:text-yellow-300">Manana</span>
               </h1>

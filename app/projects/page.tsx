@@ -6,7 +6,6 @@ import { useMemo, useState } from 'react'
 import { Code2, ExternalLink, Github, ArrowRight, Filter, X } from 'lucide-react'
 import { Header } from '@/components/header'
 import { Footer } from '@/components/footer'
-import { ThemeToggle } from '@/components/theme-toggle'
 import { ScrollReveal } from '@/components/scroll-reveal'
 import type { ReactNode } from 'react'
 
@@ -452,7 +451,6 @@ export default function ProjectsPage() {
       <ScrollReveal>
         <Footer />
       </ScrollReveal>
-      <ThemeToggle />
     </main>
   )
 }

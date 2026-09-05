@@ -29,30 +29,8 @@ export function About() {
               I genuinely believe technology is one of the most powerful tools Africa has right now  -  for education, health, access, opportunity. That's not just a talking point for me, it shapes what I choose to build and why.
             </p>
             <p>
-              When I'm not building, I'm reading about what I haven't figured out yet  -  which is a long list, and that's fine. I also love helping people grow, which led me to start <span className="text-accent font-semibold">VALUENETWORK</span>, a community where I share opportunities and updates, and <span className="text-accent font-semibold">Founderslens</span>, a TikTok page posting wisdom from top founders and builders.
+              When I'm not building, I'm reading about what I haven't figured out yet - which is a long list, and that's fine. I also love helping people grow, which led me to start <span className="text-accent font-semibold">VALUENETWORK</span>, a community where I share opportunities and updates, and <span className="text-accent font-semibold">Founderslens</span>, a TikTok page posting wisdom from top founders and builders.
             </p>
-
-            <div className="pt-2">
-              <p className="text-sm font-medium text-accent mb-3">Currently exploring</p>
-              <div className="flex flex-wrap gap-2">
-                {[
-                  'AI Engineering',
-                  'RAG Pipelines',
-                  'MCP Servers',
-                  'LangChain',
-                  'LLMs',
-                  'Agentic Workflows',
-                  'Machine Learning',
-                ].map((topic) => (
-                  <span
-                    key={topic}
-                    className="px-3 py-1 text-sm border border-accent/30 text-foreground/70 rounded-full bg-accent/5"
-                  >
-                    {topic}
-                  </span>
-                ))}
-              </div>
-            </div>
 
             <div className="pt-2">
               <p className="text-sm font-medium text-accent mb-3">Open to</p>
