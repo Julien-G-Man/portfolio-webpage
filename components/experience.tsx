@@ -4,7 +4,15 @@ import { Briefcase } from 'lucide-react'
 
 const experiences = [
   {
-    title: 'AI & Software Engineering Trainee',
+    title: 'Project Lead & Platform Engineer',
+    company: 'Project ReL — Enactus KNUST',
+    period: '08/2026  -  Present',
+    location: 'Kumasi, Ghana',
+    description: 'Leading the revival and redevelopment of Project ReL, a curriculum-aligned learning platform for Deaf students in Ghana. Owning product direction and platform engineering across backend architecture, learning workflows, stakeholder engagement, accessibility, and ongoing research into sign-language AI and Ghanaian Sign Language integration.',
+    highlights: ['Project Leadership', 'Platform Engineering', 'Backend Architecture', 'Product Strategy', 'Accessible EdTech', 'Sign Language AI', 'Ghanaian Sign Language R&D']
+  },
+  {
+    title: 'Software Engineering Fellow',
     company: 'Next Generation of Tech Giants (nGOT Giants)',
     period: '02/2026  -  Present',
     location: 'Kumasi, Ghana',
@@ -16,7 +24,7 @@ const experiences = [
     company: 'MTN Mobile Money Congo B.',
     period: '11/2025  -  12/2025',
     location: 'Brazzaville, Republic of Congo',
-    description: 'Worked inside a large-scale fintech operation across MoMo internal systems, MoMo App, and MoMo Open APIs. Built a customer support chatbot covering 15 MoMo service topics  -  XtraCash, MoMo Advance, account management & security precautions, and more  -  with a three-layer retrieval system: semantic search first, keyword fallback second, and full context injection as a last resort to eliminate hallucinations. Collaborated across product, BI, engineering, and operations teams.',
+    description: 'Worked inside a large-scale fintech operation across MoMo internal systems, MoMo App, and MoMo Open APIs. Built a customer support agent covering 15 MoMo service topics  -  XtraCash, MoMo Advance, account management & security precautions, and more  -  with a three-layer retrieval system: semantic search first, keyword fallback second, and full context injection as a last resort to eliminate hallucinations. Collaborated across product, BI, engineering, and operations teams.',
     highlights: ['FastAPI', 'Azure OpenAI', 'Semantic Search', 'Hallucination Reduction', 'Fintech Systems', 'Cross-functional Collaboration']
   },
   {
@@ -62,7 +70,7 @@ export function Experience() {
               <div className="absolute -left-4 top-0 w-6 h-6 bg-background border-2 border-border group-hover:border-accent group-hover:bg-accent transition-all rounded-full" />
 
               {/* Content */}
-              <div className="bg-secondary/30 rounded-lg p-6 group-hover:bg-secondary/50 transition-colors border border-border group-hover:border-accent/30">
+              <div className="bg-secondary/30 rounded-none p-6 group-hover:bg-secondary/50 transition-colors border border-border group-hover:border-accent/30">
                 <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-2 mb-3">
                   <div>
                     <h3 className="text-xl font-bold text-foreground">{exp.title}</h3>

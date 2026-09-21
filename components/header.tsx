@@ -4,7 +4,7 @@ import { Download, Github, Linkedin, Menu, X } from 'lucide-react'
 import { useState, useEffect } from 'react'
 import { HomeSectionLink } from '@/components/home-section-link'
 
-export function Header() {
+export function Header({ alwaysSolid = false }: { alwaysSolid?: boolean }) {
   const [isOpen, setIsOpen] = useState(false)
   const [scrolled, setScrolled] = useState(false)
 
@@ -18,9 +18,11 @@ export function Header() {
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
 
+  const isSolid = alwaysSolid || scrolled
+
   return (
     <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 border-b border-transparent
-      ${scrolled 
+      ${isSolid
         ? 'dark:bg-black/40 bg-white/70 backdrop-blur-md' 
         : 'dark:bg-black/0 bg-white/0 backdrop-blur-none'
       }`}>
@@ -28,7 +30,7 @@ export function Header() {
         <HomeSectionLink
           sectionId="hero"
           className={`text-xl md:text-2xl font-bold transition-colors duration-300 leading-tight text-left whitespace-normal
-            ${scrolled ? 'text-accent' : 'text-white'}`}
+            ${isSolid ? 'text-accent' : 'text-white'}`}
         >
           <span className="block md:inline">Julien G.</span>
           <span className="block md:inline md:ml-1">Manana</span>
@@ -39,35 +41,35 @@ export function Header() {
           <HomeSectionLink
             sectionId="about"
             className={`text-sm font-medium transition-colors duration-300 hover:text-accent
-              ${scrolled ? 'text-black dark:text-white' : 'text-white'}`}
+              ${isSolid ? 'text-black dark:text-white' : 'text-white'}`}
           >
             About
           </HomeSectionLink>
           <HomeSectionLink
             sectionId="experience"
             className={`text-sm font-medium transition-colors duration-300 hover:text-accent
-              ${scrolled ? 'text-black dark:text-white' : 'text-white'}`}
+              ${isSolid ? 'text-black dark:text-white' : 'text-white'}`}
           >
             Experience
           </HomeSectionLink>
           <a
             href="/projects"
             className={`text-sm font-medium transition-colors duration-300 hover:text-accent
-              ${scrolled ? 'text-black dark:text-white' : 'text-white'}`}
+              ${isSolid ? 'text-black dark:text-white' : 'text-white'}`}
           >
             Projects
           </a>
           <HomeSectionLink
             sectionId="skills"
             className={`text-sm font-medium transition-colors duration-300 hover:text-accent
-              ${scrolled ? 'text-black dark:text-white' : 'text-white'}`}
+              ${isSolid ? 'text-black dark:text-white' : 'text-white'}`}
           >
             Skills
           </HomeSectionLink>
           <HomeSectionLink
             sectionId="contact"
             className={`text-sm font-medium transition-colors duration-300 hover:text-accent
-              ${scrolled ? 'text-black dark:text-white' : 'text-white'}`}
+              ${isSolid ? 'text-black dark:text-white' : 'text-white'}`}
           >
             Contact
           </HomeSectionLink>
@@ -75,19 +77,19 @@ export function Header() {
             href="/Julien-Glory-Manana-Resume-June-2026.pdf"
             download
             className={`inline-flex items-center gap-1 text-sm font-medium transition-colors duration-300 hover:text-accent
-              ${scrolled ? 'text-black dark:text-white' : 'text-white'}`}
+              ${isSolid ? 'text-black dark:text-white' : 'text-white'}`}
           >
             CV
             <Download size={16} />
           </a>
           <div className={`flex items-center gap-4 ml-4 pl-4 border-l transition-colors duration-300
-            ${scrolled ? 'border-black/20 dark:border-white/20' : 'border-white/20'}`}>
+            ${isSolid ? 'border-black/20 dark:border-white/20' : 'border-white/20'}`}>
             <a
               href="https://github.com/Julien-G-Man"
               target="_blank"
               rel="noopener noreferrer"
               className={`transition-colors duration-300 hover:text-accent
-                ${scrolled ? 'text-black dark:text-white' : 'text-white'}`}
+                ${isSolid ? 'text-black dark:text-white' : 'text-white'}`}
               aria-label="GitHub"
             >
               <Github size={20} />
@@ -97,7 +99,7 @@ export function Header() {
               target="_blank"
               rel="noopener noreferrer"
               className={`transition-colors duration-300 hover:text-accent
-                ${scrolled ? 'text-black dark:text-white' : 'text-white'}`}
+                ${isSolid ? 'text-black dark:text-white' : 'text-white'}`}
               aria-label="LinkedIn"
             >
               <Linkedin size={20} />
@@ -109,7 +111,7 @@ export function Header() {
         <button
           onClick={() => setIsOpen(!isOpen)}
           className={`lg:hidden transition-colors duration-300 hover:text-accent
-            ${scrolled ? 'text-black dark:text-white' : 'text-white'}`}
+            ${isSolid ? 'text-black dark:text-white' : 'text-white'}`}
           aria-label="Toggle menu"
         >
           {isOpen ? <X size={24} /> : <Menu size={24} />}
@@ -123,42 +125,42 @@ export function Header() {
             <HomeSectionLink
               sectionId="about"
               onNavigate={() => setIsOpen(false)}
-              className="rounded-lg px-4 py-3 text-sm font-medium text-foreground transition-colors hover:bg-secondary hover:text-accent"
+              className="rounded-none px-4 py-3 text-sm font-medium text-foreground transition-colors hover:bg-secondary hover:text-accent"
             >
               About
             </HomeSectionLink>
             <HomeSectionLink
               sectionId="experience"
               onNavigate={() => setIsOpen(false)}
-              className="rounded-lg px-4 py-3 text-sm font-medium text-foreground transition-colors hover:bg-secondary hover:text-accent"
+              className="rounded-none px-4 py-3 text-sm font-medium text-foreground transition-colors hover:bg-secondary hover:text-accent"
             >
               Experience
             </HomeSectionLink>
             <a
               href="/projects"
               onClick={() => setIsOpen(false)}
-              className="rounded-lg px-4 py-3 text-sm font-medium text-foreground transition-colors hover:bg-secondary hover:text-accent"
+              className="rounded-none px-4 py-3 text-sm font-medium text-foreground transition-colors hover:bg-secondary hover:text-accent"
             >
               Projects
             </a>
             <HomeSectionLink
               sectionId="skills"
               onNavigate={() => setIsOpen(false)}
-              className="rounded-lg px-4 py-3 text-sm font-medium text-foreground transition-colors hover:bg-secondary hover:text-accent"
+              className="rounded-none px-4 py-3 text-sm font-medium text-foreground transition-colors hover:bg-secondary hover:text-accent"
             >
               Skills
             </HomeSectionLink>
             <HomeSectionLink
               sectionId="contact"
               onNavigate={() => setIsOpen(false)}
-              className="rounded-lg px-4 py-3 text-sm font-medium text-foreground transition-colors hover:bg-secondary hover:text-accent"
+              className="rounded-none px-4 py-3 text-sm font-medium text-foreground transition-colors hover:bg-secondary hover:text-accent"
             >
               Contact
             </HomeSectionLink>
             <a
               href="/Julien-Glory-Manana-Resume-June-2026.pdf"
               download
-              className="inline-flex items-center gap-2 rounded-lg px-4 py-3 text-sm font-medium text-foreground transition-colors hover:bg-secondary hover:text-accent"
+              className="inline-flex items-center gap-2 rounded-none px-4 py-3 text-sm font-medium text-foreground transition-colors hover:bg-secondary hover:text-accent"
             >
               Download CV
               <Download size={16} />

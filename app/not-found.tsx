@@ -31,14 +31,14 @@ export default function NotFound() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center pt-8">
             <Link
               href="/"
-              className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-accent text-background font-medium rounded-lg hover:bg-accent/90 transition-colors duration-300"
+              className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-accent text-background font-medium rounded-none hover:bg-accent/90 transition-colors duration-300"
             >
               <Home size={20} />
               Go Home
             </Link>
             <button
               onClick={() => window.history.back()}
-              className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-secondary border border-border text-foreground font-medium rounded-lg hover:border-accent/50 transition-colors duration-300"
+              className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-secondary border border-border text-foreground font-medium rounded-none hover:border-accent/50 transition-colors duration-300"
             >
               <ArrowLeft size={20} />
               Go Back

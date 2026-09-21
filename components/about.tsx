@@ -1,5 +1,6 @@
 'use client'
 
+import Image from 'next/image'
 import { Award, GraduationCap, Users, TrendingUp, ExternalLink } from 'lucide-react'
 
 export function About() {
@@ -51,26 +52,26 @@ export function About() {
           <div className="space-y-8">
             {/* Quick Stats */}
             <div className="grid grid-cols-2 gap-4">
-              <div className="bg-background border border-border rounded-lg p-6 hover:border-accent/50 transition-colors">
+              <div className="bg-background border border-border rounded-none p-6 hover:border-accent/50 transition-colors">
                 <p className="text-3xl font-bold text-accent mb-2">10+</p>
                 <p className="text-sm text-muted-foreground font-medium">Projects Built</p>
               </div>
-              <div className="bg-background border border-border rounded-lg p-6 hover:border-accent/50 transition-colors">
+              <div className="bg-background border border-border rounded-none p-6 hover:border-accent/50 transition-colors">
                 <p className="text-3xl font-bold text-accent mb-2">5+</p>
                 <p className="text-sm text-muted-foreground font-medium">Deployed</p>
               </div>
-              <div className="bg-background border border-border rounded-lg p-6 hover:border-accent/50 transition-colors">
+              <div className="bg-background border border-border rounded-none p-6 hover:border-accent/50 transition-colors">
                 <p className="text-3xl font-bold text-accent mb-2">15+</p>
                 <p className="text-sm text-muted-foreground font-medium">Tools & Skills</p>
               </div>
-              <div className="bg-background border border-border rounded-lg p-6 hover:border-accent/50 transition-colors">
+              <div className="bg-background border border-border rounded-none p-6 hover:border-accent/50 transition-colors">
                 <p className="text-3xl font-bold text-accent mb-2">1.5</p>
                 <p className="text-sm text-muted-foreground font-medium">Years in Tech</p>
               </div>
             </div>
 
             {/* Education */}
-            <div className="bg-background border border-border rounded-lg p-8 space-y-6">
+            <div className="bg-background border border-border rounded-none p-8 space-y-6">
               <h3 className="text-xl font-bold text-foreground flex items-center gap-2">
                 <Award size={24} className="text-accent" />
                 Education
@@ -87,37 +88,90 @@ export function About() {
                 <div>
                   <h4 className="text-lg font-bold text-foreground mb-1">W.A.S.S.C.E (Sciences)</h4>
                   <p className="text-accent font-medium mb-2">Rochas Foundation College of Africa</p>
-                  <p className="text-sm text-muted-foreground">2020  -  2023 | Nigeria</p>
+                  <p className="text-sm text-muted-foreground">2017  -  2023 | Nigeria</p>
                 </div>
               </div>
             </div>
 
-            {/* Beyond Code */}
-            <div className="bg-background border border-border rounded-lg p-8 space-y-4">
-              <h3 className="text-xl font-bold text-foreground">Beyond Code</h3>
+          </div>
+
+        </div>
+
+          {/* Beyond Code */}
+          <div className="mt-12 bg-background border border-border rounded-none p-8 space-y-6">
+            <h3 className="text-xl font-bold text-foreground">Beyond Code</h3>
+            <div className="grid gap-8 md:grid-cols-3">
               <a
                 href="https://www.tiktok.com/@founderslens"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-start gap-4 group hover:border-accent/50 border border-border rounded-lg p-4 transition-colors"
+                className="group block"
               >
-                <TrendingUp size={20} className="text-accent flex-shrink-0 mt-0.5" />
-                <div className="flex-1 min-w-0">
-                  <p className="font-semibold text-foreground group-hover:text-accent transition-colors">Founderslens</p>
-                  <p className="text-sm text-muted-foreground">TikTok  -  wisdom from top founders and builders</p>
+                <div className="relative aspect-[16/10] overflow-hidden border border-border bg-secondary">
+                  <Image
+                    src="/paystack_thumbnail.png"
+                    alt="Founderslens placeholder image"
+                    fill
+                    className="object-cover transition-transform duration-300 group-hover:scale-105"
+                  />
                 </div>
-                <ExternalLink size={16} className="text-muted-foreground group-hover:text-accent transition-colors flex-shrink-0 mt-0.5" />
+                <div className="pt-4">
+                  <div className="flex items-start justify-between gap-4">
+                    <p className="text-lg font-bold text-foreground group-hover:text-accent transition-colors">Founderslens</p>
+                    <ExternalLink size={16} className="mt-1 flex-shrink-0 text-muted-foreground group-hover:text-accent transition-colors" />
+                  </div>
+                  <p className="mt-2 text-sm text-muted-foreground">TikTok - wisdom from top founders and builders</p>
+                </div>
               </a>
-              <div className="flex items-start gap-4 border border-border rounded-lg p-4">
-                <Users size={20} className="text-accent flex-shrink-0 mt-0.5" />
-                <div>
-                  <p className="font-semibold text-foreground">VALUENETWORK</p>
-                  <p className="text-sm text-muted-foreground">Community  -  opportunities, updates, and resources for students and builders</p>
+
+              <a
+                href="https://ngotgiants.buildscitech.com/what-we-do/impact-stories/julien-glory-manana"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group block"
+              >
+                <div className="relative aspect-[16/10] overflow-hidden border border-border bg-secondary">
+                  <Image
+                    src="/ngot-sprint.png"
+                    alt="nGOT Giants Development Sprint placeholder image"
+                    fill
+                    className="object-cover transition-transform duration-300 group-hover:scale-105"
+                  />
                 </div>
-              </div>
+                <div className="pt-4">
+                  <div className="flex items-start justify-between gap-4">
+                    <p className="text-lg font-bold text-foreground group-hover:text-accent transition-colors">nGOT Giants Impact Story</p>
+                    <ExternalLink size={16} className="mt-1 flex-shrink-0 text-muted-foreground group-hover:text-accent transition-colors" />
+                  </div>
+                  <p className="mt-2 text-sm text-muted-foreground">Shipping a medical-literature RAG system through the Development Sprint</p>
+                </div>
+              </a>
+
+              <a
+                href="https://whatsapp.com/channel/0029Vb5ldB3GehEPpTk00Y0g"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group block"
+              >
+                <div className="relative aspect-[16/10] overflow-hidden border border-border bg-secondary">
+                  <Image
+                    src="/valuenetwork_logo.png"
+                    alt="VALUENETWORK logo image"
+                    fill
+                    className="object-cover transition-transform duration-300 group-hover:scale-105"
+                  />
+                </div>
+                <div className="pt-4">
+                  <div className="flex items-start justify-between gap-4">
+                    <p className="text-lg font-bold text-foreground group-hover:text-accent transition-colors">VALUENETWORK</p>
+                    <ExternalLink size={16} className="mt-1 flex-shrink-0 text-muted-foreground group-hover:text-accent transition-colors" />
+                  </div>
+                  <p className="mt-2 text-sm text-muted-foreground">Community - opportunities, updates, and resources for students and builders</p>
+                </div>
+              </a>
+      
             </div>
           </div>
-        </div>
       </div>
     </section>
   )

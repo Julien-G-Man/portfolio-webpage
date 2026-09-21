@@ -14,6 +14,7 @@ export function FeaturedProjects() {
   const featuredProjects = [
     {
       id: 1,
+      slug: '10-day-ai-ml-engineering-agentic-systems-sprint',
       title: '10-Day AI/ML Engineering & Agentic Systems Sprint',
       subtitle: 'AI/ML and Agents',
       description: 'Hands-on sprint covering FastAPI, LLM workflows, RAG pipelines, model training, and deployment practices from NGOT Giants.',
@@ -24,13 +25,14 @@ export function FeaturedProjects() {
     },
     {
       id: 2,
+      slug: 'ocasia',
       title: 'Ocasia',
       subtitle: 'AI-Powered Study Platform',
       description: 'Full-stack platform generating personalized quizzes, flashcards, and AI explanations from student notes.',
       technologies: ['Python', 'Django', 'React', 'OpenAI', 'Claude', 'Agent'],
       github: 'https://github.com/Julien-G-Man/ocasia',
       live: 'https://ocasia.vercel.app',
-      image: '/ocasia-home.png'
+      image: '/ai-tutor.jpg'
     },
   ]
 
@@ -110,7 +112,7 @@ export function FeaturedProjects() {
           {showLeftBtn && (
             <button
               onClick={() => scroll('left')}
-              className="hidden md:flex absolute left-4 top-1/2 -translate-y-1/2 z-20 p-2 bg-accent hover:bg-accent/90 text-background rounded-full transition-all duration-300 shadow-lg"
+              className="hidden md:flex absolute left-4 top-1/2 -translate-y-1/2 z-20 p-2 bg-accent hover:bg-accent/90 text-background rounded-none transition-all duration-300 shadow-lg"
               aria-label="Scroll left"
             >
               <ChevronLeft size={24} />
@@ -120,7 +122,7 @@ export function FeaturedProjects() {
           {showRightBtn && (
             <button
               onClick={() => scroll('right')}
-              className="hidden md:flex absolute right-4 top-1/2 -translate-y-1/2 z-20 p-2 bg-accent hover:bg-accent/90 text-background rounded-full transition-all duration-300 shadow-lg"
+              className="hidden md:flex absolute right-4 top-1/2 -translate-y-1/2 z-20 p-2 bg-accent hover:bg-accent/90 text-background rounded-none transition-all duration-300 shadow-lg"
               aria-label="Scroll right"
             >
               <ChevronRight size={24} />
@@ -144,7 +146,7 @@ export function FeaturedProjects() {
           {showLeftBtn && (
             <button
               onClick={() => scroll('left')}
-              className="md:hidden absolute left-2 top-1/2 -translate-y-1/2 z-20 p-2 bg-accent hover:bg-accent/90 text-background rounded-full transition-all duration-300 shadow-lg"
+              className="md:hidden absolute left-2 top-1/2 -translate-y-1/2 z-20 p-2 bg-accent hover:bg-accent/90 text-background rounded-none transition-all duration-300 shadow-lg"
               aria-label="Scroll left"
             >
               <ChevronLeft size={20} />
@@ -154,7 +156,7 @@ export function FeaturedProjects() {
           {showRightBtn && (
             <button
               onClick={() => scroll('right')}
-              className="md:hidden absolute right-2 top-1/2 -translate-y-1/2 z-20 p-2 bg-accent hover:bg-accent/90 text-background rounded-full transition-all duration-300 shadow-lg"
+              className="md:hidden absolute right-2 top-1/2 -translate-y-1/2 z-20 p-2 bg-accent hover:bg-accent/90 text-background rounded-none transition-all duration-300 shadow-lg"
               aria-label="Scroll right"
             >
               <ChevronRight size={20} />
@@ -166,9 +168,9 @@ export function FeaturedProjects() {
         <div className="flex justify-center max-w-6xl mx-auto">
           <Link
             href="/projects"
-            className="inline-flex items-center gap-2 px-8 py-3 bg-accent hover:bg-accent/90 text-background font-semibold rounded-lg transition-all duration-300 hover:shadow-lg"
+            className="inline-flex items-center gap-2 px-8 py-3 bg-accent hover:bg-accent/90 text-background font-semibold rounded-none transition-all duration-300 hover:shadow-lg"
           >
-            View All Projects
+            View Other Projects
             <ExternalLink size={18} />
           </Link>
         </div>
@@ -179,7 +181,7 @@ export function FeaturedProjects() {
 
 function ProjectCard({ project }: { project: any }) {
   return (
-    <div className="group relative w-full bg-background border border-border rounded-xl overflow-hidden hover:border-accent/50 transition-all duration-300 hover:shadow-lg hover:shadow-accent/5 flex flex-col">
+    <div className="group relative w-full bg-background border border-border rounded-none overflow-hidden hover:border-accent/50 transition-all duration-300 hover:shadow-lg hover:shadow-accent/5 flex flex-col">
       {/* Project Image */}
       <div className="relative aspect-video md:aspect-[3/2] overflow-hidden bg-black">
         <Image
@@ -199,7 +201,7 @@ function ProjectCard({ project }: { project: any }) {
               href={project.github}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center w-10 h-10 bg-accent hover:bg-accent/90 text-background rounded-full transition-colors shadow-md"
+              className="inline-flex items-center justify-center w-10 h-10 bg-accent hover:bg-accent/90 text-background rounded-none transition-colors shadow-md"
               aria-label="GitHub"
             >
               <Github size={18} />
@@ -210,7 +212,7 @@ function ProjectCard({ project }: { project: any }) {
               href={project.live}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center w-10 h-10 bg-accent hover:bg-accent/90 text-background rounded-full transition-colors shadow-md"
+              className="inline-flex items-center justify-center w-10 h-10 bg-accent hover:bg-accent/90 text-background rounded-none transition-colors shadow-md"
               aria-label="Live Demo"
             >
               <ExternalLink size={18} />
@@ -223,7 +225,9 @@ function ProjectCard({ project }: { project: any }) {
       <div className="relative p-6 flex-1 flex min-h-[260px] flex-col">
         {/* Header */}
         <div className="mb-4">
-          <h3 className="text-xl font-bold text-foreground mb-1">{project.title}</h3>
+          <Link href={`/projects/${project.slug}`} className="group/title">
+            <h3 className="text-xl font-bold text-foreground mb-1 group-hover/title:text-accent transition-colors">{project.title}</h3>
+          </Link>
           <p className="text-accent font-medium text-sm">{project.subtitle}</p>
         </div>
 
@@ -243,6 +247,13 @@ function ProjectCard({ project }: { project: any }) {
             </span>
           ))}
         </div>
+        <Link
+          href={`/projects/${project.slug}`}
+          className="mt-5 inline-flex items-center gap-2 text-sm font-semibold text-accent hover:text-accent/80 transition-colors"
+        >
+          Read project details
+          <ExternalLink size={15} />
+        </Link>
       </div>
     </div>
   )

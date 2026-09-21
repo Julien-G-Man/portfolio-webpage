@@ -73,7 +73,7 @@ export default function Contact() {
 
         <div className="grid gap-8 lg:grid-cols-[0.95fr_1.05fr] lg:items-stretch">
           {/* Contact Info */}
-          <div className="flex h-full flex-col gap-6 rounded-2xl border border-border bg-secondary/30 p-6 sm:p-8">
+          <div className="flex h-full flex-col gap-6 rounded-none border border-border bg-secondary/30 p-6 sm:p-8">
             <div>
               <h3 className="mb-4 text-xl font-semibold text-foreground">Contact Information</h3>
               <div className="space-y-4">
@@ -89,7 +89,7 @@ export default function Contact() {
               </div>
             </div>
 
-            <div className="rounded-xl border border-border/80 bg-background p-5">
+            <div className="rounded-none border border-border/80 bg-background p-5">
               <h3 className="mb-3 text-xl font-semibold text-foreground">Let's Connect</h3>
               <p className="text-muted-foreground">
                 I'm always open to new opportunities, collaborations, and interesting conversations. 
@@ -97,7 +97,7 @@ export default function Contact() {
               </p>
             </div>
 
-            <div className="rounded-xl border border-border/80 bg-background p-5">
+            <div className="rounded-none border border-border/80 bg-background p-5">
               <h3 className="mb-3 text-xl font-semibold text-foreground">Roles I'm Open To</h3>
               <p className="mb-4 text-muted-foreground">
                 Especially interested in internships and trainee opportunities where I can contribute,
@@ -113,7 +113,7 @@ export default function Contact() {
           </div>
 
           {/* Contact Form */}
-          <div className="rounded-2xl border border-border bg-secondary/20 p-6 sm:p-8">
+          <div className="rounded-none border border-border bg-secondary/20 p-6 sm:p-8">
             <form onSubmit={handleSubmit} className="space-y-5">
               <div className="grid gap-4 sm:grid-cols-2">
                 <div>
@@ -199,7 +199,7 @@ export default function Contact() {
               <button
                 type="submit"
                 disabled={status === 'loading'}
-                className="w-full rounded-lg bg-accent px-6 py-3 font-semibold text-accent-foreground transition-colors hover:bg-yellow-500 disabled:bg-muted disabled:text-muted-foreground sm:w-auto"
+                className="w-full rounded-none bg-accent px-6 py-3 font-semibold text-accent-foreground transition-colors hover:bg-yellow-500 disabled:bg-muted disabled:text-muted-foreground sm:w-auto"
               >
                 <span className="inline-flex items-center justify-center gap-2">
                   <Send className="w-4 h-4" />

@@ -3,7 +3,7 @@
 import Link from 'next/link'
 import Image from 'next/image'
 import { useMemo, useState } from 'react'
-import { Code2, ExternalLink, Github, ArrowRight, Filter, X } from 'lucide-react'
+import { Code2, ArrowRight, Filter, X } from 'lucide-react'
 import { Header } from '@/components/header'
 import { Footer } from '@/components/footer'
 import { ScrollReveal } from '@/components/scroll-reveal'
@@ -76,7 +76,7 @@ const projects: Project[] = [
     ],
     links: {
       github: 'https://github.com/Julien-G-Man/ocasia',
-      live: 'https://ocasia.vercel.app'
+      live: 'https://ocasia.live'
     }
   },
   {
@@ -156,11 +156,11 @@ const projects: Project[] = [
     }
   },
   {
-    title: 'Customer Support Chatbot',
-    subtitle: 'MTN Mobile Money Congo  -  Internship Project',
+    title: 'MoMoChat',
+    subtitle: 'MTN Mobile Money Congo - Internship Project',
     category: 'Fintech',
     description: 'Built during my internship at MTN Mobile Money Congo. A customer support chatbot covering 15 MoMo service topics  -  XtraCash, MoMo Advance, account management, and more. Uses a three-layer retrieval system to keep responses accurate and grounded: semantic search first, keyword fallback second, and full context injection as a final safety net against hallucinations.',
-    technologies: ['FastAPI', 'PostgreSQL', 'Azure OpenAI', 'React', 'REST APIs'],
+    technologies: ['FastAPI', 'RAG', 'pgvector',  'PostgreSQL', 'Azure OpenAI', 'React', 'REST APIs'],
     highlights: [
       '15 MoMo service topics chunked  -  XtraCash, MoMo Advance, account management, and more',
       'Three-layer retrieval: semantic search -> keyword fallback -> full context injection',
@@ -199,27 +199,42 @@ const projects: Project[] = [
     }
   },
   {
-    title: 'AI Engineering Journey',
-    subtitle: 'Hands-on Personal AI Engineering Curriculum (In Progress, started April 2026)',
+    title: 'AI/ML Engineering Journey',
+    subtitle: 'A structured path from machine learning foundations to production AI systems',
     category: 'AI/ML and Agents',
-    description: 'A structured learning repo documenting my path through AI engineering, from LLM fundamentals and prompt patterns to RAG pipelines, agents, MCP, deployment, and LangChain.',
-    technologies: ['Python', 'OpenAI', 'Anthropic', 'ChromaDB', 'Weaviate', 'Pinecone', 'FastAPI', 'BentoML', 'Docker', 'LangChain', 'LangGraph', 'MCP'],
+    description: 'A hands-on personal curriculum moving from mathematics and classical machine learning through neural networks, deep learning, transformers, foundation models, applied AI, and ML systems.',
+    technologies: ['Python', 'NumPy', 'Pandas', 'scikit-learn', 'PyTorch', 'Hugging Face', 'OpenAI', 'Anthropic', 'FastAPI', 'PostgreSQL', 'Redis', 'Docker', 'MLflow', 'DVC'],
     highlights: [
-      'LLM fundamentals: raw API calls, context windows, structured outputs, and prompt patterns',
-      'RAG pipeline work: embeddings, chunking, vector stores, and retrieval logic',
-      'Agent systems: tool calling, multi-step reasoning, and memory vs stateless design',
-      'MCP exploration: context and memory management across systems with tool servers',
-      'Deployment focus: serving models and shipping AI apps with FastAPI and BentoML',
-      'LangChain study: chains, memory, LangGraph, and agent orchestration'
+      'Mathematics, classical machine learning, model evaluation, and scikit-learn foundations',
+      'Neural networks, backpropagation, autograd, deep learning, and PyTorch',
+      'Transformers, tokenization, embeddings, attention, and open-source models',
+      'Fine-tuning with LoRA and QLoRA, quantization, and evaluation workflows',
+      'Applied AI including RAG, agents, tool calling, MCP, and orchestration',
+      'ML systems, serving, MLOps, deployment, monitoring, computer vision, and edge AI'
     ],
     links: {
-      github: 'https://github.com/Julien-G-Man/ai-engineering',
+      github: 'https://github.com/Julien-G-Man/ai-ml-engineering',
       live: '#'
     }
   },
 ]
 
 const categories = ['All', ...Array.from(new Set(projects.map((project) => project.category)))]
+
+const projectSlug = (title: string) =>
+  title.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '')
+
+const projectImages: Record<string, string> = {
+  '10-Day AI/ML Engineering & Agentic Systems Sprint': '/agent-right.jpeg',
+  Ocasia: '/ai-tutor.jpg',
+  VeriMed: '/drugs-on-desk.jpg',
+  'Tool-Augmented Chatbot': '/server.jpg',
+  ScholarAid: '/fulbright_students.jpg',
+  'Tena AI': '/ai_silicon.jpg',
+  'MoMoChat': '/momochat_illustration.png',
+  'Python Developer Projects': '/python-code.jpg',
+  'AI/ML Engineering Journey': '/agent-left.jpeg',
+}
 
 export default function ProjectsPage() {
   const [selectedCategory, setSelectedCategory] = useState('All')
@@ -270,7 +285,7 @@ export default function ProjectsPage() {
       <section className="py-20 bg-secondary/30">
         <div className="max-w-6xl mx-auto px-6 lg:px-12">
           <ScrollReveal className="mb-10">
-          <div className="space-y-6 rounded-xl border border-border bg-background/80 p-5 shadow-sm backdrop-blur sm:p-6">
+          <div className="space-y-6 rounded-none border border-border bg-background/80 p-5 shadow-sm backdrop-blur sm:p-6">
             <div className="flex flex-col gap-4 lg:flex-row lg:items-center lg:justify-between">
               <div>
                 <div className="inline-flex items-center gap-2 text-sm font-semibold text-accent">
@@ -286,7 +301,7 @@ export default function ProjectsPage() {
                 <button
                   type="button"
                   onClick={clearFilters}
-                  className="inline-flex w-full items-center justify-center gap-2 rounded-lg border border-border bg-secondary px-4 py-2 text-sm font-medium text-foreground transition-colors hover:border-accent/50 sm:w-auto"
+                  className="inline-flex w-full items-center justify-center gap-2 rounded-none border border-border bg-secondary px-4 py-2 text-sm font-medium text-foreground transition-colors hover:border-accent/50 sm:w-auto"
                 >
                   <X size={16} />
                   Clear
@@ -303,7 +318,7 @@ export default function ProjectsPage() {
                     key={category}
                     type="button"
                     onClick={() => setSelectedCategory(category)}
-                    className={`h-11 flex-shrink-0 rounded-lg border px-4 text-sm font-medium transition-colors ${
+                    className={`h-11 flex-shrink-0 rounded-none border px-4 text-sm font-medium transition-colors ${
                       isSelected
                         ? 'border-accent bg-accent text-background'
                         : 'border-border bg-secondary text-foreground hover:border-accent/50'
@@ -317,97 +332,43 @@ export default function ProjectsPage() {
           </div>
           </ScrollReveal>
 
-          <div className="grid grid-cols-1 gap-8">
+          <div className="grid grid-cols-1 gap-x-8 gap-y-14 sm:grid-cols-2 lg:grid-cols-3">
             {filteredProjects.map((project, index) => (
               <ScrollReveal key={`${project.title}-${project.category}`} delay={Math.min(index * 70, 280)}>
-              <div
-                className="group relative bg-background border border-border rounded-xl overflow-hidden hover:border-accent/50 transition-all duration-300 hover:shadow-lg hover:shadow-accent/5"
-              >
-                <div className="absolute top-4 right-4 text-foreground/30 font-mono font-extrabold text-4xl md:text-5xl select-none pointer-events-none">
-                  {String(index + 1).padStart(2, '0')}
-                </div>
-                {/* Gradient overlay on hover */}
-                <div className="absolute inset-0 bg-gradient-to-r from-accent/0 via-accent/0 to-accent/5 opacity-0 group-hover:opacity-100 transition-opacity" />
-
-                <div className="relative p-8 lg:p-10">
-                  {/* Header */}
-                  <div className="mb-6">
-                    <h3 className="text-2xl lg:text-3xl font-bold text-foreground mb-2">{project.title}</h3>
-                    <div className="flex flex-wrap items-center gap-3">
-                      <p className="text-lg text-accent font-medium">{project.subtitle}</p>
-                      <span className="rounded-full border border-accent/30 bg-accent/10 px-3 py-1 text-xs font-semibold text-accent">
-                        {project.category}
-                      </span>
+                <Link
+                  href={`/projects/${projectSlug(project.title)}`}
+                  className="group block"
+                >
+                  <div className="relative aspect-[4/3] overflow-hidden border border-border bg-secondary">
+                    <Image
+                      src={projectImages[project.title]}
+                      alt={`${project.title} project preview`}
+                      fill
+                      className="object-cover transition-transform duration-500 group-hover:scale-105"
+                    />
+                    <div className="absolute inset-0 bg-black/10 transition-colors group-hover:bg-black/0" />
+                  </div>
+                  <div className="pt-5">
+                    <div className="mb-3 flex items-center gap-3 text-sm text-muted-foreground">
+                      <span className="border-l-2 border-accent pl-2">{project.category}</span>
                     </div>
+                    <h3 className="text-xl font-bold leading-tight text-foreground transition-colors group-hover:text-accent">
+                      {project.title}
+                    </h3>
+                    <p className="mt-2 line-clamp-2 text-sm leading-relaxed text-muted-foreground">{project.subtitle}</p>
+                    <span className="mt-5 inline-flex items-center gap-2 text-sm font-semibold text-accent">
+                      View project
+                      <ArrowRight size={16} className="transition-transform group-hover:translate-x-1" />
+                    </span>
                   </div>
-
-                  {/* Description */}
-                  <p className="text-foreground/80 text-lg leading-relaxed mb-6 max-w-3xl">
-                    {project.description}
-                  </p>
-
-                  {/* Highlights */}
-                  <div className="mb-8 space-y-3">
-                    {project.highlights.map((highlight, idx) => (
-                      <div key={idx} className="flex items-start gap-3">
-                        <div className="w-1.5 h-1.5 bg-accent rounded-full flex-shrink-0 mt-2" />
-                        <p className="text-foreground/70">{highlight}</p>
-                      </div>
-                    ))}
-                  </div>
-
-                  {/* Technologies */}
-                  <div className="flex flex-wrap gap-2 mb-8">
-                    {project.technologies.map((tech, idx) => (
-                      <span
-                        key={idx}
-                        className="text-xs px-3 py-1.5 bg-secondary border border-border rounded-lg text-foreground/70 font-medium"
-                      >
-                        {tech}
-                      </span>
-                    ))}
-                  </div>
-
-                  {/* Links */}
-                  <div className="flex flex-wrap gap-4 pt-6 border-t border-border">
-                    {project.links.github !== '#' ? (
-                      <a
-                        href={project.links.github}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="inline-flex items-center gap-2 text-accent hover:text-accent/80 transition-colors font-medium group/link"
-                      >
-                        <Github size={18} />
-                        GitHub
-                        <ExternalLink size={16} className="group-hover/link:translate-x-1 transition-transform" />
-                      </a>
-                    ) : project.githubLabel ? (
-                      <span className="inline-flex items-center gap-2 text-foreground/60 font-medium">
-                        <Github size={18} />
-                        {project.githubLabel}
-                      </span>
-                    ) : null}
-                    {project.links.live !== '#' && (
-                      <a
-                        href={project.links.live}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="inline-flex items-center gap-2 text-accent hover:text-accent/80 transition-colors font-medium group/link"
-                      >
-                        Live Demo
-                        <ExternalLink size={16} className="group-hover/link:translate-x-1 transition-transform" />
-                      </a>
-                    )}
-                  </div>
-                </div>
-              </div>
+                </Link>
               </ScrollReveal>
             ))}
           </div>
 
           {filteredProjects.length === 0 && (
             <ScrollReveal>
-            <div className="rounded-xl border border-border bg-background p-10 text-center">
+            <div className="rounded-none border border-border bg-background p-10 text-center">
               <h2 className="text-2xl font-bold text-foreground">No projects found</h2>
               <p className="mx-auto mt-2 max-w-md text-muted-foreground">
                 Try a different category or clear the filter.
@@ -415,7 +376,7 @@ export default function ProjectsPage() {
               <button
                 type="button"
                 onClick={clearFilters}
-                className="mt-6 inline-flex items-center gap-2 rounded-lg bg-accent px-5 py-2.5 font-semibold text-background transition-colors hover:bg-accent/90"
+                className="mt-6 inline-flex items-center gap-2 rounded-none bg-accent px-5 py-2.5 font-semibold text-background transition-colors hover:bg-accent/90"
               >
                 <X size={16} />
                 Clear Filters
@@ -432,14 +393,14 @@ export default function ProjectsPage() {
         <div className="flex flex-col sm:flex-row gap-6 justify-center">
           <Link
             href="/"
-            className="inline-flex items-center gap-2 px-8 py-3 bg-secondary hover:bg-secondary/80 border border-border text-foreground font-semibold rounded-lg transition-all duration-300 hover:shadow-lg"
+              className="inline-flex items-center gap-2 px-8 py-3 bg-secondary hover:bg-secondary/80 border border-border text-foreground font-semibold rounded-none transition-all duration-300 hover:shadow-lg"
           >
             <ArrowRight size={18} className="rotate-180" />
             Home
           </Link>
           <a
             href="/?section=contact"
-            className="inline-flex items-center gap-2 px-8 py-3 bg-accent hover:bg-accent/90 text-background font-semibold rounded-lg transition-all duration-300 hover:shadow-lg"
+              className="inline-flex items-center gap-2 px-8 py-3 bg-accent hover:bg-accent/90 text-background font-semibold rounded-none transition-all duration-300 hover:shadow-lg"
           >
             Let's Connect
             <ArrowRight size={18} />

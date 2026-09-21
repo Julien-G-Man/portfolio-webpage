@@ -13,22 +13,22 @@ const skillCategories = [
     image: '/python-code.jpg'
   },
   {
-    category: 'Backend',
-    skills: ['FastAPI', 'Django', 'Flask', 'PostgreSQL', 'SQL Server', 'SQLite', 'SQLAlchemy', 'pyodbc', 'REST APIs', 'Async Programming'],
+    category: 'Software Engineering',
+    skills: ['FastAPI', 'Django', 'Pydantic', 'PostgreSQL', 'SQL Server', 'SQLite', 'SQLAlchemy', 'pytest', 'pyodbc', 'REST APIs', 'Async Programming'],
     color: 'from-cyan-500 to-cyan-600',
     mastered: false,
     image: '/server.jpg'
   },
   {
     category: 'AI / ML',
-    skills: ['OpenAI API', 'Claude API', 'Prompt Engineering', 'RAG (embeddings + retrieval)', 'Vector Databases (Pinecone)', 'LangChain', 'LlamaIndex', 'Agents basics'],
+    skills: ['RAG', 'LangChain', 'Scikit-learn', 'LlamaIndex', 'Embeddings', 'Pinecone', 'ChromaDB', 'pgvector', 'Agents and Tool Use'],
     color: 'from-pink-500 to-pink-600',
     mastered: false,
     image: '/ai_silicon.jpg'
   },
   {
     category: 'DevOps & Tools',
-    skills: ['VS Code', 'Vercel', 'Render', 'Netlify', 'Git', 'GitHub', 'Poetry', 'Pydantic V2', 'CLI Tools'],
+    skills: ['Git & GitHub', 'CLI Tools', 'GitHub Actions', 'Poetry', 'VS Code', 'Vercel', 'Render', 'Netlify'],
     color: 'from-green-500 to-green-600',
     mastered: false,
     image: '/github-profile.jpg'
@@ -95,7 +95,7 @@ export function Skills() {
               <div
                 key={index}
                 data-skill-card
-                className="group/card relative min-h-[340px] min-w-[280px] md:min-w-0 md:flex-1 flex-shrink-0 border rounded-xl p-6 hover:border-accent/50 transition-all duration-300 overflow-hidden"
+                className="group/card relative min-h-[340px] min-w-[280px] md:min-w-0 md:flex-1 flex-shrink-0 border rounded-none p-6 hover:border-accent/50 transition-all duration-300 overflow-hidden"
               >
                 <Image
                   src={category.image}
@@ -136,7 +136,7 @@ export function Skills() {
             <button
               ref={leftBtnRef}
               onClick={() => scroll('left')}
-              className="absolute left-0 top-1/2 -translate-y-1/2 z-20 p-2 bg-accent hover:bg-accent/90 text-background rounded-full transition-all duration-300 shadow-lg"
+              className="absolute left-0 top-1/2 -translate-y-1/2 z-20 p-2 bg-accent hover:bg-accent/90 text-background rounded-none transition-all duration-300 shadow-lg"
               aria-label="Scroll left"
             >
               <ChevronLeft size={24} />
@@ -148,7 +148,7 @@ export function Skills() {
             <button
               ref={rightBtnRef}
               onClick={() => scroll('right')}
-              className="absolute right-0 top-1/2 -translate-y-1/2 z-20 p-2 bg-accent hover:bg-accent/90 text-background rounded-full transition-all duration-300 shadow-lg"
+              className="absolute right-0 top-1/2 -translate-y-1/2 z-20 p-2 bg-accent hover:bg-accent/90 text-background rounded-none transition-all duration-300 shadow-lg"
               aria-label="Scroll right"
             >
               <ChevronRight size={24} />

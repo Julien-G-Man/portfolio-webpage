@@ -69,7 +69,7 @@ export function Hero() {
               <div className="pt-2 sm:pt-4 flex flex-col sm:flex-row sm:flex-wrap items-start sm:items-center gap-3">
               <button
                 onClick={() => scrollToSection('projects')}
-                className="inline-flex w-full sm:w-auto justify-center items-center gap-2 px-6 py-3 bg-accent dark:bg-yellow-300 text-white dark:text-black font-medium rounded-lg transition-colors group hero-btn"
+                className="inline-flex w-full sm:w-auto justify-center items-center gap-2 px-6 py-3 bg-accent dark:bg-yellow-300 text-white dark:text-black font-medium rounded-none transition-colors group hero-btn"
               >
                 See Case Studies
                 <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
@@ -77,7 +77,7 @@ export function Hero() {
               <a
                 href="/Julien-Glory-Manana-Resume-June-2026.pdf"
                 download
-                className="inline-flex w-full sm:w-auto justify-center items-center gap-2 px-6 py-3 border border-white/30 text-white font-medium rounded-lg hover:bg-white/10 transition-colors"
+                className="inline-flex w-full sm:w-auto justify-center items-center gap-2 px-6 py-3 border border-white/30 text-white font-medium rounded-none hover:bg-white/10 transition-colors"
               >
                 Download CV
                 <Download size={18} />
