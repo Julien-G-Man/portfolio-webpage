@@ -103,11 +103,11 @@ export default function Contact() {
                 Especially interested in internships and trainee opportunities where I can contribute,
                 learn fast, and grow with strong engineering teams.
               </p>
-              <div className="mb-4 flex flex-wrap gap-2">
-                <span className="rounded-full border border-accent/30 bg-accent/10 px-3 py-1 text-xs font-medium text-accent">Software Engineering Internship</span>
-                <span className="rounded-full border border-accent/30 bg-accent/10 px-3 py-1 text-xs font-medium text-accent">AI Engineering Internship</span>
-                <span className="rounded-full border border-accent/30 bg-accent/10 px-3 py-1 text-xs font-medium text-accent">Backend Engineering</span>
-                <span className="rounded-full border border-accent/30 bg-accent/10 px-3 py-1 text-xs font-medium text-accent">Django Development</span>
+              <div className="mb-4 flex flex-wrap gap-x-5 gap-y-3">
+                <span className="relative pl-3 text-xs font-medium text-foreground/75 before:absolute before:left-0 before:top-1/2 before:h-1 before:w-1 before:-translate-y-1/2 before:bg-accent">Software Engineering Internship</span>
+                <span className="relative pl-3 text-xs font-medium text-foreground/75 before:absolute before:left-0 before:top-1/2 before:h-1 before:w-1 before:-translate-y-1/2 before:bg-accent">AI Engineering Internship</span>
+                <span className="relative pl-3 text-xs font-medium text-foreground/75 before:absolute before:left-0 before:top-1/2 before:h-1 before:w-1 before:-translate-y-1/2 before:bg-accent">Backend Engineering</span>
+                <span className="relative pl-3 text-xs font-medium text-foreground/75 before:absolute before:left-0 before:top-1/2 before:h-1 before:w-1 before:-translate-y-1/2 before:bg-accent">Django Development</span>
               </div>
             </div>
           </div>

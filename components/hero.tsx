@@ -53,7 +53,7 @@ export function Hero() {
                 <div className="w-1 h-6 bg-accent dark:bg-yellow-300 rounded-full flex-shrink-0 mt-1" />
                 <div>
                   <p className="text-muted-foreground">Focus</p>
-                  <p className="font-medium text-white">Backend Dev</p>
+                  <p className="font-medium text-white">Backend & AI Dev</p>
                 </div>
               </div>
               <div className="flex items-start gap-3">

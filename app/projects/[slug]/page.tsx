@@ -1,6 +1,7 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import { ArrowLeft, ArrowRight, ArrowUpRight, Github } from 'lucide-react'
+import type { Metadata } from 'next'
 import { notFound } from 'next/navigation'
 import { Header } from '@/components/header'
 import { Footer } from '@/components/footer'
@@ -9,7 +10,7 @@ const projectPages = {
   '10-day-ai-ml-engineering-agentic-systems-sprint': {
     title: '10-Day AI/ML Engineering & Agentic Systems Sprint',
     category: 'AI/ML and Agents',
-    date: '2026',
+    date: 'April 2026',
     image: '/agent-right.jpeg',
     summary: 'A hands-on sprint turning AI and machine learning concepts into working APIs, retrieval systems, model workflows, and agentic applications.',
     description: 'This project collection documents a practical development sprint with nGOT Giants. The work moves from first principles to shipped systems, with an emphasis on grounding outputs, validating inputs, and building deployment-ready services.',
@@ -21,7 +22,7 @@ const projectPages = {
   ocasia: {
     title: 'Ocasia',
     category: 'Education',
-    date: '2026',
+    date: 'March 2026',
     image: '/ai-tutor.jpg',
     summary: 'An AI-powered study platform that turns student notes into personalised quizzes, flashcards, and explanations.',
     description: 'Ocasia combines a Django application with an async AI service to help students study from their own material. I focused on backend architecture and the AI integration while collaborating with a friend on the frontend.',
@@ -33,7 +34,7 @@ const projectPages = {
   verimed: {
     title: 'VeriMed',
     category: 'Health Tech',
-    date: '2026',
+    date: 'May 2026',
     image: '/drugs-on-desk.jpg',
     summary: 'A mobile-friendly medicine authenticity risk assessment tool using image analysis, OCR, barcode decoding, and reference data.',
     description: 'VeriMed combines computer vision and reference-based matching to give users a plain-language assessment of whether medicine packaging appears genuine, suspicious, or unverifiable.',
@@ -45,10 +46,10 @@ const projectPages = {
   'tool-augmented-chatbot': {
     title: 'Tool-Augmented Chatbot',
     category: 'LLM Tools',
-    date: '2026',
+    date: 'February 2026',
     image: '/server.jpg',
     summary: 'A database-aware chatbot that uses controlled LLM tools to query real SQL Server data instead of inventing answers.',
-    description: 'This full-stack learning project explores function calling, database access, and conversational context. The model chooses from predefined backend functions, and the server executes the resulting SQL operation before returning a natural-language response.',
+    description: 'This full-stack learning project was my first attempt at imeplementing tools in LLMS, essentially my intro to agents :).\n It explores function calling, database access, and conversational context. The model chooses from predefined backend functions, and the server executes the resulting SQL operation before returning a natural-language response.',
     highlights: ['Six controlled database tools', 'SQL Server access through SQLAlchemy and pyodbc', 'Conversation context stored in SQLite', 'Markdown tables and lists in the chat interface'],
     technologies: ['FastAPI', 'React', 'Vite', 'SQLAlchemy', 'pyodbc', 'OpenAI-compatible SDK', 'SQL Server'],
     github: 'https://github.com/Julien-G-Man/tool-augmented-chatbot',
@@ -57,9 +58,9 @@ const projectPages = {
   scholaraid: {
     title: 'ScholarAid',
     category: 'Education',
-    date: '2026',
+    date: 'June 2026',
     image: '/fulbright_students.jpg',
-    summary: 'A scholarship platform combining opportunity discovery, AI application feedback, and admin tools for managing scholarship data.',
+    summary: 'A scholarship platform combining opportunity discovery, AI application guidance, and admin tools for managing scholarship data.',
     description: 'ScholarAid helps students find relevant opportunities and improve their applications while giving administrators structured workflows for collecting, cleaning, and publishing scholarship listings.',
     highlights: ['Searchable scholarship listings and deadlines', 'Claude-powered essay review', 'AI-assisted scholarship intake from URLs or raw text', 'Admin scraping, review, CSV export, and ingestion workflow'],
     technologies: ['Python', 'Django', 'Next.js', 'Claude', 'DRF', 'JWT', 'BeautifulSoup4', 'PostgreSQL'],
@@ -69,7 +70,7 @@ const projectPages = {
   'tena-ai': {
     title: 'Tena AI',
     category: 'LLM Tools',
-    date: '2026',
+    date: 'January 2026',
     image: '/ai-tutor.jpg',
     summary: 'A conversational AI platform providing women rights education and emotional support to women and children',
     description: 'I collaborated on the backend for Tena AI, contributing to API design, user management, authentication, and the foundation for scalable AI interactions.',
@@ -81,7 +82,7 @@ const projectPages = {
   'customer-support-chatbot': {
     title: 'MoMoChat',
     category: 'Fintech',
-    date: '2025',
+    date: 'November 2025',
     image: '/momochat_illustration.png',
     summary: 'A grounded customer support chatbot built during my MTN Mobile Money Congo internship.',
     description: 'The chatbot covers 15 MoMo service topics and uses layered retrieval to keep answers accurate: semantic search first, keyword fallback second, and full context injection as a final safety net.',
@@ -93,7 +94,7 @@ const projectPages = {
   'python-developer-projects': {
     title: 'Python Developer Projects',
     category: 'Practice Projects',
-    date: 'Ongoing',
+    date: 'Ongoing since January 2025',
     image: '/python-code.jpg',
     summary: 'A growing collection of Python practice work covering fundamentals, APIs, computer vision, and machine learning.',
     description: 'This repository records the practical side of my Python learning journey, from early exercises and data structures to frameworks, APIs, and experiments that continue to evolve as I learn.',
@@ -105,7 +106,7 @@ const projectPages = {
   'ai-ml-engineering-journey': {
     title: 'AI/ML Engineering Journey',
     category: 'AI/ML and Agents',
-    date: 'In progress',
+    date: 'In progress since April 2026',
     image: '/agent-left.jpeg',
     summary: 'A structured, hands-on curriculum moving from machine learning foundations and neural networks to transformers, foundation models, applied AI, and ML systems.',
     description: 'This repository documents an intentional AI/ML engineering path. The work progresses from mathematics and classical machine learning through deep learning, transformers, open-source models, fine-tuning, applied AI systems, and production-oriented ML infrastructure. The learning approach is simple: understand, implement, use, then integrate.',
@@ -125,6 +126,41 @@ export function generateStaticParams() {
   return [...Object.keys(projectPages), ...Object.keys(projectAliases)].map((slug) => ({ slug }))
 }
 
+export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
+  const { slug } = await params
+  const canonicalSlug = projectAliases[slug as keyof typeof projectAliases] ?? slug
+  const project = projectPages[canonicalSlug as keyof typeof projectPages]
+
+  if (!project) {
+    return {}
+  }
+
+  return {
+    title: `${project.title} | Projects - Julien Glory Manana`,
+    description: project.summary,
+    alternates: {
+      canonical: `/projects/${canonicalSlug}`,
+    },
+    openGraph: {
+      title: project.title,
+      description: project.summary,
+      type: 'article',
+      images: [
+        {
+          url: project.image,
+          alt: `${project.title} project preview`,
+        },
+      ],
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: project.title,
+      description: project.summary,
+      images: [project.image],
+    },
+  }
+}
+
 function getRelatedProjects(currentSlug: string) {
   return Object.entries(projectPages)
     .filter(([slug]) => slug !== currentSlug)
@@ -142,25 +178,24 @@ export default async function ProjectDetailPage({ params }: { params: Promise<{ 
     <main className="bg-background">
       <Header alwaysSolid />
       <section className="border-b border-border bg-secondary/30 px-6 py-16 lg:px-12 lg:py-24">
-        <div className="mx-auto grid max-w-6xl gap-12 lg:grid-cols-2 lg:items-center">
-          <div>
+        <div className="mx-auto grid max-w-6xl gap-12 lg:grid-cols-2 lg:items-start">
+          <div className="order-1 lg:order-1">
             <Link href="/projects" className="mb-12 inline-flex items-center gap-2 text-sm font-semibold text-accent hover:text-accent/80">
               <ArrowLeft size={16} />
               Back to projects
             </Link>
-            <p className="mb-5 text-sm font-semibold uppercase tracking-[0.18em] text-accent">{project.category}</p>
             <h1 className="max-w-3xl text-4xl font-bold leading-tight text-foreground md:text-6xl">{project.title}</h1>
             <div className="mt-8 h-1 w-20 bg-accent" />
-            <p className="mt-8 text-sm text-muted-foreground">Project timeline</p>
-            <p className="mt-1 text-xl font-semibold text-foreground">{project.date}</p>
-            <p className="mt-8 max-w-2xl text-xl leading-relaxed text-foreground/80">{project.summary}</p>
-            <div className="mt-8 flex flex-wrap gap-3">
-              {project.github !== '#' && <a href={project.github} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 bg-accent px-5 py-3 font-semibold text-background"><Github size={17} /> Repository</a>}
-              {project.live !== '#' && <a href={project.live} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 border border-border bg-background px-5 py-3 font-semibold text-foreground"><ArrowUpRight size={17} /> Live project</a>}
-            </div>
           </div>
-          <div className="relative aspect-[4/3] overflow-hidden border border-border bg-black">
+          <div className="relative order-2 aspect-[4/3] overflow-hidden border border-border bg-black lg:order-2 lg:row-span-2">
             <Image src={project.image} alt={`${project.title} project preview`} fill priority className="object-cover" />
+          </div>
+          <p className="order-3 max-w-2xl text-xl leading-relaxed text-foreground/80 lg:col-start-1 lg:row-start-2">
+            {project.summary}
+          </p>
+          <div className="order-4 flex flex-wrap gap-3 lg:col-span-2">
+            {project.github !== '#' && <a href={project.github} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 bg-accent px-5 py-3 font-semibold text-background"><Github size={17} /> Repository</a>}
+            {project.live !== '#' && <a href={project.live} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 border border-border bg-background px-5 py-3 font-semibold text-foreground"><ArrowUpRight size={17} /> Live project</a>}
           </div>
         </div>
       </section>
@@ -225,9 +260,9 @@ export default async function ProjectDetailPage({ params }: { params: Promise<{ 
               </Link>
             </div>
 
-            <div className="mt-8 grid gap-8 md:grid-cols-3">
+            <div className="mt-8 flex snap-x snap-mandatory gap-6 overflow-x-auto pb-4 md:grid md:grid-cols-3 md:gap-8 md:overflow-visible md:pb-0">
               {getRelatedProjects(canonicalSlug).map(([relatedSlug, relatedProject]) => (
-                <Link key={relatedSlug} href={`/projects/${relatedSlug}`} className="group block">
+                <Link key={relatedSlug} href={`/projects/${relatedSlug}`} className="group block min-w-[82%] snap-start sm:min-w-[48%] md:min-w-0">
                   <div className="relative aspect-[4/3] overflow-hidden border border-border bg-secondary">
                     <Image
                       src={relatedProject.image}

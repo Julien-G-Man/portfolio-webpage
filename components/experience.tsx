@@ -88,7 +88,7 @@ export function Experience() {
                   {exp.highlights.map((highlight, idx) => (
                     <span
                       key={idx}
-                      className="text-xs px-3 py-1 bg-accent/10 text-accent rounded-full border border-accent/30"
+                      className="relative pl-3 text-xs font-medium text-foreground/75 before:absolute before:left-0 before:top-1/2 before:h-1 before:w-1 before:-translate-y-1/2 before:bg-accent"
                     >
                       {highlight}
                     </span>

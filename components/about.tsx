@@ -35,11 +35,11 @@ export function About() {
 
             <div className="pt-2">
               <p className="text-sm font-medium text-accent mb-3">Open to</p>
-              <div className="flex flex-wrap gap-2">
+              <div className="flex flex-wrap gap-x-5 gap-y-3">
                 {['Internships', 'Collaboration', 'Open Source', 'Mentorship'].map((item) => (
                   <span
                     key={item}
-                    className="px-3 py-1 text-sm border border-accent/50 text-accent rounded-full bg-accent/10 font-medium"
+                    className="relative pl-3 text-sm font-medium text-foreground/75 before:absolute before:left-0 before:top-1/2 before:h-1 before:w-1 before:-translate-y-1/2 before:bg-accent"
                   >
                     {item}
                   </span>
@@ -132,7 +132,7 @@ export function About() {
               >
                 <div className="relative aspect-[16/10] overflow-hidden border border-border bg-secondary">
                   <Image
-                    src="/ngot-sprint.png"
+                    src="/ngot-medical-rag.png"
                     alt="nGOT Giants Development Sprint placeholder image"
                     fill
                     className="object-cover transition-transform duration-300 group-hover:scale-105"
