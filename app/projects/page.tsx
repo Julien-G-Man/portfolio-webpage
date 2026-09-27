@@ -99,26 +99,6 @@ const projects: Project[] = [
     }
   },
   {
-    title: 'Tool-Augmented Chatbot',
-    subtitle: 'LLM Tool/Function-Calling Database Query Agent',
-    category: 'LLM Tools',
-    description: 'Full-stack learning project demonstrating LLM tool/function-calling by connecting a chatbot to a real SQL Server database. Instead of hallucinating answers, the AI assistant queries actual database tables through controlled backend functions, then summarizes results in natural language.',
-    technologies: ['FastAPI', 'React', 'Vite', 'SQLAlchemy', 'pyodbc', 'OpenAI-compatible SDK', 'SQL Server', 'SQLite'],
-    highlights: [
-      'LLM tool-calling: AI model decides when and which database function to invoke',
-      'Connects to real SQL Server (CompanyDB) with 6 predefined database functions',
-      'Maintains conversation context across multiple turns (last 5 messages in SQLite)',
-      'Rich response rendering with Markdown tables and lists support',
-      'Six available tools: list departments/projects/employees, filter by project, get project lead, get dependents',
-      'Backend: FastAPI with tool handler and SQL query execution',
-      'Frontend: React + Vite chat interface for real-time interaction'
-    ],
-    links: {
-      github: 'https://github.com/Julien-G-Man/tool-augmented-chatbot',
-      live: '#'
-    }
-  },
-  {
     title: 'ScholarAid',
     subtitle: 'Scholarship Management & Application Platform',
     category: 'Education',
@@ -217,6 +197,24 @@ const projects: Project[] = [
       live: '#'
     }
   },
+  {
+    title: 'Multiagent Software Build Team',
+    subtitle: 'DevTech / Automated Software Engineering',
+    category: 'AI/ML and Agents',
+    description: 'An AutoGen multi-agent software team that turns a plain-English feature request into working, tested Python code by planning, coding, executing, reviewing, and repeating until tests pass.',
+    technologies: ['Python', 'AutoGen', 'pyautogen', 'OpenAI gpt-4o-mini', 'FastAPI', 'Pydantic V2', 'Poetry'],
+    highlights: [
+      'Planner agent decomposes the plain-English request into implementation steps',
+      'Coder agent writes Python code against the requested feature spec',
+      'Executor UserProxyAgent runs the code in a sandbox and reports real output',
+      'Reviewer agent critiques the result against the spec and signals TERMINATE when correct',
+      'Models the communicative agents for software development loop end to end'
+    ],
+    links: {
+      github: 'https://github.com/Julien-G-Man/ai-ml-engineering/tree/main/projects/multi_agent_software_build_team',
+      live: '#'
+    }
+  },
 ]
 
 const categories = ['All', ...Array.from(new Set(projects.map((project) => project.category)))]
@@ -233,7 +231,8 @@ const projectImages: Record<string, string> = {
   'Tena AI': '/ai_silicon.jpg',
   'MoMoChat': '/momochat_illustration.png',
   'Python Developer Projects': '/python-code.jpg',
-  'AI/ML Engineering Journey': '/agent-left.jpeg',
+  'AI/ML Engineering Journey': '/simple_neural_net.jpg',
+  'Multiagent Software Build Team': '/agent-runner.jpeg',
 }
 
 export default function ProjectsPage() {

@@ -107,19 +107,32 @@ const projectPages = {
     title: 'AI/ML Engineering Journey',
     category: 'AI/ML and Agents',
     date: 'In progress since April 2026',
-    image: '/agent-left.jpeg',
+    image: '/simple_neural_net.jpg',
     summary: 'A structured, hands-on curriculum moving from machine learning foundations and neural networks to transformers, foundation models, applied AI, and ML systems.',
     description: 'This repository documents an intentional AI/ML engineering path. The work progresses from mathematics and classical machine learning through deep learning, transformers, open-source models, fine-tuning, applied AI systems, and production-oriented ML infrastructure. The learning approach is simple: understand, implement, use, then integrate.',
     highlights: ['Mathematics, classical machine learning, model evaluation, and scikit-learn', 'Neural networks, backpropagation, autograd, deep learning, and PyTorch', 'Transformers, tokenization, embeddings, attention, and foundation models', 'LoRA and QLoRA fine-tuning, quantization, and model evaluation', 'RAG, agents, tool calling, MCP, and orchestration for applied AI', 'Model serving, MLOps, deployment, monitoring, computer vision, and edge AI'],
     technologies: ['Python', 'NumPy', 'Pandas', 'scikit-learn', 'PyTorch', 'Hugging Face', 'OpenAI', 'Anthropic', 'FastAPI', 'PostgreSQL', 'Redis', 'Docker', 'MLflow', 'DVC'],
     github: 'https://github.com/Julien-G-Man/ai-ml-engineering',
     live: '#'
+  },
+  'multiagent-software-build-team': {
+    title: 'Multiagent Software Build Team',
+    category: 'AI/ML and Agents',
+    date: '2026',
+    image: '/agent-runner.jpeg',
+    summary: 'An AutoGen multi-agent software team that turns plain-English feature requests into working, tested Python code.',
+    description: 'Turning a plain-English feature request into working, tested code normally needs a developer in the loop for every iteration. This project models the loop itself with agents: plan, code, run, review, repeat until the tests pass. A Planner decomposes the request, a Coder writes Python, an Executor UserProxyAgent runs code in a sandbox and reports real output, and a Reviewer critiques against the spec before signaling TERMINATE when correct.',
+    highlights: ['Planner agent decomposes feature requests into implementation steps', 'Coder agent writes Python against the requested spec', 'Executor UserProxyAgent runs generated code in a sandbox and reports real output', 'Reviewer agent checks the result against the spec and controls completion', 'Implements the communicative agents for software development pattern end to end'],
+    technologies: ['Python', 'AutoGen', 'pyautogen', 'OpenAI gpt-4o-mini', 'FastAPI', 'Pydantic V2', 'Poetry'],
+    github: 'https://github.com/Julien-G-Man/ai-ml-engineering/tree/main/projects/multi_agent_software_build_team',
+    live: '#'
   }
 } as const
 
 const projectAliases = {
   'ai-engineering-journey': 'ai-ml-engineering-journey',
-  'momochat': 'customer-support-chatbot'
+  'momochat': 'customer-support-chatbot',
+  'multi-agent-software-build-team': 'multiagent-software-build-team'
 } as const
 
 export function generateStaticParams() {
