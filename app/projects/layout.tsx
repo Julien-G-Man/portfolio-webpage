@@ -3,14 +3,14 @@ import type { Metadata } from 'next'
 export const metadata: Metadata = {
   title: 'Projects | Julien Glory Manana',
   description:
-    'Explore Julien Glory Manana\'s AI, backend, and full-stack projects, including FastAPI apps, LLM integrations, RAG systems, Django platforms, and deployed portfolio work.',
+    'Explore Julien Glory Manana\'s AI/ML and software engineering projects, including deep learning foundations, computer vision, intelligent systems, and accessible education tools.',
   alternates: {
     canonical: 'https://juliengmanana.netlify.app/projects',
   },
   openGraph: {
     title: 'Projects | Julien Glory Manana',
     description:
-      'AI, backend, and full-stack projects by Julien Glory Manana, including FastAPI, Django, LLM integrations, RAG systems, and deployed applications.',
+      'AI/ML and software engineering projects by Julien Glory Manana, a Computer Science student at KNUST.',
     url: 'https://juliengmanana.netlify.app/projects',
     siteName: 'Julien Glory Manana - Portfolio',
     type: 'website',
@@ -27,7 +27,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Projects | Julien Glory Manana',
     description:
-      'AI, backend, and full-stack projects by Julien Glory Manana, including FastAPI, Django, LLM integrations, and RAG systems.',
+      'AI/ML and software engineering projects by Julien Glory Manana, including deep learning, computer vision, and intelligent systems.',
     images: ['/og-image.jpg'],
   },
 }

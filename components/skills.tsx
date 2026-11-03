@@ -7,28 +7,28 @@ import { useRef, useState, useEffect } from 'react'
 const skillCategories = [
   {
     category: 'Languages',
-    skills: ['Python', 'Java', 'C++', 'SQL'],
+    skills: ['Python', 'Java', 'JavaScript', 'C++', 'SQL'],
     color: 'from-blue-500 to-blue-600',
     mastered: false,
     image: '/python-code.jpg'
   },
   {
-    category: 'Software Engineering',
-    skills: ['FastAPI', 'Django', 'Pydantic', 'PostgreSQL', 'SQL Server', 'SQLite', 'SQLAlchemy', 'pytest', 'pyodbc', 'REST APIs', 'Async Programming'],
+    category: 'AI / ML',
+    skills: ['NumPy', 'scikit-learn', 'Embeddings', 'RAG', 'Semantic Retrieval', 'LLM Agents & Tool Calling', 'LangChain', 'Pinecone / ChromaDB', 'MLflow', 'OpenAI API', 'Claude'],
     color: 'from-cyan-500 to-cyan-600',
     mastered: false,
     image: '/server.jpg'
   },
   {
-    category: 'AI / ML',
-    skills: ['RAG', 'LangChain', 'Scikit-learn', 'LlamaIndex', 'Embeddings', 'Pinecone', 'ChromaDB', 'pgvector', 'Agents and Tool Use'],
+    category: 'Software Engineering',
+    skills: ['FastAPI', 'Django', 'Django REST Framework', 'REST APIs', 'PostgreSQL', 'SQLAlchemy', 'Redis', 'Pydantic', 'WebSockets'],
     color: 'from-pink-500 to-pink-600',
     mastered: false,
     image: '/ai_silicon.jpg'
   },
   {
     category: 'DevOps & Tools',
-    skills: ['Git & GitHub', 'CLI Tools', 'GitHub Actions', 'Poetry', 'VS Code', 'Vercel', 'Render', 'Netlify'],
+    skills: ['Git', 'GitHub', 'Docker', 'pytest', 'GitHub Actions', 'Poetry', 'Postman'],
     color: 'from-green-500 to-green-600',
     mastered: false,
     image: '/github-profile.jpg'
@@ -81,7 +81,7 @@ export function Skills() {
             <span className="text-xs font-medium text-accent">Technical Arsenal</span>
           </div>
           <h2 className="text-4xl lg:text-5xl font-bold text-foreground mb-4">Skills & Tools</h2>
-          <p className="text-lg text-muted-foreground">What I've picked up so far - and keep adding to</p>
+          <p className="text-lg text-muted-foreground">What I've picked up so far, and keep adding to</p>
         </div>
 
         {/* Skills Horizontal Scroll Container */}

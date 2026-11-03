@@ -21,22 +21,22 @@ export function About() {
           {/* Main Text */}
           <div className="space-y-6 text-lg text-foreground/80 leading-relaxed">
             <p>
-              Born in the Republic of Congo, raised in Nigeria, now studying Computer Science at KNUST in Ghana as a Mastercard Foundation Scholar. Three countries, one direction  -  building things that matter.
+              I'm from the Republic of Congo, but my journey has taken me through different parts of Africa. I completed my secondary education in Nigeria at Rochas Foundation College of Africa and currently study Computer Science at Kwame Nkrumah University of Science and Technology (KNUST), Ghana, as a Mastercard Foundation Scholar.
             </p>
             <p>
-              I've been working hands-on with LLMs  -  OpenAI, Claude, Azure OpenAI  -  integrating them into real projects. Things like <span className="text-accent font-semibold">Ocasia</span>, an AI study platform my friend and I built, and <span className="text-accent font-semibold">ScholarAid</span>, a scholarship platform with AI-powered essay review. Each one has taught me something I didn't know going in.
+              I'm fascinated by how technology works and what we can do with it. My journey has taken me from software engineering and backend development into Artificial Intelligence and Machine Learning. These days, I'm particularly interested in understanding the mathematical and computational foundations behind intelligent systems, building things to test what I learn, and exploring how AI can extend beyond software into the physical world.
             </p>
             <p>
-              I genuinely believe technology is one of the most powerful tools Africa has right now  -  for education, health, access, opportunity. That's not just a talking point for me, it shapes what I choose to build and why.
+              I genuinely believe technology is one of the most powerful tools Africa has right now, particularly in education, healthcare, access and opportunity. That's not just a talking point for me; it shapes what I choose to build and why. I'm interested in technology that goes beyond demonstrations and addresses problems people actually face.
             </p>
             <p>
-              When I'm not building, I'm reading about what I haven't figured out yet - which is a long list, and that's fine. I also love helping people grow, which led me to start <span className="text-accent font-semibold">VALUENETWORK</span>, a community where I share opportunities and updates, and <span className="text-accent font-semibold">Founderslens</span>, a TikTok page posting wisdom from top founders and builders.
+              When I'm not building, I'm usually reading about things I haven't figured out yet, exploring new ideas or thinking about the next thing to create. I also enjoy helping others grow and connecting people to opportunities. That interest led me to start <span className="text-accent font-semibold">ValueNetwork</span>, a community where I share opportunities and updates, and <span className="text-accent font-semibold">Founderslens</span>, a TikTok page sharing insights from founders and builders.
             </p>
 
             <div className="pt-2">
               <p className="text-sm font-medium text-accent mb-3">Open to</p>
               <div className="flex flex-wrap gap-x-5 gap-y-3">
-                {['Internships', 'Collaboration', 'Open Source', 'Mentorship'].map((item) => (
+                {['AI/ML projects', 'Software engineering', 'Open source', 'Learning with others'].map((item) => (
                   <span
                     key={item}
                     className="relative pl-3 text-sm font-medium text-foreground/75 before:absolute before:left-0 before:top-1/2 before:h-1 before:w-1 before:-translate-y-1/2 before:bg-accent"
@@ -53,19 +53,19 @@ export function About() {
             {/* Quick Stats */}
             <div className="grid grid-cols-2 gap-4">
               <div className="bg-background border border-border rounded-none p-6 hover:border-accent/50 transition-colors">
-                <p className="text-3xl font-bold text-accent mb-2">10+</p>
+                <p className="text-3xl font-bold text-accent mb-2">15+</p>
                 <p className="text-sm text-muted-foreground font-medium">Projects Built</p>
               </div>
               <div className="bg-background border border-border rounded-none p-6 hover:border-accent/50 transition-colors">
                 <p className="text-3xl font-bold text-accent mb-2">5+</p>
-                <p className="text-sm text-muted-foreground font-medium">Deployed</p>
+                <p className="text-sm text-muted-foreground font-medium">Projects Deployed</p>
               </div>
               <div className="bg-background border border-border rounded-none p-6 hover:border-accent/50 transition-colors">
                 <p className="text-3xl font-bold text-accent mb-2">15+</p>
                 <p className="text-sm text-muted-foreground font-medium">Tools & Skills</p>
               </div>
               <div className="bg-background border border-border rounded-none p-6 hover:border-accent/50 transition-colors">
-                <p className="text-3xl font-bold text-accent mb-2">1.5</p>
+                <p className="text-3xl font-bold text-accent mb-2">1.7</p>
                 <p className="text-sm text-muted-foreground font-medium">Years in Tech</p>
               </div>
             </div>

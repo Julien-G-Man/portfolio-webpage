@@ -14,7 +14,7 @@ export function Footer() {
           <div className="space-y-4">
             <h3 className="text-2xl font-bold text-white">Julien G. Manana</h3>
             <p className="text-sm leading-relaxed text-white/65">
-              Building intelligent AI systems and backend applications that make a real impact.
+              Exploring intelligent systems and building practical software.
             </p>
           </div>
 

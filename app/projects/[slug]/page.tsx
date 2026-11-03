@@ -7,6 +7,18 @@ import { Header } from '@/components/header'
 import { Footer } from '@/components/footer'
 
 const projectPages = {
+  nanonet: {
+    title: 'NanoNet',
+    category: 'AI/ML and Agents',
+    date: 'Ongoing',
+    image: '/adam.jpg',
+    summary: 'An educational neural network framework built from scratch with NumPy to explore how tensor operations, gradients, and parameter updates combine into a learning system.',
+    description: 'NanoNet implements the core mechanics that higher-level machine-learning frameworks abstract away. It includes a custom Tensor engine that builds computational graphs and propagates gradients, a NumPy multilayer perceptron, an alternative manually differentiated MLP, and an Adam optimizer. The project also uses numerical gradient checking and automated tests to validate the implementations. Its MNIST example reported 95.2% accuracy in the latest full evaluation, although the main goal is understanding the mechanics rather than benchmarking performance.',
+    highlights: ['Custom Tensor engine with computational graph construction', 'Automatic differentiation and manual backpropagation', 'NumPy multilayer perceptron with forward pass, training, and prediction', 'Adam optimizer, cross-entropy loss, sigmoid, and softmax operations', 'Numerical gradient checking and automated tests with GitHub Actions', 'MNIST and bag-of-words examples'],
+    technologies: ['Python', 'NumPy', 'Automatic Differentiation', 'Backpropagation', 'MLPs', 'Adam', 'pytest', 'GitHub Actions'],
+    github: 'https://github.com/Julien-G-Man/nanonet',
+    live: '#'
+  },
   '10-day-ai-ml-engineering-agentic-systems-sprint': {
     title: '10-Day AI/ML Engineering & Agentic Systems Sprint',
     category: 'AI/ML and Agents',
@@ -84,10 +96,10 @@ const projectPages = {
     category: 'Fintech',
     date: 'November 2025',
     image: '/momochat_illustration.png',
-    summary: 'A grounded customer support chatbot built during my MTN Mobile Money Congo internship.',
-    description: 'The chatbot covers 15 MoMo service topics and uses layered retrieval to keep answers accurate: semantic search first, keyword fallback second, and full context injection as a final safety net.',
-    highlights: ['Coverage for XtraCash, MoMo Advance, account management, and more', 'Semantic search, keyword fallback, and full context injection', 'Async endpoints with semaphore-based concurrency', 'Cross-functional work with product, BI, and engineering teams'],
-    technologies: ['FastAPI', 'RAG', 'pgvector', 'BM25', 'PostgreSQL', 'Azure OpenAI', 'React', 'REST APIs'],
+    summary: 'A prototype AI-powered customer-support assistant built during my MTN Mobile Money Congo internship.',
+    description: 'The assistant helps users access information about Mobile Money products and services by combining intelligent information retrieval with contextual responses across approximately 15 product and service topics.',
+    highlights: ['Coverage for approximately 15 product and service topics', 'Information retrieval and contextual responses', 'Prototype focused on a practical customer-support problem', 'Cross-functional work with product, BI, and engineering teams'],
+    technologies: ['AI Product Prototype', 'Information Retrieval', 'Contextual Responses'],
     github: '#',
     live: '#'
   },

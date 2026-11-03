@@ -8,16 +8,16 @@ const _geist = Geist({ subsets: ["latin"] });
 const _geistMono = Geist_Mono({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: 'Julien Glory Manana | Backend Developer | Aspiring AI Engineer',
-  description: 'Julien Glory Manana is a Python backend developer and Computer Science student at KNUST, Ghana. He focuses more in AI systems, LLM integration, Django, FastAPI, and full-stack development. Available for internships and collaborations.',
+  title: 'Julien Glory Manana | AI/ML & Software Engineering',
+  description: 'Portfolio of Julien Glory Manana, a KNUST Computer Science student exploring Artificial Intelligence, Machine Learning, and software engineering through practical projects.',
   keywords: [
     'Julien Glory Manana',
     'Julien Manana',
     'Julien Glory',
     'Python backend developer',
-    'AI developer',
-    'LLM integration specialist',
-    'FastAPI developer',
+    'Artificial Intelligence',
+    'Machine Learning',
+    'software engineering',
     'Full-stack developer',
     'software engineer',
     'KNUST computer science',
@@ -45,8 +45,8 @@ export const metadata: Metadata = {
     google: 'SY98vlwn2xMG5dhZ61WUn_PfjzEX4VSXU48Beo-nDpU',
   },
   openGraph: {
-    title: 'Julien Glory Manana | Python Backend Developer & AIE',
-    description: 'Julien Glory Manana is a Python backend developer specializing in AI systems, LLM integration, and full-stack development. KNUST Computer Science student based in Ghana.',
+    title: 'Julien Glory Manana | AI/ML & Software Engineering',
+    description: 'AI/ML and software engineering projects by a KNUST Computer Science student.',
     url: 'https://juliengmanana.netlify.app',
     siteName: 'Julien Glory Manana - Portfolio',
     type: 'website',
@@ -62,8 +62,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Julien Glory Manana | Backend & AI Developer',
-    description: 'Python backend developer specializing in AI systems, LLM integration, and full-stack development. KNUST Computer Science student.',
+    title: 'Julien Glory Manana | AI/ML & Software Engineering',
+    description: 'Exploring intelligent systems and building practical software.',
     creator: '@julien_g_manana',
     images: ['/og-image.jpg'],
   },
@@ -106,8 +106,8 @@ export default function RootLayout({
         "https://instagram.com/julien_g_manana",
         "https://facebook.com/julien.g.manana"
       ],
-      jobTitle: "Python Backend Developer",
-      description: "Python backend developer specializing in AI systems, LLM integration, and full-stack development. Computer Science student at KNUST, Ghana.",
+      jobTitle: "AI/ML and Software Engineering Student",
+      description: "Computer Science student at KNUST exploring Artificial Intelligence, Machine Learning, and software engineering.",
       worksFor: {
         "@type": "Organization",
         name: "Freelance / Self-employed"
@@ -118,9 +118,8 @@ export default function RootLayout({
         sameAs: "https://www.knust.edu.gh"
       },
       knowsAbout: [
-        "Python", "Backend Development", "Artificial Intelligence", "LLM Integration",
-        "FastAPI", "Django", "Large Language Models", "Next.js", "React", "Software Engineering",
-        "REST APIs", "SQL Server", "PostgreSQL", "Machine Learning", "OpenAI", "Azure"
+        "Python", "Backend Development", "Artificial Intelligence", "Machine Learning",
+        "Deep Learning", "Computer Vision", "Software Engineering", "REST APIs", "KNUST"
       ],
       nationality: "Congolese",
       workLocation: {
@@ -133,7 +132,7 @@ export default function RootLayout({
       "@type": "WebSite",
       name: "Julien Glory Manana - Developer Portfolio",
       url: "https://juliengmanana.netlify.app",
-      description: "Portfolio of Julien Glory Manana - Python backend developer specializing in AI systems and LLM integration",
+      description: "Portfolio of Julien Glory Manana - AI/ML and software engineering projects",
       creator: {
         "@type": "Person",
         name: "Julien Glory Manana"
@@ -173,4 +172,3 @@ export default function RootLayout({
     </html>
   )
 }
-

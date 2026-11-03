@@ -25,6 +25,24 @@ type Project = {
 
 const projects: Project[] = [
   {
+    title: 'NanoNet',
+    subtitle: 'Neural Network Framework from Scratch',
+    category: 'AI/ML and Agents',
+    description: 'An educational neural network framework built from scratch with NumPy to explore the mathematics and mechanics behind tensor operations, gradient computation, model training, and parameter updates.',
+    technologies: ['Python', 'NumPy', 'Automatic Differentiation', 'MLPs', 'Adam', 'pytest'],
+    highlights: [
+      'Custom Tensor engine with computational graphs and automatic differentiation',
+      'Manual backpropagation and a NumPy multilayer perceptron',
+      'Adam optimization, cross-entropy loss, and multiclass prediction',
+      'Numerical gradient checks, automated tests, and GitHub Actions CI',
+      'MNIST example with 95.2% reported accuracy in the latest full evaluation'
+    ],
+    links: {
+      github: 'https://github.com/Julien-G-Man/nanonet',
+      live: '#'
+    }
+  },
+  {
     title: '10-Day AI/ML Engineering & Agentic Systems Sprint',
     subtitle: 'AI/ML and Agents',
     category: 'AI/ML and Agents',
@@ -83,7 +101,7 @@ const projects: Project[] = [
     title: 'VeriMed',
     subtitle: 'AI-Powered Medicine Authenticity Risk Assessment',
     category: 'Health Tech',
-    description: 'A mobile-friendly web application that helps users assess whether a medicine is likely genuine, suspicious, or unverifiable by analyzing packaging images against FDA reference dataset.',
+    description: 'A mobile-friendly web application exploring how image processing, OCR, barcode decoding, and medicine registration information can help users assess medicine information. It does not independently verify medicine quality or guarantee drug safety.',
     technologies: ['FastAPI', 'Next.js', 'OpenCV', 'EasyOCR', 'pyzbar', 'rapidfuzz', 'PostgreSQL'],
     highlights: [
       'Three-image verification flow: front pack, back pack, and barcode or QR close-up',
@@ -139,13 +157,12 @@ const projects: Project[] = [
     title: 'MoMoChat',
     subtitle: 'MTN Mobile Money Congo - Internship Project',
     category: 'Fintech',
-    description: 'Built during my internship at MTN Mobile Money Congo. A customer support chatbot covering 15 MoMo service topics  -  XtraCash, MoMo Advance, account management, and more. Uses a three-layer retrieval system to keep responses accurate and grounded: semantic search first, keyword fallback second, and full context injection as a final safety net against hallucinations.',
-    technologies: ['FastAPI', 'RAG', 'pgvector',  'PostgreSQL', 'Azure OpenAI', 'React', 'REST APIs'],
+    description: 'Developed during my internship at MTN Mobile Money Congo, this prototype AI-powered customer-support assistant helps users access information about Mobile Money products and services. It covers approximately 15 product and service topics through intelligent information retrieval and contextual responses.',
+    technologies: ['AI Product Prototype', 'Information Retrieval', 'Contextual Responses'],
     highlights: [
-      '15 MoMo service topics chunked  -  XtraCash, MoMo Advance, account management, and more',
-      'Three-layer retrieval: semantic search -> keyword fallback -> full context injection',
-      'Full context injection as last resort to eliminate hallucinations',
-      'Async endpoints with semaphore-based concurrency',
+      'Approximately 15 Mobile Money product and service topics',
+      'Intelligent information retrieval',
+      'Contextual responses for customer support',
       'Collaborated with product, BI, and engineering teams on query coverage'
     ],
     links: {
@@ -223,6 +240,7 @@ const projectSlug = (title: string) =>
   title.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '')
 
 const projectImages: Record<string, string> = {
+  NanoNet: '/train-adam.jpg',
   '10-Day AI/ML Engineering & Agentic Systems Sprint': '/agent-right.jpeg',
   Ocasia: '/ai-tutor.jpg',
   VeriMed: '/drugs-on-desk.jpg',
@@ -414,4 +432,3 @@ export default function ProjectsPage() {
     </main>
   )
 }
-

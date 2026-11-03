@@ -14,22 +14,22 @@ export function FeaturedProjects() {
   const featuredProjects = [
     {
       id: 1,
-      slug: '10-day-ai-ml-engineering-agentic-systems-sprint',
-      title: '10-Day AI/ML Engineering & Agentic Systems Sprint',
-      subtitle: 'AI/ML and Agents',
-      description: 'Hands-on sprint covering FastAPI, LLM workflows, RAG pipelines, model training, and deployment practices from NGOT Giants.',
-      technologies: ['Python', 'FastAPI', 'OpenAI', 'RAG', 'LangChain'],
-      github: 'https://github.com/Julien-G-Man/10-Day-AI-ML-and-Agentic-Systems-Sprint',
+      slug: 'nanonet',
+      title: 'NanoNet',
+      subtitle: 'Neural network framework from scratch',
+      description: 'An educational NumPy framework with a custom Tensor engine, computational graphs, automatic differentiation, manual backpropagation, MLPs, and an Adam optimizer.',
+      technologies: ['Python', 'NumPy', 'Autodiff', 'MLPs', 'Adam'],
+      github: 'https://github.com/Julien-G-Man/nanonet',
       live: '#',
-      image: '/agent-left.jpeg'
+      image: '/mlp-train.jpg'
     },
     {
       id: 2,
       slug: 'ocasia',
       title: 'Ocasia',
-      subtitle: 'AI-Powered Study Platform',
-      description: 'Full-stack platform generating personalized quizzes, flashcards, and AI explanations from student notes.',
-      technologies: ['Python', 'Django', 'React', 'OpenAI', 'Claude', 'Agent'],
+      subtitle: 'AI-powered study platform',
+      description: 'An AI-powered application for intelligent study interactions and multiplayer learning experiences.',
+      technologies: ['AI Applications', 'Study Tools', 'Multiplayer Experiences'],
       github: 'https://github.com/Julien-G-Man/ocasia',
       live: 'https://ocasia.vercel.app',
       image: '/ai-tutor.jpg'
